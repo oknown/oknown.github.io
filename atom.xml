@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://iknown.vip/"/>
-  <updated>2019-10-26T02:37:16.718Z</updated>
+  <updated>2019-11-04T07:17:26.951Z</updated>
   <id>http://iknown.vip/</id>
   
   <author>
@@ -17,11 +17,228 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>一键脚本</title>
+    <link href="http://iknown.vip/posts/20191022001.html"/>
+    <id>http://iknown.vip/posts/20191022001.html</id>
+    <published>2019-10-21T16:00:00.000Z</published>
+    <updated>2019-11-04T07:17:26.951Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;v2ray一键部署管理脚本&quot;&gt;&lt;a href=&quot;#v2ray一键部署管理脚本&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="脚本" scheme="http://iknown.vip/categories/%E8%84%9A%E6%9C%AC/"/>
+    
+    
+      <category term="shell" scheme="http://iknown.vip/tags/shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android笔记</title>
+    <link href="http://iknown.vip/posts/20190512001.html"/>
+    <id>http://iknown.vip/posts/20190512001.html</id>
+    <published>2019-07-15T07:28:53.245Z</published>
+    <updated>2019-11-04T07:28:48.974Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Android 使用Greendao gradle 出现 Error:Unable to find method ‘org.gradle.api.tasks.TaskInputs.file(Ljava/lang/Object;)&lt;/p&gt;
+&lt;p&gt;出现此gradle
+        
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://iknown.vip/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://iknown.vip/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux常用命令</title>
+    <link href="http://iknown.vip/posts/20190715002.html"/>
+    <id>http://iknown.vip/posts/20190715002.html</id>
+    <published>2019-07-15T07:28:53.245Z</published>
+    <updated>2019-11-01T07:24:58.041Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;firewall防火墙&quot;&gt;&lt;a href=&quot;#firewall防火墙&quot; class=&quot;headerlink&quot; title=&quot;firewall防火墙&quot;&gt;&lt;/a&gt;firewall防火墙&lt;/h3&gt;&lt;p&gt;firewall-cmd
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://iknown.vip/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://iknown.vip/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java笔记</title>
+    <link href="http://iknown.vip/posts/20190512001.html"/>
+    <id>http://iknown.vip/posts/20190512001.html</id>
+    <published>2019-07-15T07:28:53.245Z</published>
+    <updated>2019-11-04T07:28:57.432Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;记录Java中的一些骚操作&lt;/p&gt;
+&lt;h3 id=&quot;Java8获取本月最后一天&quot;&gt;&lt;a href=&quot;#Java8获取本月最后一天&quot; class=&quot;headerlink&quot; title=&quot;Java8获取本月最后一天&quot;&gt;&lt;/a&gt;Java8获取本月最后一天&lt;/h3&gt;&lt;pre
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="http://iknown.vip/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="http://iknown.vip/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring笔记</title>
+    <link href="http://iknown.vip/posts/20190704001.html"/>
+    <id>http://iknown.vip/posts/20190704001.html</id>
+    <published>2019-07-15T07:28:53.245Z</published>
+    <updated>2019-11-04T07:22:02.137Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Spring的Bean扫描和Spring-MVC的Bean扫描是分开的, 两者的Bean位于两个不同的Application, 而且Spring-MVC的Bean扫描要早于Spring的Bean扫描, 所以当Controller Bean生成完成后,
+        
+      
+    
+    </summary>
+    
+      <category term="Spring" scheme="http://iknown.vip/categories/Spring/"/>
+    
+    
+      <category term="Spring" scheme="http://iknown.vip/tags/Spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>软件资源分享</title>
+    <link href="http://iknown.vip/posts/20190704001.html"/>
+    <id>http://iknown.vip/posts/20190704001.html</id>
+    <published>2019-07-15T07:28:53.245Z</published>
+    <updated>2019-11-04T07:44:32.767Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;Android&quot;&gt;&lt;a href=&quot;#Android&quot; class=&quot;headerlink&quot; title=&quot;Android&quot;&gt;&lt;/a&gt;Android&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;&quot;&gt;NFC Tool
+        
+      
+    
+    </summary>
+    
+      <category term="软件" scheme="http://iknown.vip/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+      <category term="软件" scheme="http://iknown.vip/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Oracle笔记</title>
+    <link href="http://iknown.vip/posts/20190620001.html"/>
+    <id>http://iknown.vip/posts/20190620001.html</id>
+    <published>2019-06-19T16:00:00.000Z</published>
+    <updated>2019-11-04T07:22:40.353Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;实例名区分大小写！&lt;/p&gt;
+&lt;p&gt;实例名：&lt;code&gt;select instance_name from v$instance;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;服务名：&lt;code&gt;select global_name from
+        
+      
+    
+    </summary>
+    
+      <category term="Oracle" scheme="http://iknown.vip/categories/Oracle/"/>
+    
+    
+      <category term="Oracle" scheme="http://iknown.vip/tags/Oracle/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杂记</title>
+    <link href="http://iknown.vip/posts/20190516001.html"/>
+    <id>http://iknown.vip/posts/20190516001.html</id>
+    <published>2019-05-15T16:00:00.000Z</published>
+    <updated>2019-11-04T08:48:26.805Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;常见VPN协议根据易受干扰的程度从大到小依次为：OpenVPN &amp;gt; PPTP &amp;gt; L2TP &amp;gt; IPSec，尤其是OpenVPN，GFW已经可以实现对其定点清除&lt;/p&gt;
+&lt;p&gt;酸酸乳&lt;/p&gt;
+&lt;script&gt;
+       
+        
+      
+    
+    </summary>
+    
+      <category term="杂记" scheme="http://iknown.vip/categories/%E6%9D%82%E8%AE%B0/"/>
+    
+    
+      <category term="杂记" scheme="http://iknown.vip/tags/%E6%9D%82%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>英语笔记</title>
-    <link href="http://iknown.vip/posts/20191025001.html"/>
-    <id>http://iknown.vip/posts/20191025001.html</id>
-    <published>2019-10-26T02:03:56.712Z</published>
-    <updated>2019-10-26T02:37:16.718Z</updated>
+    <link href="http://iknown.vip/posts/20190415001.html"/>
+    <id>http://iknown.vip/posts/20190415001.html</id>
+    <published>2019-04-14T16:00:00.000Z</published>
+    <updated>2019-11-04T03:41:40.085Z</updated>
     
     <summary type="html">
     
@@ -45,10 +262,10 @@
   
   <entry>
     <title>雅思和托福</title>
-    <link href="http://iknown.vip/posts/20191022001.html"/>
-    <id>http://iknown.vip/posts/20191022001.html</id>
-    <published>2019-09-15T06:53:21.047Z</published>
-    <updated>2019-10-23T00:24:20.616Z</updated>
+    <link href="http://iknown.vip/posts/20190412001.html"/>
+    <id>http://iknown.vip/posts/20190412001.html</id>
+    <published>2019-04-11T16:00:00.000Z</published>
+    <updated>2019-11-04T07:23:05.974Z</updated>
     
     <summary type="html">
     
@@ -75,167 +292,6 @@
     
     
       <category term="生活" scheme="http://iknown.vip/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java骚操作</title>
-    <link href="http://iknown.vip/posts/20190512001.html"/>
-    <id>http://iknown.vip/posts/20190512001.html</id>
-    <published>2019-07-15T07:28:53.245Z</published>
-    <updated>2019-10-29T08:15:34.295Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;记录Java中的一些骚操作&lt;/p&gt;
-&lt;h3 id=&quot;Java8获取本月最后一天&quot;&gt;&lt;a href=&quot;#Java8获取本月最后一天&quot; class=&quot;headerlink&quot; title=&quot;Java8获取本月最后一天&quot;&gt;&lt;/a&gt;Java8获取本月最后一天&lt;/h3&gt;&lt;pre
-        
-      
-    
-    </summary>
-    
-      <category term="Java" scheme="http://iknown.vip/categories/Java/"/>
-    
-    
-      <category term="Java" scheme="http://iknown.vip/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Oracle笔记</title>
-    <link href="http://iknown.vip/posts/20190620001.html"/>
-    <id>http://iknown.vip/posts/20190620001.html</id>
-    <published>2019-07-15T07:28:53.245Z</published>
-    <updated>2019-10-31T12:19:15.980Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;实例名区分大小写！&lt;/p&gt;
-&lt;p&gt;实例名：&lt;code&gt;select instance_name from v$instance;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;服务名：&lt;code&gt;select global_name from
-        
-      
-    
-    </summary>
-    
-      <category term="Oracle" scheme="http://iknown.vip/categories/Oracle/"/>
-    
-    
-      <category term="Oracle" scheme="http://iknown.vip/tags/Oracle/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Spring笔记</title>
-    <link href="http://iknown.vip/posts/20190704001.html"/>
-    <id>http://iknown.vip/posts/20190704001.html</id>
-    <published>2019-07-15T07:28:53.245Z</published>
-    <updated>2019-10-23T02:05:41.838Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Spring的Bean扫描和Spring-MVC的Bean扫描是分开的, 两者的Bean位于两个不同的Application, 而且Spring-MVC的Bean扫描要早于Spring的Bean扫描, 所以当Controller Bean生成完成后,
-        
-      
-    
-    </summary>
-    
-      <category term="Spring" scheme="http://iknown.vip/categories/Spring/"/>
-    
-    
-      <category term="Spring" scheme="http://iknown.vip/tags/Spring/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux常用命令</title>
-    <link href="http://iknown.vip/posts/20190715002.html"/>
-    <id>http://iknown.vip/posts/20190715002.html</id>
-    <published>2019-07-15T07:28:53.245Z</published>
-    <updated>2019-10-23T07:46:03.872Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;记录Linux上的一些基本操作及常用命令&lt;/p&gt;
-&lt;h3 id=&quot;firewall防火墙&quot;&gt;&lt;a href=&quot;#firewall防火墙&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://iknown.vip/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://iknown.vip/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一键脚本</title>
-    <link href="http://iknown.vip/posts/20190704001.html"/>
-    <id>http://iknown.vip/posts/20190704001.html</id>
-    <published>2019-07-15T07:28:53.245Z</published>
-    <updated>2019-11-01T01:44:15.857Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;v2ray一键部署管理脚本&quot;&gt;&lt;a href=&quot;#v2ray一键部署管理脚本&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="脚本" scheme="http://iknown.vip/categories/%E8%84%9A%E6%9C%AC/"/>
-    
-    
-      <category term="shell" scheme="http://iknown.vip/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>软件资源分享</title>
-    <link href="http://iknown.vip/posts/20190704001.html"/>
-    <id>http://iknown.vip/posts/20190704001.html</id>
-    <published>2019-07-15T07:28:53.245Z</published>
-    <updated>2019-10-29T03:34:40.618Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;Android&quot;&gt;&lt;a href=&quot;#Android&quot; class=&quot;headerlink&quot; title=&quot;Android&quot;&gt;&lt;/a&gt;Android&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;&quot;&gt;NFC Tool Pro中文破解版&lt;/a&gt;&lt;/p&gt;
-&lt;h3
-        
-      
-    
-    </summary>
-    
-      <category term="软件" scheme="http://iknown.vip/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-      <category term="软件" scheme="http://iknown.vip/tags/%E8%BD%AF%E4%BB%B6/"/>
     
   </entry>
   
