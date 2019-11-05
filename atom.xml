@@ -43,32 +43,6 @@
   </entry>
   
   <entry>
-    <title>Linux常用命令</title>
-    <link href="http://iknown.vip/posts/20190715002.html"/>
-    <id>http://iknown.vip/posts/20190715002.html</id>
-    <published>2019-07-15T07:28:53.245Z</published>
-    <updated>2019-11-01T07:24:58.041Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;firewall防火墙&quot;&gt;&lt;a href=&quot;#firewall防火墙&quot; class=&quot;headerlink&quot; title=&quot;firewall防火墙&quot;&gt;&lt;/a&gt;firewall防火墙&lt;/h3&gt;&lt;p&gt;firewall-cmd
-        
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://iknown.vip/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://iknown.vip/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Java笔记</title>
     <link href="http://iknown.vip/posts/20190512001.html"/>
     <id>http://iknown.vip/posts/20190512001.html</id>
@@ -92,6 +66,32 @@
     
     
       <category term="Java" scheme="http://iknown.vip/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux常用命令</title>
+    <link href="http://iknown.vip/posts/20190715002.html"/>
+    <id>http://iknown.vip/posts/20190715002.html</id>
+    <published>2019-07-15T07:28:53.245Z</published>
+    <updated>2019-11-01T07:24:58.041Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;firewall防火墙&quot;&gt;&lt;a href=&quot;#firewall防火墙&quot; class=&quot;headerlink&quot; title=&quot;firewall防火墙&quot;&gt;&lt;/a&gt;firewall防火墙&lt;/h3&gt;&lt;p&gt;firewall-cmd
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://iknown.vip/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://iknown.vip/tags/Linux/"/>
     
   </entry>
   
@@ -122,6 +122,34 @@
   </entry>
   
   <entry>
+    <title>Android笔记</title>
+    <link href="http://iknown.vip/posts/20190512001.html"/>
+    <id>http://iknown.vip/posts/20190512001.html</id>
+    <published>2019-07-15T07:28:53.245Z</published>
+    <updated>2019-11-05T09:03:37.832Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Android 使用Greendao gradle 出现&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Error:Unable to find method
+        
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://iknown.vip/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://iknown.vip/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
     <title>软件资源分享</title>
     <link href="http://iknown.vip/posts/20190704001.html"/>
     <id>http://iknown.vip/posts/20190704001.html</id>
@@ -146,33 +174,6 @@
     
     
       <category term="软件" scheme="http://iknown.vip/tags/%E8%BD%AF%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android笔记</title>
-    <link href="http://iknown.vip/posts/20190512001.html"/>
-    <id>http://iknown.vip/posts/20190512001.html</id>
-    <published>2019-07-15T07:28:53.245Z</published>
-    <updated>2019-11-04T07:28:48.974Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Android 使用Greendao gradle 出现 Error:Unable to find method ‘org.gradle.api.tasks.TaskInputs.file(Ljava/lang/Object;)&lt;/p&gt;
-&lt;p&gt;出现此gradle
-        
-      
-    
-    </summary>
-    
-      <category term="Android" scheme="http://iknown.vip/categories/Android/"/>
-    
-    
-      <category term="Android" scheme="http://iknown.vip/tags/Android/"/>
     
   </entry>
   

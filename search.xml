@@ -29,31 +29,6 @@
     
     
     <entry>
-      <title>Linux常用命令</title>
-      <link href="/posts/20190715002.html"/>
-      <url>/posts/20190715002.html</url>
-      
-        <content type="html"><![CDATA[<h3 id="firewall防火墙"><a href="#firewall防火墙" class="headerlink" title="firewall防火墙"></a>firewall防火墙</h3><p>firewall-cmd –get-zones<br>firewall-cmd –get-default-zones</p><p>firewall-cmd –permanent –zone=public –list-ports</p><p>firewall-cmd –permanent –zone=public –list-interfaces</p><p>firewall-cmd –permanent –zone=public –add-interface=wg0</p><p>firewall-cmd –zone=public –add-masquerade –permanent</p><p>firewall-cmd –permanent –zone=public –add-forward-port=port=39706:proto=tcp:toport=34555:toaddr=112.96.176.240<br>firewall-cmd –permanent –zone=public –remove-forward-port=port=39706:proto=tcp:toport=34555:toaddr=112.96.176.240</p><p>firewall-cmd –list-forward-ports</p><p>firewall-cmd –permanent –zone=public –add-interface=wg0<br>firewall-cmd –zone=public –add-masquerade –permanent<br>firewall-cmd –permanent –zone=public –add-rich-rule='rule family=ipv4 masquerade'</p><h3 id="快速清空文件内容"><a href="#快速清空文件内容" class="headerlink" title="快速清空文件内容"></a>快速清空文件内容</h3><pre class=" language-shell"><code class="language-shell">: > filename> filenameecho "" > filenameecho > filenamecat /dev/null > filename</code></pre><h3 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h3><p>dd if=/dev/zero of=/var/swap bs=1M count=1024</p><p>mkswap /var/swap</p><p>swapon /var/swap</p><p>vi /etc/fstab</p><p>/var/swap swap swap defaults 0 0</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
-      <categories>
-          
-          <category> Linux </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Linux </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Java笔记</title>
       <link href="/posts/20190512001.html"/>
       <url>/posts/20190512001.html</url>
@@ -71,6 +46,31 @@
         <tags>
             
             <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Linux常用命令</title>
+      <link href="/posts/20190715002.html"/>
+      <url>/posts/20190715002.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="firewall防火墙"><a href="#firewall防火墙" class="headerlink" title="firewall防火墙"></a>firewall防火墙</h3><p>firewall-cmd –get-zones<br>firewall-cmd –get-default-zones</p><p>firewall-cmd –permanent –zone=public –list-ports</p><p>firewall-cmd –permanent –zone=public –list-interfaces</p><p>firewall-cmd –permanent –zone=public –add-interface=wg0</p><p>firewall-cmd –zone=public –add-masquerade –permanent</p><p>firewall-cmd –permanent –zone=public –add-forward-port=port=39706:proto=tcp:toport=34555:toaddr=112.96.176.240<br>firewall-cmd –permanent –zone=public –remove-forward-port=port=39706:proto=tcp:toport=34555:toaddr=112.96.176.240</p><p>firewall-cmd –list-forward-ports</p><p>firewall-cmd –permanent –zone=public –add-interface=wg0<br>firewall-cmd –zone=public –add-masquerade –permanent<br>firewall-cmd –permanent –zone=public –add-rich-rule='rule family=ipv4 masquerade'</p><h3 id="快速清空文件内容"><a href="#快速清空文件内容" class="headerlink" title="快速清空文件内容"></a>快速清空文件内容</h3><pre class=" language-shell"><code class="language-shell">: > filename> filenameecho "" > filenameecho > filenamecat /dev/null > filename</code></pre><h3 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h3><p>dd if=/dev/zero of=/var/swap bs=1M count=1024</p><p>mkswap /var/swap</p><p>swapon /var/swap</p><p>vi /etc/fstab</p><p>/var/swap swap swap defaults 0 0</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
             
         </tags>
       
@@ -104,6 +104,31 @@
     
     
     <entry>
+      <title>Android笔记</title>
+      <link href="/posts/20190512001.html"/>
+      <url>/posts/20190512001.html</url>
+      
+        <content type="html"><![CDATA[<p>Android 使用Greendao gradle 出现</p><blockquote><p>Error:Unable to find method ‘org.gradle.api.tasks.TaskInputs.file(Ljava/lang/Object;)</p></blockquote><p>出现此gradle sync的错误原因是：</p><p>gradle 版本 和 greendao 版本不兼容</p><blockquote><p>More than one file was found with OS independent path ‘META-INF/proguard/androidx-annotations.pro’ </p></blockquote><p>解决方法：修改build.gradle打包的时候忽略掉 androidx-annotations.pro</p><pre><code>// app module下的gradle脚本android {    packagingOptions {        exclude 'META-INF/proguard/androidx-annotations.pro'    }}</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> Android </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Android </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>软件资源分享</title>
       <link href="/posts/20190704001.html"/>
       <url>/posts/20190704001.html</url>
@@ -121,31 +146,6 @@
         <tags>
             
             <tag> 软件 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Android笔记</title>
-      <link href="/posts/20190512001.html"/>
-      <url>/posts/20190512001.html</url>
-      
-        <content type="html"><![CDATA[<p>Android 使用Greendao gradle 出现 Error:Unable to find method ‘org.gradle.api.tasks.TaskInputs.file(Ljava/lang/Object;)</p><p>出现此gradle sync的错误原因是：</p><p>gradle 版本 和 greendao 版本不兼容</p><blockquote><p>More than one file was found with OS independent path ‘META-INF/proguard/androidx-annotations.pro’ </p></blockquote><p>解决方法：修改build.gradle打包的时候忽略掉 androidx-annotations.pro</p><pre><code>// app module下的gradle脚本android {    packagingOptions {        exclude 'META-INF/proguard/androidx-annotations.pro'    }}</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
-      <categories>
-          
-          <category> Android </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Android </tag>
             
         </tags>
       
