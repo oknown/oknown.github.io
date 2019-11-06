@@ -381,7 +381,8 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>npm中<code>~</code>和<code>^</code>的作用和区别<br><code>~</code>会匹配最近的小版本依赖包，比如<code>~</code>1.2.3会匹配所有1.2.x版本，但是不包括1.3.0<br><code>^</code>会匹配最新的大版本依赖包，比如<code>^</code>1.2.3会匹配所有1.x.x的包，包括1.3.0，但是不包括2.0.0<br><code>*</code>安装最新版本的依赖包</p>
+                <p><strong>npm中<code>~</code>和<code>^</code>的作用和区别</strong></p>
+<p><code>~</code>会匹配最近的小版本依赖包，比如<code>~</code>1.2.3会匹配所有1.2.x版本，但是不包括1.3.0<br><code>^</code>会匹配最新的大版本依赖包，比如<code>^</code>1.2.3会匹配所有1.x.x的包，包括1.3.0，但是不包括2.0.0<br><code>*</code>安装最新版本的依赖包</p>
 <p>注意<code>^</code>和<code>*</code>版本更新可能比较大，可能会造成版本不兼容，项目代码错误</p>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -597,7 +598,8 @@
         clientSecret: 'b02493329dcafe058203dff9a523672c8d5eff46',
         repo: 'oknown.github.io',
         owner: 'oknown',
-        admin: ["oknown"],
+        //admin: "oknown",
+        admin: ['oknown'],
         id: '2019-11-01T00-00-00',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
@@ -606,28 +608,6 @@
 </script>
     
 
-    
-        <link rel="stylesheet" href="/libs/gitment/gitment-default.css">
-<link rel="stylesheet" href="/css/gitment.css">
-
-<div class="gitment-card card" data-aos="fade-up">
-    <div id="gitment-content" class="card-content"></div>
-</div>
-
-<script src="/libs/gitment/gitment.js"></script>
-<script>
-var gitment = new Gitment({
-    id: 'Fri Nov 01 2019 00:00:00 GMT+0800',
-    owner: 'oknown',
-    repo: 'oknown.github.io',
-    oauth: {
-        client_id: '130f575f16ccb155305b',
-        client_secret: 'b02493329dcafe058203dff9a523672c8d5eff46'
-    }
-});
-
-gitment.render('gitment-content');
-</script>
     
 
     

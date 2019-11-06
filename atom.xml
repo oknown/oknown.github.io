@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://iknown.vip/"/>
-  <updated>2019-11-06T01:26:24.074Z</updated>
+  <updated>2019-11-06T02:20:46.373Z</updated>
   <id>http://iknown.vip/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://iknown.vip/posts/20191101001.html"/>
     <id>http://iknown.vip/posts/20191101001.html</id>
     <published>2019-10-31T16:00:00.000Z</published>
-    <updated>2019-11-06T01:26:24.074Z</updated>
+    <updated>2019-11-06T02:20:46.373Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,8 @@
       
         
         
-          &lt;p&gt;npm中&lt;code&gt;~&lt;/code&gt;和&lt;code&gt;^&lt;/code&gt;的作用和区别&lt;br&gt;&lt;code&gt;~&lt;/code&gt;会匹配最近的小版本依赖包，比如&lt;code&gt;~&lt;/code&gt;1.2.3会匹配所有1.2.x版本，但是不包括1.3.0&lt;br&gt;&lt;code&gt;^&lt;/code&gt;会匹配最新
+          &lt;p&gt;&lt;strong&gt;npm中&lt;code&gt;~&lt;/code&gt;和&lt;code&gt;^&lt;/code&gt;的作用和区别&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;~&lt;/code&gt;会匹配最近的小版本依赖包，比如&lt;code&gt;~&lt;/code&gt;1.2.3会匹配所有1.2.x版本，但是不包括1.3.0&lt;b
         
       
     
