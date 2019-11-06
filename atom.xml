@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://iknown.vip/"/>
-  <updated>2019-11-04T07:17:26.951Z</updated>
+  <updated>2019-11-06T01:26:24.074Z</updated>
   <id>http://iknown.vip/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端笔记</title>
+    <link href="http://iknown.vip/posts/20191101001.html"/>
+    <id>http://iknown.vip/posts/20191101001.html</id>
+    <published>2019-10-31T16:00:00.000Z</published>
+    <updated>2019-11-06T01:26:24.074Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;npm中&lt;code&gt;~&lt;/code&gt;和&lt;code&gt;^&lt;/code&gt;的作用和区别&lt;br&gt;&lt;code&gt;~&lt;/code&gt;会匹配最近的小版本依赖包，比如&lt;code&gt;~&lt;/code&gt;1.2.3会匹配所有1.2.x版本，但是不包括1.3.0&lt;br&gt;&lt;code&gt;^&lt;/code&gt;会匹配最新
+        
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="http://iknown.vip/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://iknown.vip/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>一键脚本</title>
@@ -43,38 +69,11 @@
   </entry>
   
   <entry>
-    <title>Java笔记</title>
-    <link href="http://iknown.vip/posts/20190512001.html"/>
-    <id>http://iknown.vip/posts/20190512001.html</id>
-    <published>2019-07-15T07:28:53.245Z</published>
-    <updated>2019-11-04T07:28:57.432Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;记录Java中的一些骚操作&lt;/p&gt;
-&lt;h3 id=&quot;Java8获取本月最后一天&quot;&gt;&lt;a href=&quot;#Java8获取本月最后一天&quot; class=&quot;headerlink&quot; title=&quot;Java8获取本月最后一天&quot;&gt;&lt;/a&gt;Java8获取本月最后一天&lt;/h3&gt;&lt;pre
-        
-      
-    
-    </summary>
-    
-      <category term="Java" scheme="http://iknown.vip/categories/Java/"/>
-    
-    
-      <category term="Java" scheme="http://iknown.vip/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Linux常用命令</title>
     <link href="http://iknown.vip/posts/20190715002.html"/>
     <id>http://iknown.vip/posts/20190715002.html</id>
-    <published>2019-07-15T07:28:53.245Z</published>
-    <updated>2019-11-01T07:24:58.041Z</updated>
+    <published>2019-07-14T16:00:00.000Z</published>
+    <updated>2019-11-06T01:32:30.154Z</updated>
     
     <summary type="html">
     
@@ -99,8 +98,8 @@
     <title>Spring笔记</title>
     <link href="http://iknown.vip/posts/20190704001.html"/>
     <id>http://iknown.vip/posts/20190704001.html</id>
-    <published>2019-07-15T07:28:53.245Z</published>
-    <updated>2019-11-04T07:22:02.137Z</updated>
+    <published>2019-07-03T16:00:00.000Z</published>
+    <updated>2019-11-06T01:32:57.184Z</updated>
     
     <summary type="html">
     
@@ -122,39 +121,11 @@
   </entry>
   
   <entry>
-    <title>Android笔记</title>
-    <link href="http://iknown.vip/posts/20190512001.html"/>
-    <id>http://iknown.vip/posts/20190512001.html</id>
-    <published>2019-07-15T07:28:53.245Z</published>
-    <updated>2019-11-05T09:03:37.832Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Android 使用Greendao gradle 出现&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Error:Unable to find method
-        
-      
-    
-    </summary>
-    
-      <category term="Android" scheme="http://iknown.vip/categories/Android/"/>
-    
-    
-      <category term="Android" scheme="http://iknown.vip/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
     <title>软件资源分享</title>
     <link href="http://iknown.vip/posts/20190704001.html"/>
     <id>http://iknown.vip/posts/20190704001.html</id>
-    <published>2019-07-15T07:28:53.245Z</published>
-    <updated>2019-11-04T07:44:32.767Z</updated>
+    <published>2019-07-03T16:00:00.000Z</published>
+    <updated>2019-11-06T01:33:36.343Z</updated>
     
     <summary type="html">
     
@@ -231,6 +202,61 @@
     
     
       <category term="杂记" scheme="http://iknown.vip/tags/%E6%9D%82%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Android笔记</title>
+    <link href="http://iknown.vip/posts/20190515001.html"/>
+    <id>http://iknown.vip/posts/20190515001.html</id>
+    <published>2019-05-14T16:00:00.000Z</published>
+    <updated>2019-11-06T01:31:44.470Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Android 使用Greendao gradle 出现&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Error:Unable to find method
+        
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://iknown.vip/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://iknown.vip/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java笔记</title>
+    <link href="http://iknown.vip/posts/20190512001.html"/>
+    <id>http://iknown.vip/posts/20190512001.html</id>
+    <published>2019-05-11T16:00:00.000Z</published>
+    <updated>2019-11-06T01:32:09.491Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;记录Java中的一些骚操作&lt;/p&gt;
+&lt;h3 id=&quot;Java8获取本月最后一天&quot;&gt;&lt;a href=&quot;#Java8获取本月最后一天&quot; class=&quot;headerlink&quot; title=&quot;Java8获取本月最后一天&quot;&gt;&lt;/a&gt;Java8获取本月最后一天&lt;/h3&gt;&lt;pre
+        
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="http://iknown.vip/categories/Java/"/>
+    
+    
+      <category term="Java" scheme="http://iknown.vip/tags/Java/"/>
     
   </entry>
   

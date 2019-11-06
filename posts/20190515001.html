@@ -4,8 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="软件,资源">
-    <meta name="description" content="收集&amp;分享各类好用的软件资源&lt;br&gt;&lt;br&gt;">
+    <meta name="keywords" content="Android,android">
+    <meta name="description" content="人的才华就如海绵的水，没有外力的挤压，它是绝对流不出来的。流出来后，海绵才能吸收新的源泉。&lt;br&gt;&lt;br&gt;">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>软件资源分享 | 你懂的</title>
+    <title>Android笔记 | 你懂的</title>
     <link rel="icon" type="image/png" href="/medias/admin.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -210,13 +210,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        软件资源分享
+                        Android笔记
                     </div>
                 </div>
             </div>
@@ -327,8 +327,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="../tags/软件/" target="_blank">
-                                <span class="chip bg-color">软件</span>
+                            <a href="../tags/Android/" target="_blank">
+                                <span class="chip bg-color">Android</span>
                             </a>
                         
                     </div>
@@ -339,8 +339,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="../categories/软件/" class="post-category" target="_blank">
-                                软件
+                            <a href="../categories/Android/" class="post-category" target="_blank">
+                                Android
                             </a>
                         
                     </div>
@@ -351,14 +351,14 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-07-04
+                    2019-05-15
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        65
+                        144
                     </div>
                     
 
@@ -381,11 +381,22 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><a href></a></p>
-<hr>
-<h3 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h3><p><a href>NFC Tool Pro中文破解版</a></p>
-<h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><p><a href>CP210X驱动文件</a></p>
-<script>
+                <p>Android 使用Greendao gradle 出现</p>
+<blockquote>
+<p>Error:Unable to find method ‘org.gradle.api.tasks.TaskInputs.file(Ljava/lang/Object;)</p>
+</blockquote>
+<p>出现此gradle sync的错误原因是：</p>
+<p>gradle 版本 和 greendao 版本不兼容</p>
+<blockquote>
+<p>More than one file was found with OS independent path ‘META-INF/proguard/androidx-annotations.pro’ </p>
+</blockquote>
+<p>解决方法：修改build.gradle打包的时候忽略掉 androidx-annotations.pro</p>
+<pre><code>// app module下的gradle脚本
+android {
+    packagingOptions {
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+    }
+}</code></pre><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -558,7 +569,7 @@
             </div>
             <br>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">
-                    《软件资源分享》
+                    《Android笔记》
                 </span> 由
             <a xmlns:cc="http://creativecommons.org/ns#" href property="cc:attributionName" rel="cc:attributionURL">
                 admin
@@ -600,7 +611,7 @@
         repo: 'oknown.github.io',
         owner: 'oknown',
         admin: ["oknown"],
-        id: '2019-07-04T00-00-00',
+        id: '2019-05-15T00-00-00',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -619,7 +630,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Thu Jul 04 2019 00:00:00 GMT+0800',
+    id: 'Wed May 15 2019 00:00:00 GMT+0800',
     owner: 'oknown',
     repo: 'oknown.github.io',
     oauth: {
@@ -647,31 +658,31 @@ gitment.render('gitment-content');
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href>
+                <a href="20190516001.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Spring笔记">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="杂记">
                         
-                        <span class="card-title">Spring笔记</span>
+                        <span class="card-title">杂记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Spring笔记，Spring常见问题，Spring配置<br><br>
+                            辣条人人都喜欢吃，白萝卜人人都不喜欢吃！<br><br><br>
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-07-04
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-16
                         </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../categories/Spring/" class="post-category" target="_blank">
-                                    Spring
+                            <a href="../categories/杂记/" class="post-category" target="_blank">
+                                    杂记
                                 </a>
                             
                             
@@ -681,8 +692,8 @@ gitment.render('gitment-content');
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../tags/Spring/" target="_blank">
-                        <span class="chip bg-color">Spring</span>
+                    <a href="../tags/杂记/" target="_blank">
+                        <span class="chip bg-color">杂记</span>
                     </a>
                     
                 </div>
@@ -696,31 +707,31 @@ gitment.render('gitment-content');
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="20190620001.html">
+                <a href="20190512001.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Oracle笔记">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Java笔记">
                         
-                        <span class="card-title">Oracle笔记</span>
+                        <span class="card-title">Java笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            记录并总结实际操作中的一些Oracle命令和常识以及注意事项<br><br>
+                            记录Java中的一些骚操作<br><br>
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-06-20
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-05-12
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../categories/Oracle/" class="post-category" target="_blank">
-                                    Oracle
+                            <a href="../categories/Java/" class="post-category" target="_blank">
+                                    Java
                                 </a>
                             
                             
@@ -730,8 +741,8 @@ gitment.render('gitment-content');
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../tags/Oracle/" target="_blank">
-                        <span class="chip bg-color">Oracle</span>
+                    <a href="../tags/Java/" target="_blank">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
                 </div>

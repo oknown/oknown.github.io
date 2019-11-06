@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>前端笔记</title>
+      <link href="/posts/20191101001.html"/>
+      <url>/posts/20191101001.html</url>
+      
+        <content type="html"><![CDATA[<p>npm中<code>~</code>和<code>^</code>的作用和区别<br><code>~</code>会匹配最近的小版本依赖包，比如<code>~</code>1.2.3会匹配所有1.2.x版本，但是不包括1.3.0<br><code>^</code>会匹配最新的大版本依赖包，比如<code>^</code>1.2.3会匹配所有1.x.x的包，包括1.3.0，但是不包括2.0.0<br><code>*</code>安装最新版本的依赖包</p><p>注意<code>^</code>和<code>*</code>版本更新可能比较大，可能会造成版本不兼容，项目代码错误</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>一键脚本</title>
       <link href="/posts/20191022001.html"/>
       <url>/posts/20191022001.html</url>
@@ -21,31 +46,6 @@
         <tags>
             
             <tag> shell </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Java笔记</title>
-      <link href="/posts/20190512001.html"/>
-      <url>/posts/20190512001.html</url>
-      
-        <content type="html"><![CDATA[<p>记录Java中的一些骚操作</p><h3 id="Java8获取本月最后一天"><a href="#Java8获取本月最后一天" class="headerlink" title="Java8获取本月最后一天"></a>Java8获取本月最后一天</h3><pre class=" language-java"><code class="language-java">LocalDate today <span class="token operator">=</span> LocalDate<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//本月的第一天</span>LocalDate firstday <span class="token operator">=</span> LocalDate<span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>today<span class="token punctuation">.</span><span class="token function">getYear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>today<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//本月的最后一天</span>LocalDate lastDay <span class="token operator">=</span>today<span class="token punctuation">.</span><span class="token function">with</span><span class="token punctuation">(</span>TemporalAdjusters<span class="token punctuation">.</span><span class="token function">lastDayOfMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"本月的第一天："</span> <span class="token operator">+</span> firstday<span class="token punctuation">)</span><span class="token punctuation">;</span>System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"本月的最后一天："</span> <span class="token operator">+</span> lastDay<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre><h3 id="PDF打印"><a href="#PDF打印" class="headerlink" title="PDF打印"></a>PDF打印</h3><h4 id="设置打印副本（份数）"><a href="#设置打印副本（份数）" class="headerlink" title="设置打印副本（份数）"></a>设置打印副本（份数）</h4><pre class=" language-java"><code class="language-java">PrintRequestAttributeSet pras <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashPrintRequestAttributeSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>pras<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Copies</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>pras<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>MultipleDocumentHandling<span class="token punctuation">.</span>SEPARATE_DOCUMENTS_UNCOLLATED_COPIES<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre><p>注意：Copies和MultipleDocumentHandling需要配合使用，否则无效。</p><p>参考资料：<a href="https://docs.oracle.com/javase/6/docs/api/javax/print/attribute/standard/Copies.html" rel="external nofollow noopener noreferrer" target="_blank">https://docs.oracle.com/javase/6/docs/api/javax/print/attribute/standard/Copies.html</a></p><h4 id="设置打印范围"><a href="#设置打印范围" class="headerlink" title="设置打印范围"></a>设置打印范围</h4><pre><code>pras.add(new PageRanges(4, 8));</code></pre><p>单单设置这个打印熟悉是不够的，还需要搭配Book</p><pre class=" language-java"><code class="language-java">PDDocument document <span class="token operator">=</span> PDDocument<span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span>inputStream<span class="token punctuation">)</span><span class="token punctuation">;</span>PDFPrintableHelper printable <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PDFPrintableHelper</span><span class="token punctuation">(</span>document<span class="token punctuation">,</span> printHandler<span class="token punctuation">)</span><span class="token punctuation">;</span>PrinterJob job <span class="token operator">=</span> PrinterJob<span class="token punctuation">.</span><span class="token function">getPrinterJob</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>job<span class="token punctuation">.</span><span class="token function">setPrintService</span><span class="token punctuation">(</span>defaultService<span class="token punctuation">)</span><span class="token punctuation">;</span>PageFormat pageFormat <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PageFormat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>Paper paper <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Paper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>pageFormat<span class="token punctuation">.</span><span class="token function">setPaper</span><span class="token punctuation">(</span>paper<span class="token punctuation">)</span><span class="token punctuation">;</span>Book book <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Book</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">int</span> pages <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getNumberOfPages</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> pageNum <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> pageNum <span class="token operator">&lt;=</span> pages<span class="token punctuation">;</span> pageNum <span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>    book<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>printable<span class="token punctuation">,</span> pageFormat<span class="token punctuation">,</span> pageNum<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>job<span class="token punctuation">.</span><span class="token function">setPageable</span><span class="token punctuation">(</span>book<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre><p>若只<code>book.append(printable, pageFormat);</code>不管PDF有多少页都只打印第一页</p><p>重点：</p><p>1、在Printerable打印之前，它无法确定可能打印的页数</p><p>2、需要使用Pagable，这允许您收集一系列Printable，每个Printable代表虚拟书中的单个页面。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
-      <categories>
-          
-          <category> Java </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Java </tag>
             
         </tags>
       
@@ -96,31 +96,6 @@
         <tags>
             
             <tag> Spring </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Android笔记</title>
-      <link href="/posts/20190512001.html"/>
-      <url>/posts/20190512001.html</url>
-      
-        <content type="html"><![CDATA[<p>Android 使用Greendao gradle 出现</p><blockquote><p>Error:Unable to find method ‘org.gradle.api.tasks.TaskInputs.file(Ljava/lang/Object;)</p></blockquote><p>出现此gradle sync的错误原因是：</p><p>gradle 版本 和 greendao 版本不兼容</p><blockquote><p>More than one file was found with OS independent path ‘META-INF/proguard/androidx-annotations.pro’ </p></blockquote><p>解决方法：修改build.gradle打包的时候忽略掉 androidx-annotations.pro</p><pre><code>// app module下的gradle脚本android {    packagingOptions {        exclude 'META-INF/proguard/androidx-annotations.pro'    }}</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
-      <categories>
-          
-          <category> Android </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Android </tag>
             
         </tags>
       
@@ -196,6 +171,56 @@
         <tags>
             
             <tag> 杂记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Android笔记</title>
+      <link href="/posts/20190515001.html"/>
+      <url>/posts/20190515001.html</url>
+      
+        <content type="html"><![CDATA[<p>Android 使用Greendao gradle 出现</p><blockquote><p>Error:Unable to find method ‘org.gradle.api.tasks.TaskInputs.file(Ljava/lang/Object;)</p></blockquote><p>出现此gradle sync的错误原因是：</p><p>gradle 版本 和 greendao 版本不兼容</p><blockquote><p>More than one file was found with OS independent path ‘META-INF/proguard/androidx-annotations.pro’ </p></blockquote><p>解决方法：修改build.gradle打包的时候忽略掉 androidx-annotations.pro</p><pre><code>// app module下的gradle脚本android {    packagingOptions {        exclude 'META-INF/proguard/androidx-annotations.pro'    }}</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> Android </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Android </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Java笔记</title>
+      <link href="/posts/20190512001.html"/>
+      <url>/posts/20190512001.html</url>
+      
+        <content type="html"><![CDATA[<p>记录Java中的一些骚操作</p><h3 id="Java8获取本月最后一天"><a href="#Java8获取本月最后一天" class="headerlink" title="Java8获取本月最后一天"></a>Java8获取本月最后一天</h3><pre class=" language-java"><code class="language-java">LocalDate today <span class="token operator">=</span> LocalDate<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//本月的第一天</span>LocalDate firstday <span class="token operator">=</span> LocalDate<span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>today<span class="token punctuation">.</span><span class="token function">getYear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>today<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//本月的最后一天</span>LocalDate lastDay <span class="token operator">=</span>today<span class="token punctuation">.</span><span class="token function">with</span><span class="token punctuation">(</span>TemporalAdjusters<span class="token punctuation">.</span><span class="token function">lastDayOfMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"本月的第一天："</span> <span class="token operator">+</span> firstday<span class="token punctuation">)</span><span class="token punctuation">;</span>System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"本月的最后一天："</span> <span class="token operator">+</span> lastDay<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre><h3 id="PDF打印"><a href="#PDF打印" class="headerlink" title="PDF打印"></a>PDF打印</h3><h4 id="设置打印副本（份数）"><a href="#设置打印副本（份数）" class="headerlink" title="设置打印副本（份数）"></a>设置打印副本（份数）</h4><pre class=" language-java"><code class="language-java">PrintRequestAttributeSet pras <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashPrintRequestAttributeSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>pras<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Copies</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>pras<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>MultipleDocumentHandling<span class="token punctuation">.</span>SEPARATE_DOCUMENTS_UNCOLLATED_COPIES<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre><p>注意：Copies和MultipleDocumentHandling需要配合使用，否则无效。</p><p>参考资料：<a href="https://docs.oracle.com/javase/6/docs/api/javax/print/attribute/standard/Copies.html" rel="external nofollow noopener noreferrer" target="_blank">https://docs.oracle.com/javase/6/docs/api/javax/print/attribute/standard/Copies.html</a></p><h4 id="设置打印范围"><a href="#设置打印范围" class="headerlink" title="设置打印范围"></a>设置打印范围</h4><pre><code>pras.add(new PageRanges(4, 8));</code></pre><p>单单设置这个打印熟悉是不够的，还需要搭配Book</p><pre class=" language-java"><code class="language-java">PDDocument document <span class="token operator">=</span> PDDocument<span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span>inputStream<span class="token punctuation">)</span><span class="token punctuation">;</span>PDFPrintableHelper printable <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PDFPrintableHelper</span><span class="token punctuation">(</span>document<span class="token punctuation">,</span> printHandler<span class="token punctuation">)</span><span class="token punctuation">;</span>PrinterJob job <span class="token operator">=</span> PrinterJob<span class="token punctuation">.</span><span class="token function">getPrinterJob</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>job<span class="token punctuation">.</span><span class="token function">setPrintService</span><span class="token punctuation">(</span>defaultService<span class="token punctuation">)</span><span class="token punctuation">;</span>PageFormat pageFormat <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PageFormat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>Paper paper <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Paper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>pageFormat<span class="token punctuation">.</span><span class="token function">setPaper</span><span class="token punctuation">(</span>paper<span class="token punctuation">)</span><span class="token punctuation">;</span>Book book <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Book</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">int</span> pages <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getNumberOfPages</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> pageNum <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> pageNum <span class="token operator">&lt;=</span> pages<span class="token punctuation">;</span> pageNum <span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>    book<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>printable<span class="token punctuation">,</span> pageFormat<span class="token punctuation">,</span> pageNum<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span>job<span class="token punctuation">.</span><span class="token function">setPageable</span><span class="token punctuation">(</span>book<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre><p>若只<code>book.append(printable, pageFormat);</code>不管PDF有多少页都只打印第一页</p><p>重点：</p><p>1、在Printerable打印之前，它无法确定可能打印的页数</p><p>2、需要使用Pagable，这允许您收集一系列Printable，每个Printable代表虚拟书中的单个页面。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
             
         </tags>
       
