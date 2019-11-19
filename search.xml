@@ -29,6 +29,31 @@
     
     
     <entry>
+      <title>MySQL笔记</title>
+      <link href="/posts/20191026001.html"/>
+      <url>/posts/20191026001.html</url>
+      
+        <content type="html"><![CDATA[<h4 id="mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）"><a href="#mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）" class="headerlink" title="mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）"></a>mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）</h4><p>– 不是以数字开头<br>select * from mot_terms where <code>name</code> not REGEXP ‘^[0-9]’<br>– 不是以字母开头<br>select * from mot_terms where <code>name</code> not REGEXP ‘^[a-zA-Z]’</p><p>– 已数字和特殊字符开头<br>select * from mot_terms where <code>name</code> REGEXP ‘^[@#$%&amp;0-9]’</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> SQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MySQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>一键脚本</title>
       <link href="/posts/20191022001.html"/>
       <url>/posts/20191022001.html</url>
@@ -83,7 +108,7 @@
       <link href="/posts/20190704001.html"/>
       <url>/posts/20190704001.html</url>
       
-        <content type="html"><![CDATA[<p>Spring的Bean扫描和Spring-MVC的Bean扫描是分开的, 两者的Bean位于两个不同的Application, 而且Spring-MVC的Bean扫描要早于Spring的Bean扫描, 所以当Controller Bean生成完成后, 再执行Spring的Bean扫描,Spring会发现要被AOP代理的Controller Bean已经在容器中存在, 配置AOP就无效了.</p><p>同样这样的情况也存在于数据库事务中, 如果Service的Bean扫描配置在spring-mvc.xml中, 而数据库事务管理器配置在application.xml中, 会导致数据库事务失效, 原理一样.</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<p>Spring的Bean扫描和Spring-MVC的Bean扫描是分开的, 两者的Bean位于两个不同的Application, 而且Spring-MVC的Bean扫描要早于Spring的Bean扫描, 所以当Controller Bean生成完成后, 再执行Spring的Bean扫描,Spring会发现要被AOP代理的Controller Bean已经在容器中存在, 配置AOP就无效了.</p><p>同样这样的情况也存在于数据库事务中, 如果Service的Bean扫描配置在spring-mvc.xml中, 而数据库事务管理器配置在application.xml中, 会导致数据库事务失效, 原理一样.</p><h3 id="Springboot引用外部配置文件"><a href="#Springboot引用外部配置文件" class="headerlink" title="Springboot引用外部配置文件"></a>Springboot引用外部配置文件</h3><p>1.通过启动命令动态引入配置文件</p><pre><code>java -jar demo.jar --Dspring.config.location=myapplication.properties</code></pre><p>2.从当前路径加载</p><p><a href="https://links.jianshu.com/go?to=https%3A%2F%2Fdocs.spring.io%2Fspring-boot%2Fdocs%2Fcurrent-SNAPSHOT%2Freference%2Fhtmlsingle%2F%23boot-features-external-config" rel="external nofollow noopener noreferrer" target="_blank">官方文档</a></p><pre><code>24.3 Application property filesSpringApplication will load properties from application.properties files in the following locations and add them to the Spring Environment:A /config subdirectory of the current directory.The current directoryA classpath /config packageThe classpath rootThe list is ordered by precedence (properties defined in locations higher in the list override those defined in lower locations).</code></pre><p>解释：<code>SpringApplication</code>将会从如下地方加载<code>application.properties</code>并将它们添加到Spring容器中</p><p>第一种是在jar包的同一目录下建一个config文件夹，然后把配置文件放到这个文件夹下；<br>第二种是直接把配置文件放到jar包的同级目录；<br>第三种在classpath下建一个config文件夹，然后把配置文件放进去；<br>第四种是在classpath下直接放配置文件。</p><p>这四种方式的优先级是从一到四依次降低的。</p><blockquote><p>注： 一二两种方案其实不是jar包的同级目录，而是（执行启动指令的）同级目录。为了便于理解我把上面的当前目录说成jar包的同级目录，这种说法并不对。如果是刚开始接触或者调试这块，还是在jar包同级目录方便。</p></blockquote><p>前两种从外部读取文件</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
       <categories>
@@ -158,7 +183,7 @@
       <link href="/posts/20190516001.html"/>
       <url>/posts/20190516001.html</url>
       
-        <content type="html"><![CDATA[<p>常见VPN协议根据易受干扰的程度从大到小依次为：OpenVPN &gt; PPTP &gt; L2TP &gt; IPSec，尤其是OpenVPN，GFW已经可以实现对其定点清除</p><p>酸酸乳</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<p>常见VPN协议根据易受干扰的程度从大到小依次为：OpenVPN &gt; PPTP &gt; L2TP &gt; IPSec，尤其是OpenVPN，GFW已经可以实现对其定点清除</p><p>酸酸乳</p><h3 id="路由器"><a href="#路由器" class="headerlink" title="路由器"></a>路由器</h3><p><a href="https://zhuanlan.zhihu.com/p/68340542" rel="external nofollow noopener noreferrer" target="_blank">原文链接</a></p><h4 id="5G和2-4G"><a href="#5G和2-4G" class="headerlink" title="5G和2.4G"></a>5G和2.4G</h4><p>蓝牙，手机4G信号，无线键鼠，各种无人机，遥控，甚至连微波炉，都使用的是2.4G信号。</p><p>穿墙只限于2.4G，5G的事情就别想穿墙还有多好了。</p><p>2.4G穿墙能力好，5G在同一个房间内连接更稳定，速度更好，带宽更足，不容易被其它设备干扰。</p><p>双频是指同时具有2.4G和5G。1200M双频指的是2.4g的300M+5g的867M约等于1200M。</p><blockquote><p>连接2.4G信号打实时网游，根本就等同于送人头。</p></blockquote><h4 id="内存和存储"><a href="#内存和存储" class="headerlink" title="内存和存储"></a>内存和存储</h4><p>100块钱的路由只2M的内存，4M的存储。真是配服这种精简的能力。</p><p>更好的处理器，内存，存储，带来的能力是能更顺畅的带动多个设备同时在线。</p><h4 id="功率和穿墙性能的关系"><a href="#功率和穿墙性能的关系" class="headerlink" title="功率和穿墙性能的关系"></a>功率和穿墙性能的关系</h4><p>关系非常大。</p><p>不过大陆的路由器基本没有能说自己穿墙好的。因为工信部把无线路由器的发射功率限制死了在100毫瓦。100毫瓦是个啥概念？手机天线的发射功率都有800毫瓦。</p><blockquote><p>所以某些品牌说自己的路由器有穿墙模式，顶多就个噱头。</p></blockquote><p>当然也有些品牌会隐藏自己更改发射功率的能力：比如磊科的某些路由器可以开到200mw，D-link的某些路由器可以开到300mw左右，Netgear的某些路由器，通过更改固件，换运行区域或者插代码，可以达到500mw的发射功率。</p><p>不过呢，发射功率越大不见得效果越好。</p><p>发射功率和接受信号优劣仅仅是部分正相关。如果发射功率太高，而本身路由器天线质量很差，这样信噪比会变得很恶劣。而如果路由器本身的承载能力处理能力不足，你会在很远的地方都收到路由器信号。而且，网络根本连接不上，俗称假信号。</p><blockquote><p>路由器的NAT能力远远比无线信号功率更重要。</p></blockquote><h4 id="天线数量与穿墙的关系"><a href="#天线数量与穿墙的关系" class="headerlink" title="天线数量与穿墙的关系"></a>天线数量与穿墙的关系</h4><blockquote><p>天线数量与穿墙能力没关系。</p></blockquote><h4 id="带宽和下载网速的关系"><a href="#带宽和下载网速的关系" class="headerlink" title="带宽和下载网速的关系"></a>带宽和下载网速的关系</h4><p>带宽和下载速度之间相差8的关系，用计算机的语言来讲就是100M的带宽是100M位，除以8等于12.5M的最高下载速度。</p><p>所以200M的最高理论下载速度：是25M。</p><blockquote><p>25M的下载速度如果没有个好的路由器绝对是整个家庭网络的瓶颈。</p></blockquote><h4 id="百兆网口和千兆网口的区别"><a href="#百兆网口和千兆网口的区别" class="headerlink" title="百兆网口和千兆网口的区别"></a>百兆网口和千兆网口的区别</h4><p>百兆的最高下载速度为：12.5M/s</p><p>千兆的最高下载速度为：125M/s</p><p>网口是用网线连接的，像我的家里，路由直接放在电视盒子的旁边。用千兆网口连接。这样用不上无线连接。看电视的速度体验就会好很多。</p><p>千兆网口是趋势，百兆网口正在被淘汰。速个网络的速度是在所有的设备在逐步的升级的过程中。光纤接入是第一步，等光纤的速度放开了，路由器和光猫就可能成为瓶颈。这时就要去升级光猫和路由器。</p><p>现在网线都要至少用到6类，或超6类的。这样网线才能支持千兆字节的稳定传输。甚至已经到了7类网线的地步。5类以下的网线不要买了，因为已经被淘汰掉了。</p><h4 id="NAT"><a href="#NAT" class="headerlink" title="NAT"></a>NAT</h4><p>决定NAT的能力的指标：</p><pre><code>内存大小CPU处理能力工作模式：半工，双工，多路多进多出。</code></pre><p>大家应该更多的关注于路由器的NAT能力，而不是单单关注于路由有几根天线，穿墙能力。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
       <categories>

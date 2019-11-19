@@ -44,11 +44,37 @@
   </entry>
   
   <entry>
+    <title>MySQL笔记</title>
+    <link href="https://uknown.me/posts/20191026001.html"/>
+    <id>https://uknown.me/posts/20191026001.html</id>
+    <published>2019-10-21T16:00:00.000Z</published>
+    <updated>2019-11-17T11:58:42.653Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）&quot;&gt;&lt;a href=&quot;#mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="SQL" scheme="https://uknown.me/categories/SQL/"/>
+    
+    
+      <category term="MySQL" scheme="https://uknown.me/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
     <title>一键脚本</title>
     <link href="https://uknown.me/posts/20191022001.html"/>
     <id>https://uknown.me/posts/20191022001.html</id>
     <published>2019-10-21T16:00:00.000Z</published>
-    <updated>2019-11-04T07:17:26.951Z</updated>
+    <updated>2019-11-12T02:17:24.383Z</updated>
     
     <summary type="html">
     
@@ -100,7 +126,7 @@
     <link href="https://uknown.me/posts/20190704001.html"/>
     <id>https://uknown.me/posts/20190704001.html</id>
     <published>2019-07-03T16:00:00.000Z</published>
-    <updated>2019-11-06T01:32:57.184Z</updated>
+    <updated>2019-11-12T02:30:34.077Z</updated>
     
     <summary type="html">
     
@@ -182,7 +208,7 @@
     <link href="https://uknown.me/posts/20190516001.html"/>
     <id>https://uknown.me/posts/20190516001.html</id>
     <published>2019-05-15T16:00:00.000Z</published>
-    <updated>2019-11-04T13:10:10.057Z</updated>
+    <updated>2019-11-07T09:20:33.467Z</updated>
     
     <summary type="html">
     
@@ -192,8 +218,7 @@
         
           &lt;p&gt;常见VPN协议根据易受干扰的程度从大到小依次为：OpenVPN &amp;gt; PPTP &amp;gt; L2TP &amp;gt; IPSec，尤其是OpenVPN，GFW已经可以实现对其定点清除&lt;/p&gt;
 &lt;p&gt;酸酸乳&lt;/p&gt;
-&lt;script&gt;
-       
+&lt;h3 id=&quot;路由器&quot;&gt;&lt;a href=&quot;#路由器&quot;
         
       
     

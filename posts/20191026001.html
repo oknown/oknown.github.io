@@ -4,8 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="前端,node,nodejs,npm,js,css">
-    <meta name="description" content="这世上，时光会改变太多事情，但总有一些人一些事，只要你相信，就永远不会改变。&lt;br&gt;&lt;br&gt;">
+    <meta name="keywords" content="MySQL,SQL,mysql">
+    <meta name="description" content="信就是所望之事的实底，是未见之事的确据。--希11:1&lt;br&gt;&lt;br&gt;">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>前端笔记 | 你懂的</title>
+    <title>MySQL笔记 | 你懂的</title>
     <link rel="icon" type="image/png" href="/medias/admin.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -253,13 +253,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        前端笔记
+                        MySQL笔记
                     </div>
                 </div>
             </div>
@@ -371,8 +371,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="../tags/前端/">
-                                <span class="chip bg-color">前端</span>
+                            <a href="../tags/MySQL/">
+                                <span class="chip bg-color">MySQL</span>
                             </a>
                         
                     </div>
@@ -383,8 +383,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="../categories/前端/" class="post-category">
-                                前端
+                            <a href="../categories/SQL/" class="post-category">
+                                SQL
                             </a>
                         
                     </div>
@@ -396,7 +396,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-11-01
+                    2019-10-22
                 </div>
                 
 
@@ -405,7 +405,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    172
+                    129
                 </div>
                 
 
@@ -428,9 +428,8 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><strong>npm中<code>~</code>和<code>^</code>的作用和区别</strong></p>
-<p><code>~</code>会匹配最近的小版本依赖包，比如<code>~</code>1.2.3会匹配所有1.2.x版本，但是不包括1.3.0<br><code>^</code>会匹配最新的大版本依赖包，比如<code>^</code>1.2.3会匹配所有1.x.x的包，包括1.3.0，但是不包括2.0.0<br><code>*</code>安装最新版本的依赖包</p>
-<p>注意<code>^</code>和<code>*</code>版本更新可能比较大，可能会造成版本不兼容，项目代码错误</p>
+                <h4 id="mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）"><a href="#mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）" class="headerlink" title="mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）"></a>mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）</h4><p>– 不是以数字开头<br>select * from mot_terms where <code>name</code> not REGEXP ‘^[0-9]’<br>– 不是以字母开头<br>select * from mot_terms where <code>name</code> not REGEXP ‘^[a-zA-Z]’</p>
+<p>– 已数字和特殊字符开头<br>select * from mot_terms where <code>name</code> REGEXP ‘^[@#$%&amp;0-9]’</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -512,8 +511,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="../tags/前端/">
-                                    <span class="chip bg-color">前端</span>
+                                <a href="../tags/MySQL/">
+                                    <span class="chip bg-color">MySQL</span>
                                 </a>
                             
                         </div>
@@ -684,7 +683,7 @@
         repo: 'oknown.github.io',
         owner: 'oknown',
         admin: ["oknown"],
-        id: '2019-11-01T00-00-00',
+        id: '2019-10-22T00-00-00',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -707,10 +706,9 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href>
+                <a href="20191101001.html">
                     <div class="card-image">
                         
                         
@@ -726,9 +724,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-01
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-11-01
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -741,7 +739,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -760,19 +757,19 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="20191026001.html">
+                <a href="20191022001.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="MySQL笔记">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="一键脚本">
                         
-                        <span class="card-title">MySQL笔记</span>
+                        <span class="card-title">一键脚本</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            信就是所望之事的实底，是未见之事的确据。--希11:1<br><br>
+                            收集&分享各类Linux上的一键脚本<br><br>
                         
                     </div>
                     <div class="publish-info">
@@ -783,8 +780,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../categories/SQL/" class="post-category">
-                                    SQL
+                            <a href="../categories/脚本/" class="post-category">
+                                    脚本
                                 </a>
                             
                             
@@ -794,8 +791,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../tags/MySQL/">
-                        <span class="chip bg-color">MySQL</span>
+                    <a href="../tags/shell/">
+                        <span class="chip bg-color">shell</span>
                     </a>
                     
                 </div>
