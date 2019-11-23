@@ -405,7 +405,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    213
+                    208
                 </div>
                 
 
@@ -436,11 +436,11 @@
 <p>firewall-cmd –permanent –zone=public –add-forward-port=port=39706:proto=tcp:toport=34555:toaddr=112.96.176.240<br>firewall-cmd –permanent –zone=public –remove-forward-port=port=39706:proto=tcp:toport=34555:toaddr=112.96.176.240</p>
 <p>firewall-cmd –list-forward-ports</p>
 <p>firewall-cmd –permanent –zone=public –add-interface=wg0<br>firewall-cmd –zone=public –add-masquerade –permanent<br>firewall-cmd –permanent –zone=public –add-rich-rule='rule family=ipv4 masquerade'</p>
-<h3 id="快速清空文件内容"><a href="#快速清空文件内容" class="headerlink" title="快速清空文件内容"></a>快速清空文件内容</h3><pre class=" language-shell"><code class="language-shell">: &gt; filename
-&gt; filename
-echo "" &gt; filename
-echo &gt; filename
-cat /dev/null &gt; filename</code></pre>
+<h3 id="快速清空文件内容"><a href="#快速清空文件内容" class="headerlink" title="快速清空文件内容"></a>快速清空文件内容</h3><pre class=" language-shell"><code class="language-shell">: > filename
+> filename
+echo "" > filename
+echo > filename
+cat /dev/null > filename</code></pre>
 <h3 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h3><p>dd if=/dev/zero of=/var/swap bs=1M count=1024</p>
 <p>mkswap /var/swap</p>
 <p>swapon /var/swap</p>
@@ -699,7 +699,7 @@ cat /dev/null &gt; filename</code></pre>
         repo: 'oknown.github.io',
         owner: 'oknown',
         admin: ["oknown"],
-        id: '2019-07-15T00-00-00',
+        id: '2019-07-15',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 

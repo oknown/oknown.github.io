@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://uknown.me/contact/index.html</loc>
+    
+    <lastmod>2019-11-23T08:01:01.560Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://uknown.me/posts/20191026001.html</loc>
     
     <lastmod>2019-11-17T11:58:42.653Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>https://uknown.me/posts/20190516001.html</loc>
     
     <lastmod>2019-11-07T09:20:33.467Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://uknown.me/contact/index.html</loc>
-    
-    <lastmod>2019-11-07T06:03:28.735Z</lastmod>
     
   </url>
   
