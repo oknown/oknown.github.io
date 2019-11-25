@@ -428,8 +428,8 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）"><a href="#mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）" class="headerlink" title="mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）"></a>mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）</h4><p>– 不是以数字开头<br>select * from mot_terms where <code>name</code> not REGEXP ‘^[0-9]’<br>– 不是以字母开头<br>select * from mot_terms where <code>name</code> not REGEXP ‘^[a-zA-Z]’</p>
-<p>– 已数字和特殊字符开头<br>select * from mot_terms where <code>name</code> REGEXP ‘^[@#$%&amp;0-9]’</p>
+                <h4 id="mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）"><a href="#mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）" class="headerlink" title="mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）"></a>mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）</h4><p>– 不是以数字开头<br><code>select * from mot_terms where name not REGEXP '^[0-9]'</code><br>– 不是以字母开头<br><code>select * from mot_terms where name not REGEXP '^[a-zA-Z]'</code></p>
+<p>– 已数字和特殊字符开头<br><code>select * from mot_terms where name REGEXP '^[@#$%&amp;0-9]'</code></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
