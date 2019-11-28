@@ -29,31 +29,6 @@
     
     
     <entry>
-      <title>MySQL笔记</title>
-      <link href="/posts/20191026001.html"/>
-      <url>/posts/20191026001.html</url>
-      
-        <content type="html"><![CDATA[<h4 id="mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）"><a href="#mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）" class="headerlink" title="mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）"></a>mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）</h4><p>– 不是以数字开头<br><code>select * from mot_terms where name not REGEXP '^[0-9]'</code><br>– 不是以字母开头<br><code>select * from mot_terms where name not REGEXP '^[a-zA-Z]'</code></p><p>– 已数字和特殊字符开头<br><code>select * from mot_terms where name REGEXP '^[@#$%&amp;0-9]'</code></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
-      <categories>
-          
-          <category> SQL </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> MySQL </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>一键脚本</title>
       <link href="/posts/20191022001.html"/>
       <url>/posts/20191022001.html</url>
@@ -71,6 +46,31 @@
         <tags>
             
             <tag> shell </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MySQL笔记</title>
+      <link href="/posts/20191026001.html"/>
+      <url>/posts/20191026001.html</url>
+      
+        <content type="html"><![CDATA[<h4 id="mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）"><a href="#mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）" class="headerlink" title="mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）"></a>mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）</h4><p>– 不是以数字开头<br><code>select * from mot_terms where name not REGEXP '^[0-9]'</code><br>– 不是以字母开头<br><code>select * from mot_terms where name not REGEXP '^[a-zA-Z]'</code></p><p>– 已数字和特殊字符开头<br><code>select * from mot_terms where name REGEXP '^[@#$%&amp;0-9]'</code></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> SQL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MySQL </tag>
             
         </tags>
       
