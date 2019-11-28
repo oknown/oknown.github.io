@@ -29,31 +29,6 @@
     
     
     <entry>
-      <title>一键脚本</title>
-      <link href="/posts/20191022001.html"/>
-      <url>/posts/20191022001.html</url>
-      
-        <content type="html"><![CDATA[<h3 id="v2ray一键部署管理脚本"><a href="#v2ray一键部署管理脚本" class="headerlink" title="v2ray一键部署管理脚本"></a>v2ray一键部署管理脚本</h3><p>Debian8/Debian7/Ubuntu16/Ubuntu14/Centos7</p><pre class=" language-shell"><code class="language-shell">bash <(curl -s -L https://git.io/v2ray.sh)</code></pre><h3 id="Kcptun-一键安装脚本"><a href="#Kcptun-一键安装脚本" class="headerlink" title="Kcptun 一键安装脚本"></a>Kcptun 一键安装脚本</h3><pre class=" language-shell"><code class="language-shell">wget --no-check-certificate -O kcptun.sh https://github.com/kuoruan/shell-scripts/raw/master/kcptun/kcptun.shsh kcptun.sh</code></pre><h3 id="OpenVZ-BBR-一键安装脚本"><a href="#OpenVZ-BBR-一键安装脚本" class="headerlink" title="OpenVZ BBR 一键安装脚本"></a>OpenVZ BBR 一键安装脚本</h3><p>安装命令：</p><pre><code>wget --no-check-certificate -O ovz-bbr-installer.sh https://github.com/kuoruan/shell-scripts/raw/master/ovz-bbr/ovz-bbr-installer.shsh ovz-bbr-installer.sh</code></pre><p>卸载命令</p><pre><code>sh ovz-bbr-installer.sh uninstall</code></pre><h3 id="BBR-BBR魔改-锐速一键脚本"><a href="#BBR-BBR魔改-锐速一键脚本" class="headerlink" title="BBR+BBR魔改+锐速一键脚本"></a>BBR+BBR魔改+锐速一键脚本</h3><p>Centos 6+/Debian 8+/Ubuntu 14+</p><pre><code>wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" &amp;&amp; chmod +x tcp.sh &amp;&amp; ./tcp.sh</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
-      <categories>
-          
-          <category> 脚本 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> shell </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>MySQL笔记</title>
       <link href="/posts/20191026001.html"/>
       <url>/posts/20191026001.html</url>
@@ -71,6 +46,31 @@
         <tags>
             
             <tag> MySQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>一键脚本</title>
+      <link href="/posts/20191022001.html"/>
+      <url>/posts/20191022001.html</url>
+      
+        <content type="html"><![CDATA[<h3 id="v2ray一键部署管理脚本"><a href="#v2ray一键部署管理脚本" class="headerlink" title="v2ray一键部署管理脚本"></a>v2ray一键部署管理脚本</h3><p>Debian8/Debian7/Ubuntu16/Ubuntu14/Centos7</p><pre class=" language-shell"><code class="language-shell">bash <(curl -s -L https://git.io/v2ray.sh)</code></pre><h3 id="Kcptun-一键安装脚本"><a href="#Kcptun-一键安装脚本" class="headerlink" title="Kcptun 一键安装脚本"></a>Kcptun 一键安装脚本</h3><pre class=" language-shell"><code class="language-shell">wget --no-check-certificate -O kcptun.sh https://github.com/kuoruan/shell-scripts/raw/master/kcptun/kcptun.shsh kcptun.sh</code></pre><h3 id="OpenVZ-BBR-一键安装脚本"><a href="#OpenVZ-BBR-一键安装脚本" class="headerlink" title="OpenVZ BBR 一键安装脚本"></a>OpenVZ BBR 一键安装脚本</h3><p>安装命令：</p><pre><code>wget --no-check-certificate -O ovz-bbr-installer.sh https://github.com/kuoruan/shell-scripts/raw/master/ovz-bbr/ovz-bbr-installer.shsh ovz-bbr-installer.sh</code></pre><p>卸载命令</p><pre><code>sh ovz-bbr-installer.sh uninstall</code></pre><h3 id="BBR-BBR魔改-锐速一键脚本"><a href="#BBR-BBR魔改-锐速一键脚本" class="headerlink" title="BBR+BBR魔改+锐速一键脚本"></a>BBR+BBR魔改+锐速一键脚本</h3><p>Centos 6+/Debian 8+/Ubuntu 14+</p><pre><code>wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" &amp;&amp; chmod +x tcp.sh &amp;&amp; ./tcp.sh</code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 脚本 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> shell </tag>
             
         </tags>
       
