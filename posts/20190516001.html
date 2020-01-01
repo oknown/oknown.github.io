@@ -23,9 +23,9 @@
     <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
-    
+
     <script src="/libs/jquery/jquery.min.js"></script>
-    
+
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -209,7 +209,7 @@
 			
 			    <i class="fa-fw fas fa-1x fa-comments"></i>
 			
-			Contact
+			留言板
 		</a>
           
         </li>
@@ -258,9 +258,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <div class="description center-align post-title">
-                        杂记
-                    </div>
+                    <h1 class="description center-align post-title">杂记</h1>
                 </div>
             </div>
         </div>
@@ -298,6 +296,7 @@
     }
 
     .toc-widget {
+        width: 345px;
         padding-left: 20px;
     }
 
@@ -312,6 +311,11 @@
     .toc-widget ol {
         padding: 0;
         list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
     }
 
     #toc-content ol {
@@ -415,7 +419,7 @@
                     3 分
                 </div>
                 
-				
+
                 
                     <div id="busuanzi_container_page_pv" class="info-break-policy">
                         <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
@@ -423,7 +427,7 @@
                     </div>
 				
             </div>
-            
+
         </div>
         <hr class="clearfix">
         <div class="card-content article-card-content">
@@ -728,7 +732,7 @@ CPU处理能力
 
 <script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
 
-    
+
 <!-- 代码块复制 -->
 
 <script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
@@ -744,6 +748,7 @@ CPU处理能力
 <style type="text/css">
 code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
 </style>
+
 
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
@@ -770,7 +775,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             tocSelector: '#toc-content',
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
-            // headingsOffset: -205,
+            collapseDepth: Number('0'),
             headingSelector: 'h2, h3, h4'
         });
 
@@ -846,14 +851,16 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 
     <footer class="page-footer bg-color">
-    <div class="container row center-align">
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
-            <span id="year">年份</span>
+            <span id="year">2019</span>
             <a href="https://uknown.me" target="_blank">admin</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="external nofollow noopener noreferrer">Matery</a>
             <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">4.7k</span>&nbsp;字
             
             
             
@@ -870,51 +877,6 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             </span>
             
             <br>
-            
-            <span id="sitetime">载入运行时间...</span>
-            <script>
-                function siteTime() {
-                    window.setTimeout("siteTime()", 1000);
-                    var seconds = 1000;
-                    var minutes = seconds * 60;
-                    var hours = minutes * 60;
-                    var days = hours * 24;
-                    var years = days * 365;
-                    var today = new Date();
-                    var startYear = "2019";
-                    var startMonth = "6";
-                    var startDate = "28";
-                    var startHour = "0";
-                    var startMinute = "0";
-                    var startSecond = "0";
-                    var todayYear = today.getFullYear();
-                    var todayMonth = today.getMonth() + 1;
-                    var todayDate = today.getDate();
-                    var todayHour = today.getHours();
-                    var todayMinute = today.getMinutes();
-                    var todaySecond = today.getSeconds();
-                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
-                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-                    var diff = t2 - t1;
-                    var diffYears = Math.floor(diff / years);
-                    var diffDays = Math.floor((diff / days) - diffYears * 365);
-                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
-                        minutes);
-                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
-                        diffMinutes * minutes) / seconds);
-                    if (startYear == todayYear) {
-                        document.getElementById("year").innerHTML = todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
-                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-                    } else {
-                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
-                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-                    }
-                }
-                setInterval(siteTime, 1000);
-            </script>
             
             <br>
             
@@ -1017,8 +979,6 @@ $(function () {
 
     
 
-    
-    <script type="text/javascript" color="0,0,255" pointcolor="0,0,255" opacity="0.7" zindex="-1" count="99" src="/libs/background/canvas-nest.js"></script>
     
 
     
