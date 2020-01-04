@@ -5,7 +5,7 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="keywords" content="Linux常用命令, 你懂的,资源,uknown">
-    <meta name="description" content="记录并总结Linux上的一些基本操作、常识及常用命令和注意事项">
+    <meta name="description" content="但那些想要发财的人，就陷在迷惑、落在网罗和许多无知有害的私欲里，叫人沉在败坏和灭亡中。贪财是万恶之根。有人贪恋钱财，就被诱离了真道，用许多愁苦把自己刺透了。--提前:6:9-10">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -439,32 +439,33 @@
 <p>drop: 丢弃所有进入的包，而不给出任何响应<br>block: 拒绝所有外部发起的连接，允许内部发起的连接<br>public: 允许指定的进入连接<br>external: 同上，对伪装的进入连接，一般用于路由转发<br>dmz: 允许受限制的进入连接<br>work: 允许受信任的计算机被限制的进入连接，类似 workgroup<br>home: 同上，类似 homegroup<br>internal: 同上，范围针对所有互联网用户<br>trusted: 信任所有连接</p>
 <p>更新防火墙规则：<code>firewall-cmd --reload</code><br>更新防火墙规则，重启服务：<code>firewall-cmd --completely-reload</code><br>查看已激活的Zone信息: <code>firewall-cmd --get-active-zones</code><br>查看指定接口所属区域：<code>firewall-cmd --get-zone-of-interface=eth0</code><br>拒绝所有包：<code>firewall-cmd --panic-on</code><br>取消拒绝状态：<code>firewall-cmd --panic-off</code><br>查看是否拒绝：<code>firewall-cmd --query-panic</code></p>
 <p><em>开启和关闭端口</em></p>
-<p>查看所有打开的端口：<br>firewall-cmd –zone=public –list-ports</p>
-<p>添加<br>firewall-cmd –zone=public –add-port=80/tcp –permanent</p>
-<p>查看：<br>firewall-cmd –zone=public –query-port=80/tcp</p>
-<p>删除：<br>firewall-cmd –zone=public –remove-port=80/tcp –permanent</p>
+<p>查看所有打开的端口：<br><code>firewall-cmd --zone=public --list-ports</code></p>
+<p>添加<br><code>firewall-cmd --zone=public --add-port=80/tcp --permanent</code></p>
+<p>查看：<br><code>firewall-cmd --zone=public --query-port=80/tcp</code></p>
+<p>删除：<br><code>firewall-cmd --zone=public --remove-port=80/tcp --permanent</code></p>
 <p><code>--permanent</code>永久生效，没有此参数重启后失效</p>
-<p>firewall-cmd –get-zones<br>firewall-cmd –get-default-zones</p>
-<p>firewall-cmd –permanent –zone=public –list-ports</p>
-<p>firewall-cmd –permanent –zone=public –list-interfaces</p>
-<p>firewall-cmd –permanent –zone=public –add-interface=wg0</p>
+<p><code>firewall-cmd --get-zones</code></p>
+<p><code>firewall-cmd --get-default-zones</code></p>
+<p><code>firewall-cmd --permanent --zone=public --list-ports</code></p>
+<p><code>firewall-cmd --permanent --zone=public --list-interfaces</code></p>
+<p><code>firewall-cmd --permanent --zone=public --add-interface=wg0</code></p>
 <p><em>管理服务</em></p>
 <p>以smtp服务为例， 添加到work zone</p>
 <p>添加：<br><code>firewall-cmd --zone=work --add-service=smtp</code><br>查看：<br><code>firewall-cmd --zone=work --query-service=smtp</code><br>删除：<br><code>firewall-cmd --zone=work --remove-service=smtp</code></p>
 <p><em>端口转发</em></p>
 <p>打开端口转发，首先需要打开IP地址伪装</p>
 <p>查看：<br><code>firewall-cmd --zone=external --query-masquerade</code><br>打开：<br><code>firewall-cmd --zone=external --add-masquerade</code><br>关闭：<br><code>firewall-cmd --zone=external --remove-masquerade</code><br>转发 tcp 22 端口至 3753：</p>
-<p>firewall-cmd –zone=external –add-forward-port=22:porto=tcp:toport=3753</p>
-<p>firewall-cmd –zone=external –remove-forward-port=22:porto=tcp:toport=3753</p>
+<p><code>firewall-cmd --zone=external --add-forward-port=22:porto=tcp:toport=3753</code></p>
+<p><code>firewall-cmd --zone=external --remove-forward-port=22:porto=tcp:toport=3753</code></p>
 <p>转发端口数据至另一个IP的相同端口：</p>
-<p>firewall-cmd –zone=external –add-forward-port=22:porto=tcp:toaddr=192.168.1.112</p>
-<p>firewall-cmd –zone=external –remove-forward-port=22:porto=tcp:toaddr=192.168.1.112</p>
+<p><code>firewall-cmd --zone=external --add-forward-port=22:porto=tcp:toaddr=192.168.1.112</code></p>
+<p><code>firewall-cmd --zone=external --remove-forward-port=22:porto=tcp:toaddr=192.168.1.112</code></p>
 <p>转发端口数据至另一个IP的 3753 端口：</p>
-<p>firewall-cmd –zone=external –add-forward-port=22:porto=tcp:：toport=3753:toaddr=192.168.1.112</p>
-<p>firewall-cmd –permanent –zone=public –remove-forward-port=port=39706:proto=tcp:toport=34555:toaddr=112.96.176.240</p>
+<p><code>firewall-cmd --zone=external --add-forward-port=22:porto=tcp:：toport=3753:toaddr=192.168.1.112</code></p>
+<p><code>firewall-cmd --permanent --zone=public --remove-forward-port=port=39706:proto=tcp:toport=34555:toaddr=112.96.176.240</code></p>
 <p>查看转发端口</p>
-<p>firewall-cmd –list-forward-ports</p>
-<p>firewall-cmd –permanent –zone=public –add-interface=wg0<br>firewall-cmd –zone=public –add-masquerade –permanent<br>firewall-cmd –permanent –zone=public –add-rich-rule='rule family=ipv4 masquerade'</p>
+<p><code>firewall-cmd --list-forward-ports</code></p>
+<p><code>firewall-cmd --permanent --zone=public --add-interface=wg0</code><br><code>firewall-cmd --zone=public --add-masquerade --permanent</code><br><code>firewall-cmd --permanent --zone=public --add-rich-rule='rule family=ipv4 masquerade'</code></p>
 <h3 id="systemctl"><a href="#systemctl" class="headerlink" title="systemctl"></a>systemctl</h3><p>systemctl是CentOS7的服务管理工具中主要的工具，它融合之前service和chkconfig的功能于一体。</p>
 <p>启动一个服务：<code>systemctl start firewalld.service</code><br>关闭一个服务：<code>systemctl stop firewalld.service</code><br>重启一个服务：<code>systemctl restart firewalld.service</code><br>显示一个服务的状态：<code>systemctl status firewalld.service</code><br>在开机时启用一个服务：<code>systemctl enable firewalld.service</code><br>在开机时禁用一个服务：<code>systemctl disable firewalld.service</code><br>查看服务是否开机启动：<code>systemctl is-enabled firewalld.service</code><br>查看已启动的服务列表：<code>systemctl list-unit-files|grep enabled</code><br>查看启动失败的服务列表：<code>systemctl --failed</code></p>
 <h3 id="快速清空文件内容"><a href="#快速清空文件内容" class="headerlink" title="快速清空文件内容"></a>快速清空文件内容</h3><pre class=" language-shell"><code class="language-shell">: > filename
@@ -646,31 +647,31 @@ cat /dev/null > filename</code></pre>
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="20191022001.html">
+                <a href="20190724001.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="一键脚本">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="SpringBoot笔记">
                         
-                        <span class="card-title">一键脚本</span>
+                        <span class="card-title">SpringBoot笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            你们常存忍耐，就必保全灵魂。--路:21:19<br><br>
+                            你们务要常存弟兄相爱的心。不可忘记用爱心接待客旅；因为曾有接待客旅的，不知不觉就接待了天使。--希:13:1-2
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-10-22
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-07-24
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../categories/脚本/" class="post-category">
-                                    脚本
+                            <a href="../categories/SpringBoot/" class="post-category">
+                                    SpringBoot
                                 </a>
                             
                             
@@ -680,8 +681,8 @@ cat /dev/null > filename</code></pre>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../tags/shell/">
-                        <span class="chip bg-color">shell</span>
+                    <a href="../tags/SpringBoot/">
+                        <span class="chip bg-color">SpringBoot</span>
                     </a>
                     
                 </div>
@@ -880,7 +881,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="external nofollow noopener noreferrer">Matery</a>
             <br>
             
-            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">4.7k</span>&nbsp;字
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">6.6k</span>&nbsp;字
             
             
             

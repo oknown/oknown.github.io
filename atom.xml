@@ -97,11 +97,91 @@
   </entry>
   
   <entry>
+    <title>SpringCloud笔记</title>
+    <link href="https://uknown.me/posts/20190911001.html"/>
+    <id>https://uknown.me/posts/20190911001.html</id>
+    <published>2019-09-11T04:00:00.000Z</published>
+    <updated>2020-01-04T04:50:53.432Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Eureka没有闭源，是Eurkea 2.x分支不再维护！Spring Cloud并不强依赖Eureka&lt;/p&gt;
+&lt;p&gt;springcloud Eureka是基于Netflix
+        
+      
+    
+    </summary>
+    
+      <category term="SpringCloud" scheme="https://uknown.me/categories/SpringCloud/"/>
+    
+    
+      <category term="SpringCloud" scheme="https://uknown.me/tags/SpringCloud/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker笔记</title>
+    <link href="https://uknown.me/posts/20190819001.html"/>
+    <id>https://uknown.me/posts/20190819001.html</id>
+    <published>2019-08-19T04:00:00.000Z</published>
+    <updated>2020-01-04T04:41:51.720Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Dockerfile&quot;&gt;&lt;a href=&quot;#Dockerfile&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Docker" scheme="https://uknown.me/categories/Docker/"/>
+    
+    
+      <category term="Docker" scheme="https://uknown.me/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot笔记</title>
+    <link href="https://uknown.me/posts/20190724001.html"/>
+    <id>https://uknown.me/posts/20190724001.html</id>
+    <published>2019-07-24T04:00:00.000Z</published>
+    <updated>2020-01-04T04:48:55.455Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;springboot打包忽略Test单元测试&lt;/p&gt;
+&lt;pre class=&quot; language-xml&quot;&gt;&lt;code class=&quot;language-xml&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+      <category term="SpringBoot" scheme="https://uknown.me/categories/SpringBoot/"/>
+    
+    
+      <category term="SpringBoot" scheme="https://uknown.me/tags/SpringBoot/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux常用命令</title>
     <link href="https://uknown.me/posts/20190715002.html"/>
     <id>https://uknown.me/posts/20190715002.html</id>
     <published>2019-07-15T04:00:00.000Z</published>
-    <updated>2019-11-25T01:11:45.071Z</updated>
+    <updated>2020-01-04T04:44:10.155Z</updated>
     
     <summary type="html">
     
@@ -181,7 +261,7 @@
     <link href="https://uknown.me/posts/20190620001.html"/>
     <id>https://uknown.me/posts/20190620001.html</id>
     <published>2019-06-20T04:00:00.000Z</published>
-    <updated>2019-11-04T07:22:40.353Z</updated>
+    <updated>2020-01-04T04:56:22.888Z</updated>
     
     <summary type="html">
     
@@ -209,7 +289,7 @@
     <link href="https://uknown.me/posts/20190516001.html"/>
     <id>https://uknown.me/posts/20190516001.html</id>
     <published>2019-05-16T04:00:00.000Z</published>
-    <updated>2019-11-07T09:20:33.467Z</updated>
+    <updated>2020-01-04T05:03:55.344Z</updated>
     
     <summary type="html">
     
@@ -237,7 +317,7 @@
     <link href="https://uknown.me/posts/20190515001.html"/>
     <id>https://uknown.me/posts/20190515001.html</id>
     <published>2019-05-15T04:00:00.000Z</published>
-    <updated>2019-11-06T01:31:44.470Z</updated>
+    <updated>2020-01-04T05:06:31.622Z</updated>
     
     <summary type="html">
     
