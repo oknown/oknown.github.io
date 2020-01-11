@@ -4,7 +4,7 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Linux常用命令, 你懂的,资源,uknown">
+    <meta name="keywords" content="Linux,shell,脚本,一键脚本">
     <meta name="description" content="但那些想要发财的人，就陷在迷惑、落在网罗和许多无知有害的私欲里，叫人沉在败坏和灭亡中。贪财是万恶之根。有人贪恋钱财，就被诱离了真道，用许多愁苦把自己刺透了。--提前:6:9-10">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Linux常用命令 | 你懂的</title>
+    <title>Linux笔记 | 你懂的</title>
     <link rel="icon" type="image/png" href="/medias/admin.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -253,12 +253,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Linux常用命令</h1>
+                    <h1 class="description center-align post-title">Linux笔记</h1>
                 </div>
             </div>
         </div>
@@ -432,7 +432,8 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="firewall防火墙"><a href="#firewall防火墙" class="headerlink" title="firewall防火墙"></a>firewall防火墙</h3><p>安装：yum install firewalld</p>
+                <p>Linux默认不允许非root用户启动的进程监听1024以下的端口，除非为每一个二进制文件显式声明。</p>
+<h3 id="firewall防火墙"><a href="#firewall防火墙" class="headerlink" title="firewall防火墙"></a>firewall防火墙</h3><p>安装：yum install firewalld</p>
 <p><em>firewalld的基本使用</em><br>启动：<code>systemctl start firewalld</code><br>停止运行：<code>systemctl stop firewalld</code><br>查看状态：<code>systemctl status firewalld</code><br>开机启动：<code>systemctl enable firewalld</code><br>禁止开机启动：<code>systemctl disable firewalld</code></p>
 <p>查看版本：<code>firewall-cmd --version</code><br>查看帮助：<code>firewall-cmd --help</code><br>显示状态：<code>firewall-cmd --state</code></p>
 <p>信任级别，通过Zone的值指定</p>
@@ -440,9 +441,9 @@
 <p>更新防火墙规则：<code>firewall-cmd --reload</code><br>更新防火墙规则，重启服务：<code>firewall-cmd --completely-reload</code><br>查看已激活的Zone信息: <code>firewall-cmd --get-active-zones</code><br>查看指定接口所属区域：<code>firewall-cmd --get-zone-of-interface=eth0</code><br>拒绝所有包：<code>firewall-cmd --panic-on</code><br>取消拒绝状态：<code>firewall-cmd --panic-off</code><br>查看是否拒绝：<code>firewall-cmd --query-panic</code></p>
 <p><em>开启和关闭端口</em></p>
 <p>查看所有打开的端口：<br><code>firewall-cmd --zone=public --list-ports</code></p>
-<p>添加<br><code>firewall-cmd --zone=public --add-port=80/tcp --permanent</code></p>
+<p>添加<br><code>firewall-cmd --zone=public --add-port=80/tcp --permanent</code><br><code>firewall-cmd --zone=public --add-port=8080-9090/tcp --permanent</code></p>
 <p>查看：<br><code>firewall-cmd --zone=public --query-port=80/tcp</code></p>
-<p>删除：<br><code>firewall-cmd --zone=public --remove-port=80/tcp --permanent</code></p>
+<p>删除：<br><code>firewall-cmd --zone=public --remove-port=80/tcp --permanent</code><br><code>firewall-cmd --zone=public --remove-port=8080-9090/tcp --permanent</code></p>
 <p><code>--permanent</code>永久生效，没有此参数重启后失效</p>
 <p><code>firewall-cmd --get-zones</code></p>
 <p><code>firewall-cmd --get-default-zones</code></p>
@@ -493,7 +494,15 @@ cat /dev/null > filename</code></pre>
 <p>注意上面  kernel后面有*号，表示所有 kernel开头的…..</p>
 <p><em>方法二：</em><br>直接在yum的命令后面加上  –exclude=kernel*  参数，如下：</p>
 <p>yum –exclude=kernel* update</p>
-<script>
+<h3 id="一键脚本"><a href="#一键脚本" class="headerlink" title="一键脚本"></a>一键脚本</h3><h4 id="v2ray一键部署管理脚本"><a href="#v2ray一键部署管理脚本" class="headerlink" title="v2ray一键部署管理脚本"></a>v2ray一键部署管理脚本</h4><p>Debian8/Debian7/Ubuntu16/Ubuntu14/Centos7</p>
+<pre class=" language-shell"><code class="language-shell">bash <(curl -s -l https: git.io v2ray.sh)< code></(curl></code></pre>
+<h4 id="Kcptun-一键安装脚本"><a href="#Kcptun-一键安装脚本" class="headerlink" title="Kcptun 一键安装脚本"></a>Kcptun 一键安装脚本</h4><pre class=" language-shell"><code class="language-shell">wget --no-check-certificate -O kcptun.sh https://github.com/kuoruan/shell-scripts/raw/master/kcptun/kcptun.sh
+sh kcptun.sh</code></pre>
+<h4 id="OpenVZ-BBR-一键安装脚本"><a href="#OpenVZ-BBR-一键安装脚本" class="headerlink" title="OpenVZ BBR 一键安装脚本"></a>OpenVZ BBR 一键安装脚本</h4><p>安装命令：</p>
+<pre><code>wget --no-check-certificate -O ovz-bbr-installer.sh https://github.com/kuoruan/shell-scripts/raw/master/ovz-bbr/ovz-bbr-installer.sh
+sh ovz-bbr-installer.sh</code></pre><p>卸载命令</p>
+<pre><code>sh ovz-bbr-installer.sh uninstall</code></pre><h4 id="BBR-BBR魔改-锐速一键脚本"><a href="#BBR-BBR魔改-锐速一键脚本" class="headerlink" title="BBR+BBR魔改+锐速一键脚本"></a>BBR+BBR魔改+锐速一键脚本</h4><p>Centos 6+/Debian 8+/Ubuntu 14+</p>
+<pre><code>wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" &amp;&amp; chmod +x tcp.sh &amp;&amp; ./tcp.sh</code></pre><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -881,7 +890,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="external nofollow noopener noreferrer">Matery</a>
             <br>
             
-            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">6.6k</span>&nbsp;字
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">8.1k</span>&nbsp;字
             
             
             

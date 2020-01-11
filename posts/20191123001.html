@@ -4,8 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Linux,脚本,一键脚本">
-    <meta name="description" content="你们常存忍耐，就必保全灵魂。--路:21:19&lt;br&gt;&lt;br&gt;">
+    <meta name="keywords" content="Linux,shell,centos,vsftp,ftp">
+    <meta name="description" content="我劝你，第一要为万人恳求、祷告、代求、祝谢；为君王和一切在位的，也该如此，使我们可以敬虔、端正、平安无事地度日。--提前:2:1-2">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>一键脚本 | 你懂的</title>
+    <title>Centos7安装vsftpd | 你懂的</title>
     <link rel="icon" type="image/png" href="/medias/admin.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -253,12 +253,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">一键脚本</h1>
+                    <h1 class="description center-align post-title">Centos7安装vsftpd</h1>
                 </div>
             </div>
         </div>
@@ -375,8 +375,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="../tags/shell/">
-                                <span class="chip bg-color">shell</span>
+                            <a href="../tags/Linux/">
+                                <span class="chip bg-color">Linux</span>
+                            </a>
+                        
+                            <a href="../tags/FTP/">
+                                <span class="chip bg-color">FTP</span>
                             </a>
                         
                     </div>
@@ -387,8 +391,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="../categories/脚本/" class="post-category">
-                                脚本
+                            <a href="../categories/Linux/" class="post-category">
+                                Linux
                             </a>
                         
                     </div>
@@ -400,7 +404,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-10-22
+                    2019-11-23
                 </div>
                 
 
@@ -409,14 +413,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    60
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    6 分
                 </div>
                 
 
@@ -432,15 +436,151 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="v2ray一键部署管理脚本"><a href="#v2ray一键部署管理脚本" class="headerlink" title="v2ray一键部署管理脚本"></a>v2ray一键部署管理脚本</h3><p>Debian8/Debian7/Ubuntu16/Ubuntu14/Centos7</p>
-<pre class=" language-shell"><code class="language-shell">bash <(curl -s -l https: git.io v2ray.sh)< code></(curl></code></pre>
-<h3 id="Kcptun-一键安装脚本"><a href="#Kcptun-一键安装脚本" class="headerlink" title="Kcptun 一键安装脚本"></a>Kcptun 一键安装脚本</h3><pre class=" language-shell"><code class="language-shell">wget --no-check-certificate -O kcptun.sh https://github.com/kuoruan/shell-scripts/raw/master/kcptun/kcptun.sh
-sh kcptun.sh</code></pre>
-<h3 id="OpenVZ-BBR-一键安装脚本"><a href="#OpenVZ-BBR-一键安装脚本" class="headerlink" title="OpenVZ BBR 一键安装脚本"></a>OpenVZ BBR 一键安装脚本</h3><p>安装命令：</p>
-<pre><code>wget --no-check-certificate -O ovz-bbr-installer.sh https://github.com/kuoruan/shell-scripts/raw/master/ovz-bbr/ovz-bbr-installer.sh
-sh ovz-bbr-installer.sh</code></pre><p>卸载命令</p>
-<pre><code>sh ovz-bbr-installer.sh uninstall</code></pre><h3 id="BBR-BBR魔改-锐速一键脚本"><a href="#BBR-BBR魔改-锐速一键脚本" class="headerlink" title="BBR+BBR魔改+锐速一键脚本"></a>BBR+BBR魔改+锐速一键脚本</h3><p>Centos 6+/Debian 8+/Ubuntu 14+</p>
-<pre><code>wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" &amp;&amp; chmod +x tcp.sh &amp;&amp; ./tcp.sh</code></pre><script>
+                <blockquote>
+<p>FTP，即：文件传输协议（File Transfer Protocol）是用于在网络上进行文件传输的一套标准协议，属于网络传输协议的应用层。注意，它是协议，不是软件，基于客户端/服务器模式，默认使用20、21端口号，其中端口20（数据端口）用于进行数据传输，端口21（命令端口）用于接受客户端发出的相关FTP命令与参数。FTP服务器普遍部署于局域网中，具有容易搭建、方便管理的特点。而且有些FTP客户端工具还可以支持文件的多点下载以及断点续传技术，因此FTP服务得到了广大用户的青睐。</p>
+</blockquote>
+<p>FTP协议有以下两种工作模式：</p>
+<ul>
+<li><p>主动模式（PORT）：FTP服务器主动向客户端发起连接请求。</p>
+</li>
+<li><p>被动模式（PASV）：FTP服务器等待客户端发起连接请求（FTP的默认工作模式）。</p>
+</li>
+</ul>
+<p>vsftpd是基于FTP开发的一套程序，也是一款在Linux发行版中最受推崇的FTP服务器程序，特点是小巧轻快，安全易用。</p>
+<p>vsftpd有以下三种认证模式：</p>
+<ul>
+<li><p>匿名开放模式：是一种最不安全的认证模式，任何人都可以无需密码验证而直接登陆。</p>
+</li>
+<li><p>本地用户模式：是通过Linux系统本地的账户密码信息进行认证的模式，相较于匿名开放模式更安全，而且配置起来简单。</p>
+</li>
+<li><p>虚拟用户模式：是这三种模式中最安全的一种认证模式，它需要为FTP服务单独建立用户数据库文件，虚拟出用来进行口令验证的账户信息，而这些账户信息在服务器系统中实际上是不存在的，仅供FTP服务程序进行认证使用。</p>
+</li>
+</ul>
+<h3 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h3><pre><code>yum -y install vsftpd</code></pre><h3 id="软件配置"><a href="#软件配置" class="headerlink" title="软件配置"></a>软件配置</h3><h4 id="匿名开放模式"><a href="#匿名开放模式" class="headerlink" title="匿名开放模式"></a>匿名开放模式</h4><p>1、修改配置文件，带注释的是需要修改和新增的配置</p>
+<p><code>vim /etc/vsftpd/vsftpd.conf</code></p>
+<pre class=" language-shell"><code class="language-shell">#启用匿名访问模式
+anonymous_enable=YES
+#匿名用户上传文件的umask值
+anon_umask=022
+#允许匿名用户上传文件
+anon_upload_enable=YES
+#允许匿名用户创建目录
+anon_mkdir_write_enable=YES
+#允许匿名用户重命名、删除等操作
+anon_other_write_enable=YES
+#匿名用户的FTP根目录
+anon_root=/data/anon
+local_enable=YES
+write_enable=YES
+local_umask=022
+dirmessage_enable=YES
+xferlog_enable=YES
+connect_from_port_20=YES
+xferlog_std_format=YES
+#vsftpd服务监听的端口号
+listen_port=2231
+listen=NO
+listen_ipv6=YES
+pam_service_name=vsftpd
+userlist_enable=YES
+tcp_wrappers=YES
+#PASV模式最小端口号
+pasv_min_port=45000
+#PASV模式最大端口号
+pasv_max_port=49000</code></pre>
+<p>2、创建并授权匿名用户FTP根目录</p>
+<pre><code>mkdir -p /data/anon/pub
+chown -R ftp /data/anon/pub/</code></pre><p>3、启动vsftpd服务，并加入开机启动</p>
+<pre><code>systemctl start vsftpd
+systemctl enable vsftpd</code></pre><h4 id="本地用户模式"><a href="#本地用户模式" class="headerlink" title="本地用户模式"></a>本地用户模式</h4><p>1、修改配置文件，删除之前的匿名模式配置内容</p>
+<p><code>vim /etc/vsftpd/vsftpd.conf</code></p>
+<pre class=" language-shell"><code class="language-shell">#关闭匿名访问模式
+anonymous_enable=NO
+local_enable=YES
+write_enable=YES
+local_umask=022
+#指定本地用户的FTP根目录
+local_root=/data/user
+#将用户权限禁锢在FTP目录
+chroot_local_user=YES
+#允许对FTP根目录执行写入操作
+allow_writeable_chroot=YES
+dirmessage_enable=YES
+xferlog_enable=YES
+connect_from_port_20=YES
+xferlog_std_format=YES
+listen_port=2231
+listen=NO
+listen_ipv6=YES
+pam_service_name=vsftpd
+userlist_enable=YES
+tcp_wrappers=YES
+pasv_min_port=45000
+pasv_max_port=49000</code></pre>
+<p>2、创建本地用户，并指定家目录</p>
+<pre><code>useradd -d /data/user -s /sbin/nologin user
+echo "123456" | passwd --stdin user</code></pre><p>3、重启vsftpd服务</p>
+<p><code>systemctl restart vsftpd</code></p>
+<h4 id="虚拟用户模式"><a href="#虚拟用户模式" class="headerlink" title="虚拟用户模式"></a>虚拟用户模式</h4><p>1、创建用于FTP认证的用户数据库文件</p>
+<p><code>vim /etc/vsftpd/vuser.txt</code></p>
+<pre><code>test
+123456
+test1
+123456</code></pre><p>注：第一行用户名，第二行密码，依此类推</p>
+<p>明文信息不安全，需要使用db_load命令用哈希（hash）算法将明文信息转换成数据文件，然后将明文信息文件删除。</p>
+<p><code>yum install db4*</code></p>
+<pre class=" language-shell"><code class="language-shell">db_load -T -t hash -f /etc/vsftpd/vuser.txt /etc/vsftpd/vuser.db
+chmod 600 /etc/vsftpd/vuser.db
+rm -f /etc/vsftpd/vuser.txt</code></pre>
+<p>2、创建虚拟用户映射的系统本地用户和FTP根目录</p>
+<pre><code>useradd -d /data/ftproot -s /sbin/nologin ftp
+chmod -Rf 755 /data/ftproot/</code></pre><p>3、建立用于支持虚拟用户的PAM文件</p>
+<blockquote>
+<p>PAM（可插拔认证模块）是一种认证机制，通过一些动态链接库和统一的API把系统提供的服务与认证方式分开，使得系统管理员可以根据需求灵活调整服务程序的不同认证方式。PAM采用了分层设计（应用程序层、应用接口层、鉴别模块层）的思想</p>
+</blockquote>
+<p>新建一个用于虚拟用户认证的PAM文件vsftpd.pam，其中PAM文件内的“db=”参数为使用db_load命令生成的账户密码数据文件的路径，但不用写数据文件的后缀。</p>
+<p><code>vim /etc/pam.d/vsftpd.pam</code></p>
+<pre><code>auth     required     /lib64/security/pam_userdb.so  db=/etc/vsftpd/vuser
+account  required     /lib64/security/pam_userdb.so  db=/etc/vsftpd/vuser</code></pre><p>4、为两个虚拟用户设置不同的权限，test只有读取权限，而test1拥有所有权限。</p>
+<pre><code>mkdir /etc/vsftpd/vusers_dir
+touch /etc/vsftpd/vusers_dir/test
+vim /etc/vsftpd/vusers_dir/test1</code></pre><p>将如下内容写入到<code>/etc/vsftpd/vusers_dir/test1</code>文件中</p>
+<pre><code>anon_upload_enable=YES
+anon_mkdir_write_enable=YES
+anon_other_write_enable=YES</code></pre><p>注意：新建虚拟用户配置文件，文件名要和上面的虚拟用户名单里的账号名字相同。</p>
+<p>5、修改配置文件，删除之前的配置内容</p>
+<p><code>vim /etc/vsftpd/vsftpd.conf</code></p>
+<pre><code>anonymous_enable=NO
+anon_umask=022
+local_enable=YES
+#开启虚拟用户模式
+guest_enable=YES
+#指定虚拟用户对应的系统用户
+guest_username=ftp
+#允许对FTP根目录执行写入操作
+allow_writeable_chroot=YES
+write_enable=YES
+local_umask=022
+local_root=/data/ftproot
+dirmessage_enable=YES
+xferlog_enable=YES
+connect_from_port_20=YES
+xferlog_std_format=YES
+listen_port=2231
+listen=NO
+listen_ipv6=YES
+#指定PAM文件, vsftpd的pam文件在/etc/pam.d/目录下
+pam_service_name=vsftpd.pam
+userlist_enable=YES
+tcp_wrappers=YES
+#指定虚拟用户配置文件目录
+user_config_dir=/etc/vsftpd/vusers_dir
+pasv_min_port=45000
+pasv_max_port=49000</code></pre><p>6、重启vsftpd服务</p>
+<p><code>systemctl restart vsftpd</code></p>
+<h3 id="防火墙配置"><a href="#防火墙配置" class="headerlink" title="防火墙配置"></a>防火墙配置</h3><pre><code>firewall-cmd --permanent --add-port=2231/tcp --permanent
+firewall-cmd --permanent --add-port=45000-49000/tcp --permanent
+firewall-cmd --reload</code></pre><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -484,7 +624,7 @@ sh ovz-bbr-installer.sh</code></pre><p>卸载命令</p>
                 </span>
                 <span class="reprint-info">
                     <!-- <a href="https://uknown.me">https://uknown.me</a> -->
-                    <a href="https://uknown.me/posts/20191022001.html">https://uknown.me/posts/20191022001.html</a>
+                    <a href="https://uknown.me/posts/20191123001.html">https://uknown.me/posts/20191123001.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -522,8 +662,12 @@ sh ovz-bbr-installer.sh</code></pre><p>卸载命令</p>
                     
                         <div class="article-tag">
                             
-                                <a href="../tags/shell/">
-                                    <span class="chip bg-color">shell</span>
+                                <a href="../tags/Linux/">
+                                    <span class="chip bg-color">Linux</span>
+                                </a>
+                            
+                                <a href="../tags/FTP/">
+                                    <span class="chip bg-color">FTP</span>
                                 </a>
                             
                         </div>
@@ -569,7 +713,7 @@ sh ovz-bbr-installer.sh</code></pre><p>卸载命令</p>
         repo: 'oknown.github.io',
         owner: 'oknown',
         admin: ["oknown"],
-        id: '2019-10-22',
+        id: '2019-11-23',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -592,44 +736,50 @@ sh ovz-bbr-installer.sh</code></pre><p>卸载命令</p>
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="20191026001.html">
+                <a href>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="MySQL笔记">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Centos7安装vsftpd">
                         
-                        <span class="card-title">MySQL笔记</span>
+                        <span class="card-title">Centos7安装vsftpd</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            信就是所望之事的实底，是未见之事的确据。--希11:1
+                            我劝你，第一要为万人恳求、祷告、代求、祝谢；为君王和一切在位的，也该如此，使我们可以敬虔、端正、平安无事地度日。--提前:2:1-2
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-10-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../categories/SQL/" class="post-category">
-                                    SQL
+                            <a href="../categories/Linux/" class="post-category">
+                                    Linux
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../tags/MySQL/">
-                        <span class="chip bg-color">MySQL</span>
+                    <a href="../tags/Linux/">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                    <a href="../tags/FTP/">
+                        <span class="chip bg-color">FTP</span>
                     </a>
                     
                 </div>
@@ -643,31 +793,31 @@ sh ovz-bbr-installer.sh</code></pre><p>卸载命令</p>
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="20190911001.html">
+                <a href="20191101001.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="SpringCloud笔记">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="前端笔记">
                         
-                        <span class="card-title">SpringCloud笔记</span>
+                        <span class="card-title">前端笔记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            我们纵然失信，他仍是可信的，因为他不能背乎自己。--提后:2:13 <br><br>
+                            这世上，时光会改变太多事情，但总有一些人一些事，只要你相信，就永远不会改变。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-09-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-01
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../categories/SpringCloud/" class="post-category">
-                                    SpringCloud
+                            <a href="../categories/前端/" class="post-category">
+                                    前端
                                 </a>
                             
                             
@@ -677,8 +827,8 @@ sh ovz-bbr-installer.sh</code></pre><p>卸载命令</p>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../tags/SpringCloud/">
-                        <span class="chip bg-color">SpringCloud</span>
+                    <a href="../tags/前端/">
+                        <span class="chip bg-color">前端</span>
                     </a>
                     
                 </div>
@@ -828,7 +978,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="external nofollow noopener noreferrer">Matery</a>
             <br>
             
-            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">6.6k</span>&nbsp;字
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">8.1k</span>&nbsp;字
             
             
             

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://uknown.me/"/>
-  <updated>2019-12-24T07:24:46.076Z</updated>
+  <updated>2020-01-10T08:51:32.462Z</updated>
   <id>https://uknown.me/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Centos7安装vsftpd</title>
+    <link href="https://uknown.me/posts/20191123001.html"/>
+    <id>https://uknown.me/posts/20191123001.html</id>
+    <published>2019-11-23T05:00:00.000Z</published>
+    <updated>2020-01-10T08:51:32.462Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;FTP，即：文件传输协议（File Transfer
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://uknown.me/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="https://uknown.me/tags/Linux/"/>
+    
+      <category term="FTP" scheme="https://uknown.me/tags/FTP/"/>
+    
+  </entry>
   
   <entry>
     <title>前端笔记</title>
@@ -67,32 +96,6 @@
     
     
       <category term="MySQL" scheme="https://uknown.me/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一键脚本</title>
-    <link href="https://uknown.me/posts/20191022001.html"/>
-    <id>https://uknown.me/posts/20191022001.html</id>
-    <published>2019-10-22T04:00:00.000Z</published>
-    <updated>2019-12-24T07:23:48.795Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;v2ray一键部署管理脚本&quot;&gt;&lt;a href=&quot;#v2ray一键部署管理脚本&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="脚本" scheme="https://uknown.me/categories/%E8%84%9A%E6%9C%AC/"/>
-    
-    
-      <category term="shell" scheme="https://uknown.me/tags/shell/"/>
     
   </entry>
   
@@ -177,11 +180,11 @@
   </entry>
   
   <entry>
-    <title>Linux常用命令</title>
+    <title>Linux笔记</title>
     <link href="https://uknown.me/posts/20190715002.html"/>
     <id>https://uknown.me/posts/20190715002.html</id>
     <published>2019-07-15T04:00:00.000Z</published>
-    <updated>2020-01-04T04:44:10.155Z</updated>
+    <updated>2020-01-10T05:48:28.807Z</updated>
     
     <summary type="html">
     
@@ -189,7 +192,8 @@
       
         
         
-          &lt;h3 id=&quot;firewall防火墙&quot;&gt;&lt;a href=&quot;#firewall防火墙&quot; class=&quot;headerlink&quot; title=&quot;firewall防火墙&quot;&gt;&lt;/a&gt;firewall防火墙&lt;/h3&gt;&lt;p&gt;安装：yum install
+          &lt;p&gt;Linux默认不允许非root用户启动的进程监听1024以下的端口，除非为每一个二进制文件显式声明。&lt;/p&gt;
+&lt;h3 id=&quot;firewall防火墙&quot;&gt;&lt;a href=&quot;#firewall防火墙&quot; class=&quot;headerlink&quot;
         
       
     
@@ -369,10 +373,10 @@
   
   <entry>
     <title>Mybatis笔记</title>
-    <link href="https://uknown.me/posts/20190110001.html"/>
-    <id>https://uknown.me/posts/20190110001.html</id>
-    <published>2019-01-10T05:00:00.000Z</published>
-    <updated>2019-12-24T07:47:19.385Z</updated>
+    <link href="https://uknown.me/posts/20190410001.html"/>
+    <id>https://uknown.me/posts/20190410001.html</id>
+    <published>2019-04-10T04:00:00.000Z</published>
+    <updated>2020-01-04T05:17:55.218Z</updated>
     
     <summary type="html">
     
