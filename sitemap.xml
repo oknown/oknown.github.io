@@ -151,21 +151,7 @@
 
   
   <url>
-    <loc>https://uknown.me/tags/Docker/</loc>
-    <lastmod>2020-08-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://uknown.me/tags/Android/</loc>
-    <lastmod>2020-08-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://uknown.me/tags/Java/</loc>
     <lastmod>2020-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -186,7 +172,14 @@
   </url>
   
   <url>
-    <loc>https://uknown.me/tags/MySQL/</loc>
+    <loc>https://uknown.me/tags/Docker/</loc>
+    <lastmod>2020-08-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://uknown.me/tags/Java/</loc>
     <lastmod>2020-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -194,6 +187,20 @@
   
   <url>
     <loc>https://uknown.me/tags/mybatis/</loc>
+    <lastmod>2020-08-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://uknown.me/tags/MySQL/</loc>
+    <lastmod>2020-08-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://uknown.me/tags/OpenWrt/</loc>
     <lastmod>2020-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -228,21 +235,7 @@
   </url>
   
   <url>
-    <loc>https://uknown.me/tags/OpenWrt/</loc>
-    <lastmod>2020-08-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://uknown.me/tags/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2020-08-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://uknown.me/tags/%E8%BD%AF%E4%BB%B6/</loc>
     <lastmod>2020-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -255,24 +248,17 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://uknown.me/tags/%E8%BD%AF%E4%BB%B6/</loc>
+    <lastmod>2020-08-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
-    <loc>https://uknown.me/categories/Docker/</loc>
-    <lastmod>2020-08-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://uknown.me/categories/Android/</loc>
-    <lastmod>2020-08-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://uknown.me/categories/Java/</loc>
     <lastmod>2020-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -286,7 +272,28 @@
   </url>
   
   <url>
+    <loc>https://uknown.me/categories/Docker/</loc>
+    <lastmod>2020-08-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://uknown.me/categories/Java/</loc>
+    <lastmod>2020-08-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://uknown.me/categories/SQL/</loc>
+    <lastmod>2020-08-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://uknown.me/categories/OpenWrt/</loc>
     <lastmod>2020-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -321,13 +328,6 @@
   </url>
   
   <url>
-    <loc>https://uknown.me/categories/OpenWrt/</loc>
-    <lastmod>2020-08-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://uknown.me/categories/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2020-08-27</lastmod>
     <changefreq>daily</changefreq>
@@ -335,14 +335,14 @@
   </url>
   
   <url>
-    <loc>https://uknown.me/categories/%E8%BD%AF%E4%BB%B6/</loc>
+    <loc>https://uknown.me/categories/%E6%9D%82%E8%AE%B0/</loc>
     <lastmod>2020-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://uknown.me/categories/%E6%9D%82%E8%AE%B0/</loc>
+    <loc>https://uknown.me/categories/%E8%BD%AF%E4%BB%B6/</loc>
     <lastmod>2020-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
