@@ -30,7 +30,8 @@
     <script src="../libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="atom.xml" title="你懂的" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -444,9 +445,8 @@
             <div id="articleContent">
                 <p><strong><em>记录1：</em></strong></p>
 <p>OpenWrt官方较新版固件ssr plus插件无法使用GFW模式的解决办法：安装dnsmasq-extra + dnsFtcp插件（<a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/honwen/openwrt-dnsmasq-extra">下载地址</a>）</p>
-<pre class="line-numbers language-none"><code class="language-none">opkg install dnsFtcp-xxx.ipk
-opkg install dnsmasq-extra-xxx.ipk<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
+<pre><code>opkg install dnsFtcp-xxx.ipk
+opkg install dnsmasq-extra-xxx.ipk</code></pre>
 <p><strong><em>记录2：</em></strong></p>
 <p>OpenWrt使用smartdns等插件进行TCP方式（tls，https）域名解析时DDNS无法获取绑定域名的IP（系统日志里bind-host error）时的解析办法：安装knot-host插件，运行<code>opkg install knot-host</code>（luci界面提示安装bind-host或knot-host或drill，bind-host无效，drill未试）</p>
 <script>
@@ -846,7 +846,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="external nofollow noopener noreferrer">Matery</a>
             <br>
             
-            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">9.9k</span>&nbsp;字
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">9.8k</span>&nbsp;字
             
             
             

@@ -30,7 +30,8 @@
     <script src="../libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="atom.xml" title="你懂的" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -445,23 +446,21 @@
                 <p>Eureka没有闭源，是Eurkea 2.x分支不再维护！Spring Cloud并不强依赖Eureka</p>
 <p>springcloud Eureka是基于Netflix Eureka做了二次封装，主要负责完成微服务架构中的服务治理功能。服务端和客户端均采用java编写，所以主要适用于java实现的分布式系统。</p>
 <p>Eureka服务端即服务注册中心</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;dependency&gt;
+<pre><code>&lt;dependency&gt;
     &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
     &lt;artifactId&gt;spring-cloud-starter-eureka-server&lt;/artifactId&gt;
-&lt;/dependency&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
+&lt;/dependency&gt;</code></pre>
 <p>Eureka客户端用于处理服务的注册与发现</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;dependency&gt;
+<pre><code>&lt;dependency&gt;
     &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
     &lt;artifactId&gt;spring-cloud-starter-eureka&lt;/artifactId&gt;
-&lt;/dependency&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
+&lt;/dependency&gt;</code></pre>
 <blockquote>
 <p><strong>Nacos 有三大主要功能:</strong><br><strong>服务发现和服务健康监测</strong><br>    Nacos 提供对服务的实时的健康检查，阻止向不健康的主机或服务实例发送请求。<br><strong>动态配置管理</strong><br>    配置中心化管理让实现无状态服务变得更简单，让服务按需弹性扩展变得更容易。<br><strong>动态DNS服务</strong><br>    服务发现的未来一定是基于标准的 DNS 协议做，而不是像 Eureka 或者像 ZooKeeper 这样的私有 API 或者协议做, 同时在云上，在服务发现场景中，注册中心更关注的是可用性而不是数据一致性</p>
 </blockquote>
 <p><strong>Spring Security OAuth2 中 Feign传递 Token 问题</strong></p>
 <p>微服务体系中，避免不了服务之间链式调用，一般使用 Feign ，由于使用 Spring Security OAuth2 全局做了安全认证，简单的一种实现方式就是在服务提供方获得 Token 再次通过 HTTP 协议传递调用Token到相应的服务。</p>
-<pre class="line-numbers language-none"><code class="language-none">@Configuration
+<pre><code>@Configuration
 public class FeignIntercepter implements RequestInterceptor {
     @Override
     public void apply(RequestTemplate requestTemplate) {
@@ -470,56 +469,52 @@ public class FeignIntercepter implements RequestInterceptor {
         //添加token
         requestTemplate.header("Authorization", request.getHeader("Authorization"));
     }
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+}</code></pre>
 <p><strong>SpringCloud Oauth2认证授权服务器负载均衡</strong></p>
 <blockquote>
 <p>验证令牌并检索用户信息所需的最小资源服务器配置是指定userInfoUri属性。<br>这将允许使用Barer令牌认证来验证传入的请求。<br>所以很可能你打算启用资源服务器可能每个微服务，你要开发。在其中一个边缘服务上，您可能需要启用单点登录。 @EnableOAuthSso将允许您将未经认证的用户的自动重定向转向授权服务器，他们将能够登录。<br>类似地，您将必须指定一些额外的属性，如授权服务器令牌的地址和授权uri以及客户端凭据。我们还可以指定我们的应用程序中应该保护哪些路径。</p>
 </blockquote>
-<pre class="line-numbers language-none"><code class="language-none">security:
+<pre><code>security:
   oauth2:
     client:
       access-token-uri: http://localhost:8005/oauth/token
       user-authorization-uri: http://localhost:8005/oauth/authorize
       client-id: app
-      client-secret: 123456<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+      client-secret: 123456</code></pre>
 <p>只要配置了<code>security.oauth2.resource.loadBalanced</code>为true，OAuth2RestTemplate就具有LoadBalancer （负载均衡）功能了，另外你可以将user-info-uri、access-token-uri、user-authorization-uri替换成网关中的路由地址</p>
-<pre class="line-numbers language-'application.yaml'" data-language="'application.yaml'"><code class="language-'application.yaml'">security:
+<pre class="line-numbers language-'application.yaml'"><code class="language-'application.yaml'">security:
   oauth2:
     resource:
       loadBalanced: true
 #      user-info-uri: http://localhost:8005/user/tokenUser
       user-info-uri: http://api-admin/user/tokenUser<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>api-admin是网关中配置的认证授权服务器地址</p>
 <p>源码</p>
-<pre class="line-numbers language-none"><code class="language-none">@Configuration
+<pre><code>@Configuration
 @ConditionalOnClass({ LoadBalancerInterceptor.class, OAuth2RestTemplate.class })
 @ConditionalOnBean(LoadBalancerInterceptor.class)
 @AutoConfigureAfter(OAuth2AutoConfiguration.class)
 public class OAuth2LoadBalancerClientAutoConfiguration {
 
-	@Configuration
-	@ConditionalOnProperty(value = "security.oauth2.resource.loadBalanced", matchIfMissing = false)
-	protected static class UserInfoLoadBalancerConfig {
-		@Bean
-		public UserInfoRestTemplateCustomizer loadBalancedUserInfoRestTemplateCustomizer(
-				final LoadBalancerInterceptor loadBalancerInterceptor) {
-			return new UserInfoRestTemplateCustomizer() {
-				@Override
-				public void customize(OAuth2RestTemplate restTemplate) {
-					List&lt;ClientHttpRequestInterceptor&gt; interceptors = new ArrayList&lt;&gt;(
-							restTemplate.getInterceptors());
-					interceptors.add(loadBalancerInterceptor);
-					restTemplate.setInterceptors(interceptors);
-				}
-			};
-		}
-	}
+    @Configuration
+    @ConditionalOnProperty(value = "security.oauth2.resource.loadBalanced", matchIfMissing = false)
+    protected static class UserInfoLoadBalancerConfig {
+        @Bean
+        public UserInfoRestTemplateCustomizer loadBalancedUserInfoRestTemplateCustomizer(
+                final LoadBalancerInterceptor loadBalancerInterceptor) {
+            return new UserInfoRestTemplateCustomizer() {
+                @Override
+                public void customize(OAuth2RestTemplate restTemplate) {
+                    List&lt;ClientHttpRequestInterceptor&gt; interceptors = new ArrayList&lt;&gt;(
+                            restTemplate.getInterceptors());
+                    interceptors.add(loadBalancerInterceptor);
+                    restTemplate.setInterceptors(interceptors);
+                }
+            };
+        }
+    }
 
-}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+}</code></pre>
 <p>OAuth2注意点</p>
 <p>1、security.oauth2.resource.jwt.key-uri/security.oauth2.resource.jwt.key-value只能配置一个key<br>security.oauth2.resource.jwk.key-set-uri配置好多key</p>
 <p>2、从OAuth2AutoConfiguration可以看出<code>security.oauth2.resource.clientId</code>和<code>security.oauth2.resource.clientSecret</code>的值就是<code>security.oauth2.client.clientId</code>和<code>security.oauth2.client.clientSecret</code>的值<br>所以<code>security.oauth2.resource.clientId</code>和<code>security.oauth2.resource.clientSecret</code>的值我们不需要配置，只需要配置<code>security.oauth2.client.clientId</code>和<code>security.oauth2.client.clientSecret</code>的值就可以了</p>
@@ -918,7 +913,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="external nofollow noopener noreferrer">Matery</a>
             <br>
             
-            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">9.9k</span>&nbsp;字
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">9.8k</span>&nbsp;字
             
             
             

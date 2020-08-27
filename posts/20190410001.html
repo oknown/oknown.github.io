@@ -30,7 +30,8 @@
     <script src="../libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="atom.xml" title="你懂的" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -451,12 +452,11 @@
 </ul>
 <p><strong>当实体类中的属性名和表中的字段名不一样的解决方案</strong></p>
 <p>1、通过在查询的sql语句中定义字段名的别名，让字段名的别名和实体类的属性名一致</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;select id=”selectorder” parametertype=”int” resultetype=”me.gacl.domain.order”&gt;
-	select order_id id, order_no orderno ,order_price price form orders where order_id=#{id};
-&lt;/select&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
+<pre><code>&lt;select id=”selectorder” parametertype=”int” resultetype=”me.gacl.domain.order”&gt;
+    select order_id id, order_no orderno ,order_price price form orders where order_id=#{id};
+&lt;/select&gt;</code></pre>
 <p>2、通过<resultmap>来映射字段名和实体类属性名的一一对应的关系</resultmap></p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;select id="getOrder" parameterType="int" resultMap="orderresultmap"&gt;
+<pre><code>&lt;select id="getOrder" parameterType="int" resultMap="orderresultmap"&gt;
     select * from orders where order_id=#{id}
 &lt;/select&gt;
 &lt;resultMap type=”me.gacl.domain.order” id=”orderresultmap”&gt;
@@ -465,8 +465,7 @@
     &lt;!–用result属性来映射非主键字段，property为实体类属性名，column为数据表中的属性–&gt;
     &lt;result property = “orderno” column =”order_no”/&gt;
     &lt;result property=”price” column=”order_price” /&gt;
-&lt;/reslutMap&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+&lt;/reslutMap&gt;</code></pre>
 <ul>
 <li>Dao接口，就是人们常说的Mapper接口，接口的全限名，就是映射文件中的namespace的值，接口的方法名，就是映射文件中MappedStatement的id值，接口方法内的参数，就是传递给sql的参数。</li>
 <li>Mapper接口是没有实现类的，当调用接口方法时，接口全限名+方法名拼接字符串作为key值，可唯一定位一个MappedStatement</li>
@@ -869,7 +868,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="external nofollow noopener noreferrer">Matery</a>
             <br>
             
-            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">9.9k</span>&nbsp;字
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">9.8k</span>&nbsp;字
             
             
             

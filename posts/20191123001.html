@@ -30,7 +30,8 @@
     <script src="../libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="atom.xml" title="你懂的" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -466,11 +467,10 @@
 <li><p>虚拟用户模式：是这三种模式中最安全的一种认证模式，它需要为FTP服务单独建立用户数据库文件，虚拟出用来进行口令验证的账户信息，而这些账户信息在服务器系统中实际上是不存在的，仅供FTP服务程序进行认证使用。</p>
 </li>
 </ul>
-<h3 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h3><pre class="line-numbers language-none"><code class="language-none">yum -y install vsftpd<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
+<h3 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h3><pre><code>yum -y install vsftpd</code></pre>
 <h3 id="软件配置"><a href="#软件配置" class="headerlink" title="软件配置"></a>软件配置</h3><h4 id="匿名开放模式"><a href="#匿名开放模式" class="headerlink" title="匿名开放模式"></a>匿名开放模式</h4><p>1、修改配置文件，带注释的是需要修改和新增的配置</p>
 <p><code>vim /etc/vsftpd/vsftpd.conf</code></p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#启用匿名访问模式
+<pre class="line-numbers language-shell"><code class="language-shell">#启用匿名访问模式
 anonymous_enable=YES
 #匿名用户上传文件的umask值
 anon_umask=022
@@ -500,18 +500,15 @@ tcp_wrappers=YES
 pasv_min_port=45000
 #PASV模式最大端口号
 pasv_max_port=49000<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>2、创建并授权匿名用户FTP根目录</p>
-<pre class="line-numbers language-none"><code class="language-none">mkdir -p /data/anon/pub
-chown -R ftp /data/anon/pub/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
+<pre><code>mkdir -p /data/anon/pub
+chown -R ftp /data/anon/pub/</code></pre>
 <p>3、启动vsftpd服务，并加入开机启动</p>
-<pre class="line-numbers language-none"><code class="language-none">systemctl start vsftpd
-systemctl enable vsftpd<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
+<pre><code>systemctl start vsftpd
+systemctl enable vsftpd</code></pre>
 <h4 id="本地用户模式"><a href="#本地用户模式" class="headerlink" title="本地用户模式"></a>本地用户模式</h4><p>1、修改配置文件，删除之前的匿名模式配置内容</p>
 <p><code>vim /etc/vsftpd/vsftpd.conf</code></p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#关闭匿名访问模式
+<pre class="line-numbers language-shell"><code class="language-shell">#关闭匿名访问模式
 anonymous_enable=NO
 local_enable=YES
 write_enable=YES
@@ -534,54 +531,46 @@ userlist_enable=YES
 tcp_wrappers=YES
 pasv_min_port=45000
 pasv_max_port=49000<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>2、创建本地用户，并指定家目录</p>
-<pre class="line-numbers language-none"><code class="language-none">useradd -d /data/user -s /sbin/nologin user
-echo "123456" | passwd --stdin user<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
+<pre><code>useradd -d /data/user -s /sbin/nologin user
+echo "123456" | passwd --stdin user</code></pre>
 <p>3、重启vsftpd服务</p>
 <p><code>systemctl restart vsftpd</code></p>
 <h4 id="虚拟用户模式"><a href="#虚拟用户模式" class="headerlink" title="虚拟用户模式"></a>虚拟用户模式</h4><p>1、创建用于FTP认证的用户数据库文件</p>
 <p><code>vim /etc/vsftpd/vuser.txt</code></p>
-<pre class="line-numbers language-none"><code class="language-none">test
+<pre><code>test
 123456
 test1
-123456<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
+123456</code></pre>
 <p>注：第一行用户名，第二行密码，依此类推</p>
 <p>明文信息不安全，需要使用db_load命令用哈希（hash）算法将明文信息转换成数据文件，然后将明文信息文件删除。</p>
 <p><code>yum install db4*</code></p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">db_load -T -t hash -f /etc/vsftpd/vuser.txt /etc/vsftpd/vuser.db
+<pre class="line-numbers language-shell"><code class="language-shell">db_load -T -t hash -f /etc/vsftpd/vuser.txt /etc/vsftpd/vuser.db
 chmod 600 /etc/vsftpd/vuser.db
 rm -f /etc/vsftpd/vuser.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
 <p>2、创建虚拟用户映射的系统本地用户和FTP根目录</p>
-<pre class="line-numbers language-none"><code class="language-none">useradd -d /data/ftproot -s /sbin/nologin ftp
-chmod -Rf 755 /data/ftproot/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
+<pre><code>useradd -d /data/ftproot -s /sbin/nologin ftp
+chmod -Rf 755 /data/ftproot/</code></pre>
 <p>3、建立用于支持虚拟用户的PAM文件</p>
 <blockquote>
 <p>PAM（可插拔认证模块）是一种认证机制，通过一些动态链接库和统一的API把系统提供的服务与认证方式分开，使得系统管理员可以根据需求灵活调整服务程序的不同认证方式。PAM采用了分层设计（应用程序层、应用接口层、鉴别模块层）的思想</p>
 </blockquote>
 <p>新建一个用于虚拟用户认证的PAM文件vsftpd.pam，其中PAM文件内的“db=”参数为使用db_load命令生成的账户密码数据文件的路径，但不用写数据文件的后缀。</p>
 <p><code>vim /etc/pam.d/vsftpd.pam</code></p>
-<pre class="line-numbers language-none"><code class="language-none">auth     required     /lib64/security/pam_userdb.so  db=/etc/vsftpd/vuser
-account  required     /lib64/security/pam_userdb.so  db=/etc/vsftpd/vuser<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
+<pre><code>auth     required     /lib64/security/pam_userdb.so  db=/etc/vsftpd/vuser
+account  required     /lib64/security/pam_userdb.so  db=/etc/vsftpd/vuser</code></pre>
 <p>4、为两个虚拟用户设置不同的权限，test只有读取权限，而test1拥有所有权限。</p>
-<pre class="line-numbers language-none"><code class="language-none">mkdir /etc/vsftpd/vusers_dir
+<pre><code>mkdir /etc/vsftpd/vusers_dir
 touch /etc/vsftpd/vusers_dir/test
-vim /etc/vsftpd/vusers_dir/test1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
+vim /etc/vsftpd/vusers_dir/test1</code></pre>
 <p>将如下内容写入到<code>/etc/vsftpd/vusers_dir/test1</code>文件中</p>
-<pre class="line-numbers language-none"><code class="language-none">anon_upload_enable=YES
+<pre><code>anon_upload_enable=YES
 anon_mkdir_write_enable=YES
-anon_other_write_enable=YES<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
+anon_other_write_enable=YES</code></pre>
 <p>注意：新建虚拟用户配置文件，文件名要和上面的虚拟用户名单里的账号名字相同。</p>
 <p>5、修改配置文件，删除之前的配置内容</p>
 <p><code>vim /etc/vsftpd/vsftpd.conf</code></p>
-<pre class="line-numbers language-none"><code class="language-none">anonymous_enable=NO
+<pre><code>anonymous_enable=NO
 anon_umask=022
 local_enable=YES
 #开启虚拟用户模式
@@ -607,14 +596,12 @@ tcp_wrappers=YES
 #指定虚拟用户配置文件目录
 user_config_dir=/etc/vsftpd/vusers_dir
 pasv_min_port=45000
-pasv_max_port=49000<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+pasv_max_port=49000</code></pre>
 <p>6、重启vsftpd服务</p>
 <p><code>systemctl restart vsftpd</code></p>
-<h3 id="防火墙配置"><a href="#防火墙配置" class="headerlink" title="防火墙配置"></a>防火墙配置</h3><pre class="line-numbers language-none"><code class="language-none">firewall-cmd --permanent --add-port=2231/tcp --permanent
+<h3 id="防火墙配置"><a href="#防火墙配置" class="headerlink" title="防火墙配置"></a>防火墙配置</h3><pre><code>firewall-cmd --permanent --add-port=2231/tcp --permanent
 firewall-cmd --permanent --add-port=45000-49000/tcp --permanent
-firewall-cmd --reload<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
+firewall-cmd --reload</code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1010,7 +997,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="external nofollow noopener noreferrer">Matery</a>
             <br>
             
-            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">9.9k</span>&nbsp;字
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">9.8k</span>&nbsp;字
             
             
             

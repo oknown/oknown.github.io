@@ -30,7 +30,8 @@
     <script src="../libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="atom.xml" title="你懂的" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -446,19 +447,18 @@
 <p>– 已数字和特殊字符开头<br><code>select * from mot_terms where name REGEXP '^[@#$%&amp;0-9]'</code></p>
 <h3 id="utf8？utf8mb4"><a href="#utf8？utf8mb4" class="headerlink" title="utf8？utf8mb4!"></a>utf8？utf8mb4!</h3><p>MySQL的utf8编码只支持3字节的数据，而emoji表情数据是4个字节的字符，导致内容无法保存或乱码<br>可以对4字节的字符进行编码存储，然后取出来的时候，再进行解码。但是这样做会使得任何使用该字符的地方都要进行编码与解码。<br>utf8mb4编码是utf8编码的超集，兼容utf8，并且能存储4字节的表情字符。<br>采用utf8mb4编码的好处是：存储与获取数据的时候，不用再考虑表情字符的编码与解码问题。</p>
 <p>so 更改数据库的编码为utf8mb4<br>修改配置文件my.cnf</p>
-<pre class="line-numbers language-none"><code class="language-none">[mysqld]
+<pre><code>[mysqld]
 character-set-server=utf8mb4
- 
+
 [mysql]
 default-character-set=utf8mb4
- 
+
 [client]
-default-character-set=utf8mb4<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+default-character-set=utf8mb4</code></pre>
 <p>重启mysql服务</p>
 <p>tips：utf8mb4的最低mysql版本支持版本为5.5.3+</p>
 <p><strong><em>检查</em></strong></p>
-<pre class="line-numbers language-none"><code class="language-none">SHOW VARIABLES WHERE Variable_name LIKE 'character_set_%' OR Variable_name LIKE 'collation%';<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
+<pre><code>SHOW VARIABLES WHERE Variable_name LIKE 'character_set_%' OR Variable_name LIKE 'collation%';</code></pre>
 <p>例如</p>
 <p>Variable_name  |  Value<br>character_set_client  |  utf8mb4<br>character_set_connection  |  utf8mb4<br>character_set_database  |  utf8mb4<br>character_set_filesystem  |  binary<br>character_set_results  |  utf8mb4<br>character_set_server  |  utf8mb4<br>character_set_system  |  utf8<br>collation_connection  |  utf8mb4_unicode_ci<br>collation_database  |  utf8mb4_unicode_ci<br>collation_server  |  utf8mb4_unicode_ci</p>
 <p>重要</p>
@@ -858,7 +858,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="external nofollow noopener noreferrer">Matery</a>
             <br>
             
-            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">9.9k</span>&nbsp;字
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">9.8k</span>&nbsp;字
             
             
             

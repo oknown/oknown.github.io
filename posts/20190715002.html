@@ -30,7 +30,8 @@
     <script src="../libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="atom.xml" title="你懂的" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -479,12 +480,11 @@
 <p><code>firewall-cmd --permanent --zone=public --add-interface=wg0</code><br><code>firewall-cmd --zone=public --add-masquerade --permanent</code><br><code>firewall-cmd --permanent --zone=public --add-rich-rule='rule family=ipv4 masquerade'</code></p>
 <h3 id="systemctl"><a href="#systemctl" class="headerlink" title="systemctl"></a>systemctl</h3><p>systemctl是CentOS7的服务管理工具中主要的工具，它融合之前service和chkconfig的功能于一体。</p>
 <p>启动一个服务：<code>systemctl start firewalld.service</code><br>关闭一个服务：<code>systemctl stop firewalld.service</code><br>重启一个服务：<code>systemctl restart firewalld.service</code><br>显示一个服务的状态：<code>systemctl status firewalld.service</code><br>在开机时启用一个服务：<code>systemctl enable firewalld.service</code><br>在开机时禁用一个服务：<code>systemctl disable firewalld.service</code><br>查看服务是否开机启动：<code>systemctl is-enabled firewalld.service</code><br>查看已启动的服务列表：<code>systemctl list-unit-files|grep enabled</code><br>查看启动失败的服务列表：<code>systemctl --failed</code></p>
-<h3 id="快速清空文件内容"><a href="#快速清空文件内容" class="headerlink" title="快速清空文件内容"></a>快速清空文件内容</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">: &gt; filename
-&gt; filename
-echo "" &gt; filename
-echo &gt; filename
-cat /dev/null &gt; filename<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+<h3 id="快速清空文件内容"><a href="#快速清空文件内容" class="headerlink" title="快速清空文件内容"></a>快速清空文件内容</h3><pre class="line-numbers language-shell"><code class="language-shell">: > filename
+> filename
+echo "" > filename
+echo > filename
+cat /dev/null > filename<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h3><p>dd if=/dev/zero of=/var/swap bs=1M count=1024</p>
 <p>mkswap /var/swap</p>
 <p>swapon /var/swap</p>
@@ -501,29 +501,22 @@ cat /dev/null &gt; filename<span aria-hidden="true" class="line-numbers-rows"><s
 <p>9.列出所有已安装但不在 Yum Repository 内的软件包信息<br>命令：yum info extras</p>
 <p>10.列出软件包提供哪些文件<br>命令：yum provides</p>
 <h4 id="yum-update时禁止更新内核"><a href="#yum-update时禁止更新内核" class="headerlink" title="yum update时禁止更新内核"></a>yum update时禁止更新内核</h4><p>设置前请先备份原设置文件yum.conf</p>
-<pre class="line-numbers language-none"><code class="language-none">cp /etc/yum.conf    /etc/yum.conf.bak<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
+<pre><code>cp /etc/yum.conf    /etc/yum.conf.bak</code></pre>
 <p><em>方法一（永久解决，一劳永逸）：</em><br>修改yum的配置文件 vim /etc/yum.conf<br>在[main]的最后添加 exclude=kernel*</p>
 <p>注意上面  kernel后面有*号，表示所有 kernel开头的…..</p>
 <p><em>方法二：</em><br>直接在yum的命令后面加上  –exclude=kernel*  参数，如下：</p>
 <p>yum –exclude=kernel* update</p>
 <h3 id="一键脚本"><a href="#一键脚本" class="headerlink" title="一键脚本"></a>一键脚本</h3><h4 id="v2ray一键部署管理脚本"><a href="#v2ray一键部署管理脚本" class="headerlink" title="v2ray一键部署管理脚本"></a>v2ray一键部署管理脚本</h4><p>Debian8/Debian7/Ubuntu16/Ubuntu14/Centos7</p>
-<pre class="line-numbers language-none"><code class="language-none">bash &lt;(curl -s -L https://git.io/v2ray.sh)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h4 id="Kcptun-一键安装脚本"><a href="#Kcptun-一键安装脚本" class="headerlink" title="Kcptun 一键安装脚本"></a>Kcptun 一键安装脚本</h4><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">wget --no-check-certificate -O kcptun.sh https://github.com/kuoruan/shell-scripts/raw/master/kcptun/kcptun.sh
+<pre><code>bash &lt;(curl -s -L https://git.io/v2ray.sh)</code></pre>
+<h4 id="Kcptun-一键安装脚本"><a href="#Kcptun-一键安装脚本" class="headerlink" title="Kcptun 一键安装脚本"></a>Kcptun 一键安装脚本</h4><pre class="line-numbers language-shell"><code class="language-shell">wget --no-check-certificate -O kcptun.sh https://github.com/kuoruan/shell-scripts/raw/master/kcptun/kcptun.sh
 sh kcptun.sh<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
 <h4 id="OpenVZ-BBR-一键安装脚本"><a href="#OpenVZ-BBR-一键安装脚本" class="headerlink" title="OpenVZ BBR 一键安装脚本"></a>OpenVZ BBR 一键安装脚本</h4><p>安装命令：</p>
-<pre class="line-numbers language-none"><code class="language-none">wget --no-check-certificate -O ovz-bbr-installer.sh https://github.com/kuoruan/shell-scripts/raw/master/ovz-bbr/ovz-bbr-installer.sh
-sh ovz-bbr-installer.sh<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre><code>wget --no-check-certificate -O ovz-bbr-installer.sh https://github.com/kuoruan/shell-scripts/raw/master/ovz-bbr/ovz-bbr-installer.sh
+sh ovz-bbr-installer.sh</code></pre>
 <p>卸载命令</p>
-<pre class="line-numbers language-none"><code class="language-none">sh ovz-bbr-installer.sh uninstall<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
+<pre><code>sh ovz-bbr-installer.sh uninstall</code></pre>
 <h4 id="BBR-BBR魔改-锐速一键脚本"><a href="#BBR-BBR魔改-锐速一键脚本" class="headerlink" title="BBR+BBR魔改+锐速一键脚本"></a>BBR+BBR魔改+锐速一键脚本</h4><p>Centos 6+/Debian 8+/Ubuntu 14+</p>
-<pre class="line-numbers language-none"><code class="language-none">wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" &amp;&amp; chmod +x tcp.sh &amp;&amp; ./tcp.sh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
+<pre><code>wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" &amp;&amp; chmod +x tcp.sh &amp;&amp; ./tcp.sh</code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -915,7 +908,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="external nofollow noopener noreferrer">Matery</a>
             <br>
             
-            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">9.9k</span>&nbsp;字
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">9.8k</span>&nbsp;字
             
             
             

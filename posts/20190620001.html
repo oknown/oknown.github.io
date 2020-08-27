@@ -30,7 +30,8 @@
     <script src="../libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="atom.xml" title="你懂的" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -461,13 +462,10 @@
 <h3 id="OPatch"><a href="#OPatch" class="headerlink" title="OPatch"></a>OPatch</h3><p>opatch version</p>
 <p>查看当前数据库的补丁情况：<code>opatch lsinventory</code></p>
 <p>升级前检查是否有冲突：</p>
-<pre class="line-numbers language-none"><code class="language-none">cd 补丁包目录
-opatch prereq CheckConflictAgainstOHWithDetail -ph ./<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
+<pre><code>cd 补丁包目录
+opatch prereq CheckConflictAgainstOHWithDetail -ph ./</code></pre>
 <p>应用补丁</p>
-<pre class="line-numbers language-none"><code class="language-none">opatch apply<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
+<pre><code>opatch apply</code></pre>
 <p>升级失败回滚：<code>opatch rollback -id 27734982</code></p>
 <h3 id="导入导出"><a href="#导入导出" class="headerlink" title="导入导出"></a>导入导出</h3><p>exp 用户名/密码@本地服务名 file = 目标地址 full=y</p>
 <p>imp 用户名/密码@本地服务名 file=文件的位置  ignore=y</p>
@@ -866,7 +864,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="external nofollow noopener noreferrer">Matery</a>
             <br>
             
-            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">9.9k</span>&nbsp;字
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">9.8k</span>&nbsp;字
             
             
             

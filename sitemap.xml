@@ -151,13 +151,6 @@
 
   
   <url>
-    <loc>https://uknown.me/tags/Android/</loc>
-    <lastmod>2020-08-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://uknown.me/tags/Linux/</loc>
     <lastmod>2020-08-27</lastmod>
     <changefreq>daily</changefreq>
@@ -172,7 +165,7 @@
   </url>
   
   <url>
-    <loc>https://uknown.me/tags/Java/</loc>
+    <loc>https://uknown.me/tags/Android/</loc>
     <lastmod>2020-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -180,6 +173,13 @@
   
   <url>
     <loc>https://uknown.me/tags/Docker/</loc>
+    <lastmod>2020-08-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://uknown.me/tags/Java/</loc>
     <lastmod>2020-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -214,7 +214,14 @@
   </url>
   
   <url>
-    <loc>https://uknown.me/tags/SpringBoot/</loc>
+    <loc>https://uknown.me/tags/Spring/</loc>
+    <lastmod>2020-08-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://uknown.me/tags/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2020-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -228,14 +235,7 @@
   </url>
   
   <url>
-    <loc>https://uknown.me/tags/Spring/</loc>
-    <lastmod>2020-08-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://uknown.me/tags/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>https://uknown.me/tags/SpringBoot/</loc>
     <lastmod>2020-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -258,13 +258,6 @@
 
   
   <url>
-    <loc>https://uknown.me/categories/Android/</loc>
-    <lastmod>2020-08-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://uknown.me/categories/Linux/</loc>
     <lastmod>2020-08-27</lastmod>
     <changefreq>daily</changefreq>
@@ -272,7 +265,7 @@
   </url>
   
   <url>
-    <loc>https://uknown.me/categories/Java/</loc>
+    <loc>https://uknown.me/categories/Android/</loc>
     <lastmod>2020-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -280,6 +273,13 @@
   
   <url>
     <loc>https://uknown.me/categories/Docker/</loc>
+    <lastmod>2020-08-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://uknown.me/categories/Java/</loc>
     <lastmod>2020-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -307,7 +307,14 @@
   </url>
   
   <url>
-    <loc>https://uknown.me/categories/SpringBoot/</loc>
+    <loc>https://uknown.me/categories/Spring/</loc>
+    <lastmod>2020-08-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://uknown.me/categories/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2020-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -321,14 +328,7 @@
   </url>
   
   <url>
-    <loc>https://uknown.me/categories/Spring/</loc>
-    <lastmod>2020-08-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://uknown.me/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>https://uknown.me/categories/SpringBoot/</loc>
     <lastmod>2020-08-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

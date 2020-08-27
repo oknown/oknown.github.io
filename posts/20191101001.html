@@ -30,7 +30,8 @@
     <script src="../libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="atom.xml" title="你懂的" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
 
 <body>
@@ -447,40 +448,33 @@
 <h3 id="判断一个js变量是否为数组"><a href="#判断一个js变量是否为数组" class="headerlink" title="判断一个js变量是否为数组"></a>判断一个js变量是否为数组</h3><ol>
 <li>typeof</li>
 </ol>
-<pre class="line-numbers language-none"><code class="language-none">var ary = [1,23,4];
+<pre><code>var ary = [1,23,4];
 
-console.log(typeof ary); //输出结果是Object<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+console.log(typeof ary); //输出结果是Object</code></pre>
 <p>typeof并不能实时的检测出是否是数组，只能判断其类型，所以说typeof判断基本类型数据还是挺好的，但是不能准确测试出是否是数组</p>
 <p>2.instanceof</p>
-<pre class="line-numbers language-none"><code class="language-none">var ary = [1,23,4];
+<pre><code>var ary = [1,23,4];
 
-console.log(ary  instanceof Array) //true; <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-
-
+console.log(ary  instanceof Array) //true; </code></pre>
 <p>3.原型链方法</p>
-<pre class="line-numbers language-none"><code class="language-none">var ary = [1,23,4]; 
+<pre><code>var ary = [1,23,4]; 
 
 console.log(ary.__proto__.constructor==Array); //true 
 
-console.log(ary.constructor==Array) //true 这两段代码是一样的<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+console.log(ary.constructor==Array) //true 这两段代码是一样的</code></pre>
 <p>兼容性：在IE早期版本里面__proto__没有定义</p>
 <p>instanceof 和constructor 判断的变量，必须在当前页面声明的，比如，一个页面（父页面）有一个框架，框架中引用了一个页面（子页面），在子页面中声明了一个ary，并将其赋值给父页面的一个变量，这时判断该变量，Array == object.constructor;会返回false；</p>
 <p>原因：</p>
 <p>1、array属于引用型数据，在传递过程中，仅仅是引用地址的传递。</p>
 <p>2、每个页面的Array原生对象所引用的地址是不一样的，在子页面声明的array，所对应的构造函数，是子页面的Array对象；父页面来进行判断，使用的Array并不等于子页面的Array；</p>
 <p>4.通用的方法</p>
-<pre class="line-numbers language-none"><code class="language-none">var ary = [1,23,4];
+<pre><code>var ary = [1,23,4];
 
 function isArray(o){
-	return Object.prototype.toString.call(o)== '[object Array]';
+    return Object.prototype.toString.call(o)== '[object Array]';
 }
 
-console.log(isArray(ary));<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-
+console.log(isArray(ary));</code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -876,7 +870,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="external nofollow noopener noreferrer">Matery</a>
             <br>
             
-            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">9.9k</span>&nbsp;字
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">9.8k</span>&nbsp;字
             
             
             
