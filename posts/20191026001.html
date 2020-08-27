@@ -2,10 +2,10 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
     <meta charset="utf-8">
     <meta name="keywords" content="MySQL,SQL,mysql">
-    <meta name="description" content="信就是所望之事的实底，是未见之事的确据。--希11:1">
+    <meta name="description" content="记录学习、工作、生活中的一些问题和感悟，收集&amp;分享软件、资源，你懂的，不懂的这里全都有。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,30 +13,34 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
     <title>MySQL笔记 | 你懂的</title>
-    <link rel="icon" type="image/png" href="/medias/admin.png">
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../admin.png">
 
-    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/matery.css">
-    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../css/matery.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../css/my.css">
 
-    <script src="/libs/jquery/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../libs/jquery/jquery.min.js"></script>
 
+<meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="atom.xml" title="你懂的" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
-        <div id="navContainer" class="nav-wrapper head-container">
+        <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
                 <a href="../index.html" class="waves-effect waves-light">
                     
-                    <img src="/medias/admin.png" class="logo-img" alt="LOGO">
+                    <img src="/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../admin.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">你懂的</span>
                 </a>
@@ -48,9 +52,9 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/" class="waves-effect waves-light">
+    <a href="../index.html" class="waves-effect waves-light">
       
-      <i class="fas fa-1x fa-home" style="zoom: 0.6;"></i>
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
       
       <span>首页</span>
     </a>
@@ -59,9 +63,9 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/tags" class="waves-effect waves-light">
+    <a href="../tags" class="waves-effect waves-light">
       
-      <i class="fas fa-1x fa-tags" style="zoom: 0.6;"></i>
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
       
       <span>标签</span>
     </a>
@@ -70,9 +74,9 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/categories" class="waves-effect waves-light">
+    <a href="../categories" class="waves-effect waves-light">
       
-      <i class="fas fa-1x fa-bookmark" style="zoom: 0.6;"></i>
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
       
       <span>分类</span>
     </a>
@@ -81,9 +85,9 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/archives" class="waves-effect waves-light">
+    <a href="../archives" class="waves-effect waves-light">
       
-      <i class="fas fa-1x fa-archive" style="zoom: 0.6;"></i>
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
       
       <span>归档</span>
     </a>
@@ -92,9 +96,9 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/about" class="waves-effect waves-light">
+    <a href="../about" class="waves-effect waves-light">
       
-      <i class="fas fa-1x fa-user-circle" style="zoom: 0.6;"></i>
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
       
       <span>关于</span>
     </a>
@@ -103,9 +107,9 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/contact" class="waves-effect waves-light">
+    <a href="../contact" class="waves-effect waves-light">
       
-      <i class="fas fa-1x fa-comments" style="zoom: 0.6;"></i>
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
       
       <span>留言板</span>
     </a>
@@ -114,9 +118,9 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/friends" class="waves-effect waves-light">
+    <a href="../friends" class="waves-effect waves-light">
       
-      <i class="fas fa-1x fa-address-book" style="zoom: 0.6;"></i>
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
       
       <span>友情链接</span>
     </a>
@@ -130,11 +134,12 @@
   </li>
 </ul>
 
+
 <div id="mobile-nav" class="side-nav sidenav">
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/admin.png" class="logo-img circle responsive-img">
+        <img src="/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../admin.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">你懂的</div>
         <div class="logo-desc">
@@ -150,9 +155,9 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/" class="waves-effect waves-light">
+		<a href="../index.html" class="waves-effect waves-light">
 			
-			    <i class="fa-fw fas fa-1x fa-home"></i>
+			    <i class="fa-fw fas fa-home"></i>
 			
 			首页
 		</a>
@@ -161,9 +166,9 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/tags" class="waves-effect waves-light">
+		<a href="../tags" class="waves-effect waves-light">
 			
-			    <i class="fa-fw fas fa-1x fa-tags"></i>
+			    <i class="fa-fw fas fa-tags"></i>
 			
 			标签
 		</a>
@@ -172,9 +177,9 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/categories" class="waves-effect waves-light">
+		<a href="../categories" class="waves-effect waves-light">
 			
-			    <i class="fa-fw fas fa-1x fa-bookmark"></i>
+			    <i class="fa-fw fas fa-bookmark"></i>
 			
 			分类
 		</a>
@@ -183,9 +188,9 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/archives" class="waves-effect waves-light">
+		<a href="../archives" class="waves-effect waves-light">
 			
-			    <i class="fa-fw fas fa-1x fa-archive"></i>
+			    <i class="fa-fw fas fa-archive"></i>
 			
 			归档
 		</a>
@@ -194,9 +199,9 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/about" class="waves-effect waves-light">
+		<a href="../about" class="waves-effect waves-light">
 			
-			    <i class="fa-fw fas fa-1x fa-user-circle"></i>
+			    <i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
 		</a>
@@ -205,9 +210,9 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/contact" class="waves-effect waves-light">
+		<a href="../contact" class="waves-effect waves-light">
 			
-			    <i class="fa-fw fas fa-1x fa-comments"></i>
+			    <i class="fa-fw fas fa-comments"></i>
 			
 			留言板
 		</a>
@@ -216,9 +221,9 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/friends" class="waves-effect waves-light">
+		<a href="../friends" class="waves-effect waves-light">
 			
-			    <i class="fa-fw fas fa-1x fa-address-book"></i>
+			    <i class="fa-fw fas fa-address-book"></i>
 			
 			友情链接
 		</a>
@@ -229,6 +234,7 @@
     </ul>
 </div>
 
+
         </div>
 
         
@@ -237,7 +243,7 @@
 </header>
 
     
-<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
         let pwd = '';
@@ -253,7 +259,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -271,7 +277,7 @@
 <main class="post-container content">
 
     
-    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../libs/tocbot/tocbot.css">
 <style>
     #articleContent h1::before,
     #articleContent h2::before,
@@ -335,14 +341,14 @@
     #toc-content .toc-link::before {
         background-color: transparent;
         max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
     }
 
     #toc-content .is-active-link {
         color: #42b983;
-    }
-
-    #toc-content .is-active-link::before {
-        background-color: #42b983;
     }
 
     #floating-toc-btn {
@@ -409,7 +415,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    140
+                    421
                 </div>
                 
 
@@ -427,14 +433,35 @@
                     </div>
 				
             </div>
-
         </div>
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>MySQL或MariaDB，不要用“UTF8”编码，改用utf8mb4</p>
-<h4 id="mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）"><a href="#mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）" class="headerlink" title="mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）"></a>mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）</h4><p>– 不是以数字开头<br><code>select * from mot_terms where name not REGEXP '^[0-9]'</code><br>– 不是以字母开头<br><code>select * from mot_terms where name not REGEXP '^[a-zA-Z]'</code></p>
+                <h4 id="mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）"><a href="#mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）" class="headerlink" title="mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）"></a>mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）</h4><p>– 不是以数字开头<br><code>select * from mot_terms where name not REGEXP '^[0-9]'</code><br>– 不是以字母开头<br><code>select * from mot_terms where name not REGEXP '^[a-zA-Z]'</code></p>
 <p>– 已数字和特殊字符开头<br><code>select * from mot_terms where name REGEXP '^[@#$%&amp;0-9]'</code></p>
+<h3 id="utf8？utf8mb4"><a href="#utf8？utf8mb4" class="headerlink" title="utf8？utf8mb4!"></a>utf8？utf8mb4!</h3><p>MySQL的utf8编码只支持3字节的数据，而emoji表情数据是4个字节的字符，导致内容无法保存或乱码<br>可以对4字节的字符进行编码存储，然后取出来的时候，再进行解码。但是这样做会使得任何使用该字符的地方都要进行编码与解码。<br>utf8mb4编码是utf8编码的超集，兼容utf8，并且能存储4字节的表情字符。<br>采用utf8mb4编码的好处是：存储与获取数据的时候，不用再考虑表情字符的编码与解码问题。</p>
+<p>so 更改数据库的编码为utf8mb4<br>修改配置文件my.cnf</p>
+<pre class="line-numbers language-none"><code class="language-none">[mysqld]
+character-set-server=utf8mb4
+ 
+[mysql]
+default-character-set=utf8mb4
+ 
+[client]
+default-character-set=utf8mb4<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>重启mysql服务</p>
+<p>tips：utf8mb4的最低mysql版本支持版本为5.5.3+</p>
+<p><strong><em>检查</em></strong></p>
+<pre class="line-numbers language-none"><code class="language-none">SHOW VARIABLES WHERE Variable_name LIKE 'character_set_%' OR Variable_name LIKE 'collation%';<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>例如</p>
+<p>Variable_name  |  Value<br>character_set_client  |  utf8mb4<br>character_set_connection  |  utf8mb4<br>character_set_database  |  utf8mb4<br>character_set_filesystem  |  binary<br>character_set_results  |  utf8mb4<br>character_set_server  |  utf8mb4<br>character_set_system  |  utf8<br>collation_connection  |  utf8mb4_unicode_ci<br>collation_database  |  utf8mb4_unicode_ci<br>collation_server  |  utf8mb4_unicode_ci</p>
+<p>重要</p>
+<p>系统变量 | 描述<br>character_set_client ｜ utf8mb4<br>character_set_connection ｜ utf8mb4<br>character_set_database ｜ utf8mb4<br>character_set_results ｜ utf8mb4<br>character_set_server ｜ utf8mb4</p>
+<p>SQL</p>
+<p><code>show create table &lt;表名&gt;;</code></p>
+<p>更改数据库编码：<code>ALTER DATABASE &lt;数据库名&gt; CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;</code></p>
+<p>更改表编码：<code>ALTER TABLE &lt;表名&gt; CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;</code></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -468,7 +495,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://uknown.me" rel="external nofollow noreferrer">admin</a>
+                    <a href="../about" rel="external nofollow noreferrer">admin</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -478,8 +505,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <!-- <a href="https://uknown.me">https://uknown.me</a> -->
-                    <a href="https://uknown.me/posts/20191026001.html">https://uknown.me/posts/20191026001.html</a>
+                    <a href="https://uknown.me">https://uknown.me</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -492,7 +518,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noopener noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="https://uknown.me" target="_blank">admin</a>
+                    <a href="../about" target="_blank">admin</a>
                     !
                 </span>
             </div>
@@ -525,13 +551,12 @@
                     
                 </div>
                 <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
-                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
-
+                    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../libs/share/css/share.min.css">
 <div id="article-share">
-    
+
     
     <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="/libs/share/js/social-share.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../libs/share/js/social-share.min.js"></script>
     
 
     
@@ -545,18 +570,18 @@
     </div>
 
     
-        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
-<link rel="stylesheet" href="/css/my-gitalk.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../css/my-gitalk.css">
 
 <div class="card gitalk-card" data-aos="fade-up">
-    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; left: 20px; top: 15px; padding-bottom: 5px;">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
         <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
         <span>评论</span>
     </div>
     <div id="gitalk-container" class="card-content"></div>
 </div>
 
-<script src="/libs/gitalk/gitalk.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../libs/gitalk/gitalk.min.js"></script>
 <script>
     let gitalk = new Gitalk({
         clientID: '559eacfba3c76c3c2b8b',
@@ -564,12 +589,15 @@
         repo: 'oknown.github.io',
         owner: 'oknown',
         admin: ["oknown"],
-        id: '2019-10-22',
+        id: '2019-10-22T00-00-00',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
     gitalk.render('gitalk-container');
 </script>
+
+    
+
     
 
     
@@ -593,7 +621,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="前端笔记">
+                        <img src="/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../medias/featureimages/6.jpg" class="responsive-img" alt="前端笔记">
                         
                         <span class="card-title">前端笔记</span>
                     </div>
@@ -601,7 +629,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            这世上，时光会改变太多事情，但总有一些人一些事，只要你相信，就永远不会改变。
+                            你的话是我脚前的灯，是我路上的光。你公义的典章，我曾起誓遵守，我必按誓而行。--诗:119:105-106
                         
                     </div>
                     <div class="publish-info">
@@ -612,7 +640,7 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../categories/前端/" class="post-category">
+                            <a href="../categories/%E5%89%8D%E7%AB%AF/" class="post-category">
                                     前端
                                 </a>
                             
@@ -623,7 +651,7 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../tags/前端/">
+                    <a href="../tags/%E5%89%8D%E7%AB%AF/">
                         <span class="chip bg-color">前端</span>
                     </a>
                     
@@ -642,7 +670,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="SpringCloud笔记">
+                        <img src="/images/loading.gif" data-original="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../medias/featureimages/12.jpg" class="responsive-img" alt="SpringCloud笔记">
                         
                         <span class="card-title">SpringCloud笔记</span>
                     </div>
@@ -689,21 +717,21 @@
 
 
 <!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../libs/codeBlock/codeBlockFuction.js"></script>
 
 <!-- 代码语言 -->
 
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../libs/codeBlock/codeLang.js"></script>
 
 
 <!-- 代码块复制 -->
 
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../libs/codeBlock/codeCopy.js"></script>
 
 
 <!-- 代码块收缩 -->
 
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../libs/codeBlock/codeShrink.js"></script>
 
 
 <!-- 代码块折行 -->
@@ -731,7 +759,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 </div>
 
 
-<script src="/libs/tocbot/tocbot.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../libs/tocbot/tocbot.min.js"></script>
 <script>
     $(function () {
         tocbot.init({
@@ -813,17 +841,61 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 
 
+
     <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class>
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12" server="netease" type="playlist" id="503838841" fixed="true" autoplay="false" theme="#42b983" loop="all" order="random" preload="auto" volume="0.7" list-folded="true">
+        </meting-js>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
     <div class="container row center-align" style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             <span id="year">2019</span>
-            <a href="https://uknown.me" target="_blank">admin</a>
+            <a href="../about" target="_blank">admin</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="external nofollow noopener noreferrer">Matery</a>
             <br>
             
-            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">8.1k</span>&nbsp;字
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">9.9k</span>&nbsp;字
             
             
             
@@ -889,12 +961,13 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
     </div>
 </div>
 
-<script src="/js/search.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../js/search.js"></script>
 <script type="text/javascript">
 $(function () {
-    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+    searchFunc("https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../search.xml", 'searchInput', 'searchResult');
 });
 </script>
+
     <!-- 回到顶部按钮 -->
 <div id="backTop" class="top-scroll">
     <a class="btn-floating btn-large waves-effect waves-light" href="#!">
@@ -903,57 +976,43 @@ $(function () {
 </div>
 
 
-    <script src="/libs/materialize/materialize.min.js"></script>
-    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="/libs/aos/aos.js"></script>
-    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="/js/matery.js"></script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-
+    <script src="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../libs/materialize/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../libs/aos/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../js/matery.js"></script>
 
     <!-- Baidu Analytics -->
 
     <!-- Baidu Push -->
 
+    
+    <script src="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/gh/oknown/oknown.github.io../libs/instantpage/instantpage.js" type="module"></script>
+    
+
 <script>
-    (function () {
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        } else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-</script>
-
-    
-    <script src="/libs/others/clicklove.js" async="async"></script>
-    
-    
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
-    
-    
-    
-    <script src="/libs/instantpage/instantpage.js" type="module"></script>
-    
-
-</body>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=o;var i=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function o(){i&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,e,a=0;a<r.length;a++)t=r[a],e=void 0,0<=(e=t.getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}o(),n.addEventListener("scroll",function(){var t,e;t=o,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>

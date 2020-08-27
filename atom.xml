@@ -3,10 +3,10 @@
   <title>你懂的</title>
   
   <subtitle>你懂的</subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="https://uknown.me/atom.xml" rel="self"/>
   
   <link href="https://uknown.me/"/>
-  <updated>2020-01-10T08:51:32.462Z</updated>
+  <updated>2020-04-03T01:58:45.453Z</updated>
   <id>https://uknown.me/</id>
   
   <author>
@@ -14,7 +14,33 @@
     
   </author>
   
-  <generator uri="http://hexo.io/">Hexo</generator>
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>OpenWrt折腾日记</title>
+    <link href="https://uknown.me/posts/20191218001.html"/>
+    <id>https://uknown.me/posts/20191218001.html</id>
+    <published>2019-12-18T05:00:00.000Z</published>
+    <updated>2020-04-03T01:58:45.453Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;&lt;em&gt;记录1：&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;OpenWrt官方较新版固件ssr plus插件无法使用GFW模式的解决办法：安装dnsmasq-extra + dnsFtcp插件（&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="OpenWrt" scheme="https://uknown.me/categories/OpenWrt/"/>
+    
+    
+    <category term="OpenWrt" scheme="https://uknown.me/tags/OpenWrt/"/>
+    
+  </entry>
   
   <entry>
     <title>Centos7安装vsftpd</title>
@@ -23,25 +49,24 @@
     <published>2019-11-23T05:00:00.000Z</published>
     <updated>2020-01-10T08:51:32.462Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;blockquote&gt;
-&lt;p&gt;FTP，即：文件传输协议（File Transfer
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;FTP，即：文件传输协议（File Transfer</summary>
         
       
     
-    </summary>
-    
-      <category term="Linux" scheme="https://uknown.me/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="https://uknown.me/tags/Linux/"/>
+    <category term="Linux" scheme="https://uknown.me/categories/Linux/"/>
     
-      <category term="FTP" scheme="https://uknown.me/tags/FTP/"/>
+    
+    <category term="Linux" scheme="https://uknown.me/tags/Linux/"/>
+    
+    <category term="FTP" scheme="https://uknown.me/tags/FTP/"/>
     
   </entry>
   
@@ -50,25 +75,23 @@
     <link href="https://uknown.me/posts/20191101001.html"/>
     <id>https://uknown.me/posts/20191101001.html</id>
     <published>2019-11-01T04:00:00.000Z</published>
-    <updated>2019-12-24T07:24:46.076Z</updated>
+    <updated>2020-08-25T09:23:33.632Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;&lt;strong&gt;npm中&lt;code&gt;~&lt;/code&gt;和&lt;code&gt;^&lt;/code&gt;的作用和区别&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;~&lt;/code&gt;会匹配最近的小版本依赖包，比如&lt;code&gt;~&lt;/code&gt;1.2.3会匹配所有1.2.x版本，但是不包括1.3.0&lt;b
+    <summary type="html">&lt;h3 id=&quot;npm中-和-的作用和区别&quot;&gt;&lt;a href=&quot;#npm中-和-的作用和区别&quot; class=&quot;headerlink&quot;</summary>
         
       
     
-    </summary>
-    
-      <category term="前端" scheme="https://uknown.me/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="前端" scheme="https://uknown.me/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://uknown.me/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="前端" scheme="https://uknown.me/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -77,25 +100,23 @@
     <link href="https://uknown.me/posts/20191026001.html"/>
     <id>https://uknown.me/posts/20191026001.html</id>
     <published>2019-10-22T04:00:00.000Z</published>
-    <updated>2019-12-24T07:24:32.860Z</updated>
+    <updated>2020-08-07T05:45:10.288Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;MySQL或MariaDB，不要用“UTF8”编码，改用utf8mb4&lt;/p&gt;
-&lt;h4 id=&quot;mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）&quot;&gt;&lt;a href=&quot;#mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）&quot;
+    <summary type="html">&lt;h4 id=&quot;mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）&quot;&gt;&lt;a href=&quot;#mysql过滤查询（以字母开头，以数字开头，非数字开头，非字母开头）&quot; class=&quot;headerlink&quot;</summary>
         
       
     
-    </summary>
-    
-      <category term="SQL" scheme="https://uknown.me/categories/SQL/"/>
     
     
-      <category term="MySQL" scheme="https://uknown.me/tags/MySQL/"/>
+    <category term="SQL" scheme="https://uknown.me/categories/SQL/"/>
+    
+    
+    <category term="MySQL" scheme="https://uknown.me/tags/MySQL/"/>
     
   </entry>
   
@@ -106,23 +127,22 @@
     <published>2019-09-11T04:00:00.000Z</published>
     <updated>2020-01-04T04:50:53.432Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;Eureka没有闭源，是Eurkea 2.x分支不再维护！Spring Cloud并不强依赖Eureka&lt;/p&gt;
-&lt;p&gt;springcloud Eureka是基于Netflix
+    <summary type="html">&lt;p&gt;Eureka没有闭源，是Eurkea 2.x分支不再维护！Spring Cloud并不强依赖Eureka&lt;/p&gt;
+&lt;p&gt;springcloud Eureka是基于Netflix</summary>
         
       
     
-    </summary>
-    
-      <category term="SpringCloud" scheme="https://uknown.me/categories/SpringCloud/"/>
     
     
-      <category term="SpringCloud" scheme="https://uknown.me/tags/SpringCloud/"/>
+    <category term="SpringCloud" scheme="https://uknown.me/categories/SpringCloud/"/>
+    
+    
+    <category term="SpringCloud" scheme="https://uknown.me/tags/SpringCloud/"/>
     
   </entry>
   
@@ -133,22 +153,21 @@
     <published>2019-08-19T04:00:00.000Z</published>
     <updated>2020-01-04T04:41:51.720Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;h3 id=&quot;Dockerfile&quot;&gt;&lt;a href=&quot;#Dockerfile&quot; class=&quot;headerlink&quot;
+    <summary type="html">&lt;h3 id=&quot;Dockerfile&quot;&gt;&lt;a href=&quot;#Dockerfile&quot; class=&quot;headerlink&quot;</summary>
         
       
     
-    </summary>
-    
-      <category term="Docker" scheme="https://uknown.me/categories/Docker/"/>
     
     
-      <category term="Docker" scheme="https://uknown.me/tags/Docker/"/>
+    <category term="Docker" scheme="https://uknown.me/categories/Docker/"/>
+    
+    
+    <category term="Docker" scheme="https://uknown.me/tags/Docker/"/>
     
   </entry>
   
@@ -159,23 +178,22 @@
     <published>2019-07-24T04:00:00.000Z</published>
     <updated>2020-01-04T04:48:55.455Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;springboot打包忽略Test单元测试&lt;/p&gt;
-&lt;pre class=&quot; language-xml&quot;&gt;&lt;code class=&quot;language-xml&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span
+    <summary type="html">&lt;p&gt;springboot打包忽略Test单元测试&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-xml&quot; data-language=&quot;xml&quot;&gt;&lt;div</summary>
         
       
     
-    </summary>
-    
-      <category term="SpringBoot" scheme="https://uknown.me/categories/SpringBoot/"/>
     
     
-      <category term="SpringBoot" scheme="https://uknown.me/tags/SpringBoot/"/>
+    <category term="SpringBoot" scheme="https://uknown.me/categories/SpringBoot/"/>
+    
+    
+    <category term="SpringBoot" scheme="https://uknown.me/tags/SpringBoot/"/>
     
   </entry>
   
@@ -184,25 +202,24 @@
     <link href="https://uknown.me/posts/20190715002.html"/>
     <id>https://uknown.me/posts/20190715002.html</id>
     <published>2019-07-15T04:00:00.000Z</published>
-    <updated>2020-01-10T05:48:28.807Z</updated>
+    <updated>2020-04-03T01:58:45.452Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;Linux默认不允许非root用户启动的进程监听1024以下的端口，除非为每一个二进制文件显式声明。&lt;/p&gt;
-&lt;h3 id=&quot;firewall防火墙&quot;&gt;&lt;a href=&quot;#firewall防火墙&quot; class=&quot;headerlink&quot;
+    <summary type="html">&lt;p&gt;Linux默认不允许非root用户启动的进程监听1024以下的端口，除非为每一个二进制文件显式声明。&lt;/p&gt;
+&lt;h3 id=&quot;firewall防火墙&quot;&gt;&lt;a href=&quot;#firewall防火墙&quot; class=&quot;headerlink&quot;</summary>
         
       
     
-    </summary>
-    
-      <category term="Linux" scheme="https://uknown.me/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="https://uknown.me/tags/Linux/"/>
+    <category term="Linux" scheme="https://uknown.me/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="https://uknown.me/tags/Linux/"/>
     
   </entry>
   
@@ -213,22 +230,21 @@
     <published>2019-07-04T04:00:00.000Z</published>
     <updated>2019-12-24T07:28:41.487Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;Spring的Bean扫描和Spring-MVC的Bean扫描是分开的, 两者的Bean位于两个不同的Application, 而且Spring-MVC的Bean扫描要早于Spring的Bean扫描, 所以当Controller Bean生成完成后,
+    <summary type="html">&lt;p&gt;Spring的Bean扫描和Spring-MVC的Bean扫描是分开的, 两者的Bean位于两个不同的Application, 而且Spring-MVC的Bean扫描要早于Spring的Bean扫描, 所以当Controller Bean生成完成后,</summary>
         
       
     
-    </summary>
-    
-      <category term="Spring" scheme="https://uknown.me/categories/Spring/"/>
     
     
-      <category term="Spring" scheme="https://uknown.me/tags/Spring/"/>
+    <category term="Spring" scheme="https://uknown.me/categories/Spring/"/>
+    
+    
+    <category term="Spring" scheme="https://uknown.me/tags/Spring/"/>
     
   </entry>
   
@@ -239,24 +255,23 @@
     <published>2019-07-04T04:00:00.000Z</published>
     <updated>2019-12-24T07:21:15.752Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3 id=&quot;Android&quot;&gt;&lt;a href=&quot;#Android&quot; class=&quot;headerlink&quot; title=&quot;Android&quot;&gt;&lt;/a&gt;Android&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;&quot;&gt;NFC Tool
+&lt;h3 id=&quot;Android&quot;&gt;&lt;a href=&quot;#Android&quot; class=&quot;headerlink&quot; title=&quot;Android&quot;&gt;&lt;/a&gt;Android&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;&quot;&gt;NFC Tool</summary>
         
       
     
-    </summary>
-    
-      <category term="软件" scheme="https://uknown.me/categories/%E8%BD%AF%E4%BB%B6/"/>
     
     
-      <category term="软件" scheme="https://uknown.me/tags/%E8%BD%AF%E4%BB%B6/"/>
+    <category term="软件" scheme="https://uknown.me/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+    <category term="软件" scheme="https://uknown.me/tags/%E8%BD%AF%E4%BB%B6/"/>
     
   </entry>
   
@@ -267,24 +282,23 @@
     <published>2019-06-20T04:00:00.000Z</published>
     <updated>2020-01-04T04:56:22.888Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;实例名区分大小写！&lt;/p&gt;
+    <summary type="html">&lt;p&gt;实例名区分大小写！&lt;/p&gt;
 &lt;p&gt;实例名：&lt;code&gt;select instance_name from v$instance;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;服务名：&lt;code&gt;select global_name from
+&lt;p&gt;服务名：&lt;code&gt;select global_name from</summary>
         
       
     
-    </summary>
-    
-      <category term="Oracle" scheme="https://uknown.me/categories/Oracle/"/>
     
     
-      <category term="Oracle" scheme="https://uknown.me/tags/Oracle/"/>
+    <category term="Oracle" scheme="https://uknown.me/categories/Oracle/"/>
+    
+    
+    <category term="Oracle" scheme="https://uknown.me/tags/Oracle/"/>
     
   </entry>
   
@@ -293,26 +307,25 @@
     <link href="https://uknown.me/posts/20190516001.html"/>
     <id>https://uknown.me/posts/20190516001.html</id>
     <published>2019-05-16T04:00:00.000Z</published>
-    <updated>2020-01-04T05:03:55.344Z</updated>
+    <updated>2020-08-21T09:48:39.733Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;常见VPN协议根据易受干扰的程度从大到小依次为：OpenVPN &amp;gt; PPTP &amp;gt; L2TP &amp;gt; IPSec，尤其是OpenVPN，GFW已经可以实现对其定点清除&lt;/p&gt;
+    <summary type="html">&lt;p&gt;常见VPN协议根据易受干扰的程度从大到小依次为：OpenVPN &amp;gt; PPTP &amp;gt; L2TP &amp;gt; IPSec，尤其是OpenVPN，GFW已经可以实现对其定点清除&lt;/p&gt;
 &lt;p&gt;酸酸乳&lt;/p&gt;
-&lt;h3 id=&quot;路由器&quot;&gt;&lt;a href=&quot;#路由器&quot;
+&lt;h3 id=&quot;路由器&quot;&gt;&lt;a href=&quot;#路由器&quot;</summary>
         
       
     
-    </summary>
-    
-      <category term="杂记" scheme="https://uknown.me/categories/%E6%9D%82%E8%AE%B0/"/>
     
     
-      <category term="杂记" scheme="https://uknown.me/tags/%E6%9D%82%E8%AE%B0/"/>
+    <category term="杂记" scheme="https://uknown.me/categories/%E6%9D%82%E8%AE%B0/"/>
+    
+    
+    <category term="杂记" scheme="https://uknown.me/tags/%E6%9D%82%E8%AE%B0/"/>
     
   </entry>
   
@@ -323,24 +336,23 @@
     <published>2019-05-15T04:00:00.000Z</published>
     <updated>2020-01-04T05:06:31.622Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;Android 使用Greendao gradle 出现&lt;/p&gt;
+    <summary type="html">&lt;p&gt;Android 使用Greendao gradle 出现&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Error:Unable to find method
+&lt;p&gt;Error:Unable to find method</summary>
         
       
     
-    </summary>
-    
-      <category term="Android" scheme="https://uknown.me/categories/Android/"/>
     
     
-      <category term="Android" scheme="https://uknown.me/tags/Android/"/>
+    <category term="Android" scheme="https://uknown.me/categories/Android/"/>
+    
+    
+    <category term="Android" scheme="https://uknown.me/tags/Android/"/>
     
   </entry>
   
@@ -349,25 +361,24 @@
     <link href="https://uknown.me/posts/20190512001.html"/>
     <id>https://uknown.me/posts/20190512001.html</id>
     <published>2019-05-12T04:00:00.000Z</published>
-    <updated>2019-12-24T07:11:07.907Z</updated>
+    <updated>2020-04-03T01:58:45.452Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;记录Java中的一些骚操作&lt;/p&gt;
-&lt;h3 id=&quot;Java8获取本月最后一天&quot;&gt;&lt;a href=&quot;#Java8获取本月最后一天&quot; class=&quot;headerlink&quot; title=&quot;Java8获取本月最后一天&quot;&gt;&lt;/a&gt;Java8获取本月最后一天&lt;/h3&gt;&lt;pre
+    <summary type="html">&lt;p&gt;记录Java中的一些骚操作&lt;/p&gt;
+&lt;h3 id=&quot;Java8获取本月最后一天&quot;&gt;&lt;a href=&quot;#Java8获取本月最后一天&quot; class=&quot;headerlink&quot; title=&quot;Java8获取本月最后一天&quot;&gt;&lt;/a&gt;Java8获取本月最后一天&lt;/h3&gt;&lt;pre</summary>
         
       
     
-    </summary>
-    
-      <category term="Java" scheme="https://uknown.me/categories/Java/"/>
     
     
-      <category term="Java" scheme="https://uknown.me/tags/Java/"/>
+    <category term="Java" scheme="https://uknown.me/categories/Java/"/>
+    
+    
+    <category term="Java" scheme="https://uknown.me/tags/Java/"/>
     
   </entry>
   
@@ -376,28 +387,27 @@
     <link href="https://uknown.me/posts/20190410001.html"/>
     <id>https://uknown.me/posts/20190410001.html</id>
     <published>2019-04-10T04:00:00.000Z</published>
-    <updated>2020-01-04T05:17:55.218Z</updated>
+    <updated>2020-04-03T01:58:45.453Z</updated>
     
-    <summary type="html">
     
       
       
         
         
-          &lt;p&gt;&lt;strong&gt;在Mybatis中，有两种占位符&lt;/strong&gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;strong&gt;在Mybatis中，有两种占位符&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;#{}解析传递进来的参数数据&lt;/li&gt;
 &lt;li&gt;${}对传递进来的参数原样拼接在SQL中&lt;/li&gt;
-&lt;li&gt;#{}是预编译处理(自动进行java类型和jdbc类型转换)，${}是字
+&lt;li&gt;#{}是预编译处理(自动进行java类型和jdbc类型转换)，${}是字</summary>
         
       
     
-    </summary>
-    
-      <category term="Java" scheme="https://uknown.me/categories/Java/"/>
     
     
-      <category term="mybatis" scheme="https://uknown.me/tags/mybatis/"/>
+    <category term="Java" scheme="https://uknown.me/categories/Java/"/>
+    
+    
+    <category term="mybatis" scheme="https://uknown.me/tags/mybatis/"/>
     
   </entry>
   
