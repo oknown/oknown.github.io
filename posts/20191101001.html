@@ -459,7 +459,7 @@ console.log(ary  instanceof Array) //true; <span aria-hidden="true" class="line-
 console.log(ary.__proto__.constructor==Array); //true 
 
 console.log(ary.constructor==Array) //true 这两段代码是一样的<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>兼容性：在IE早期版本里面<strong>proto</strong>没有定义</p>
+<p>兼容性：在IE早期版本里面__proto__没有定义</p>
 <p>instanceof 和constructor 判断的变量，必须在当前页面声明的，比如，一个页面（父页面）有一个框架，框架中引用了一个页面（子页面），在子页面中声明了一个ary，并将其赋值给父页面的一个变量，这时判断该变量，Array == object.constructor;会返回false；</p>
 <p>原因：</p>
 <p>1、array属于引用型数据，在传递过程中，仅仅是引用地址的传递。</p>
