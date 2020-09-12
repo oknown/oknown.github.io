@@ -19,19 +19,18 @@
     <title>大象秘籍 | 懒人日记</title>
     <link rel="icon" type="image/png" href="../admin.png">
 
-    <link rel="stylesheet" type="text/css" href="../libs/awesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="../libs/materialize/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="../libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="../libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="../libs/lightGallery/css/lightgallery.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/matery.css">
-    <link rel="stylesheet" type="text/css" href="../css/my.css">
+    <link rel="stylesheet" type="text/css" href="../static/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="../static/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="../static/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/my.css">
 
-    <script src="../libs/jquery/jquery.min.js"></script>
+    <script src="../static/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="atom.xml" title="懒人日记" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+</head>
 
 
 <body>
@@ -244,7 +243,7 @@
 </header>
 
     
-<script src="../libs/cryptojs/crypto-js.min.js"></script>
+<script src="../static/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
         let pwd = '';
@@ -278,7 +277,7 @@
 <main class="post-container content">
 
     
-    <link rel="stylesheet" href="../libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="../static/libs/tocbot/tocbot.css">
 <style>
     #articleContent h1::before,
     #articleContent h2::before,
@@ -444,12 +443,12 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>获取当月天数及当月第一天及最后一天时间戳</p>
-<pre class="line-numbers language-php"><code class="language-php"><span class="token variable">$beginThismonth</span> <span class="token operator">=</span> <span class="token function">mktime</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token function">date</span><span class="token punctuation">(</span><span class="token string">'m'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token function">date</span><span class="token punctuation">(</span><span class="token string">'Y'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token variable">$endThismonth</span> <span class="token operator">=</span> <span class="token function">mktime</span><span class="token punctuation">(</span><span class="token number">23</span><span class="token punctuation">,</span> <span class="token number">59</span><span class="token punctuation">,</span> <span class="token number">59</span><span class="token punctuation">,</span> <span class="token function">date</span><span class="token punctuation">(</span><span class="token string">'m'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">date</span><span class="token punctuation">(</span><span class="token string">'t'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">date</span><span class="token punctuation">(</span><span class="token string">'Y'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre><code class="php">$beginThismonth = mktime(0, 0, 0, date('m'), 1, date('Y'));
+$endThismonth = mktime(23, 59, 59, date('m'), date('t'), date('Y'));</code></pre>
 <p>获取当前季度的第一天和最后一天时间戳</p>
-<pre class="line-numbers language-php"><code class="language-php"><span class="token variable">$season</span> <span class="token operator">=</span> <span class="token function">ceil</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token function">date</span><span class="token punctuation">(</span><span class="token string">'n'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token variable">$begin_this_season</span> <span class="token operator">=</span> <span class="token function">mktime</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span><span class="token variable">$season</span><span class="token operator">*</span><span class="token number">3</span><span class="token operator">-</span><span class="token number">3</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token function">date</span><span class="token punctuation">(</span><span class="token string">'Y'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token variable">$end_this_season</span> <span class="token operator">=</span> <span class="token function">mktime</span><span class="token punctuation">(</span><span class="token number">23</span><span class="token punctuation">,</span><span class="token number">59</span><span class="token punctuation">,</span><span class="token number">59</span><span class="token punctuation">,</span><span class="token variable">$season</span><span class="token operator">*</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token function">date</span><span class="token punctuation">(</span><span class="token string">'t'</span><span class="token punctuation">,</span><span class="token function">mktime</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span> <span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span><span class="token variable">$season</span><span class="token operator">*</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token function">date</span><span class="token punctuation">(</span><span class="token string">"Y"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token function">date</span><span class="token punctuation">(</span><span class="token string">'Y'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre><code class="php">$season = ceil((date('n'))/3);
+$begin_this_season = mktime(0, 0, 0,$season*3-3+1,1,date('Y'));
+$end_this_season = mktime(23,59,59,$season*3,date('t',mktime(0, 0 , 0,$season*3,1,date("Y"))),date('Y'));</code></pre>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -539,12 +538,12 @@
                     
                 </div>
                 <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; margin: -0.15rem 0;">
-                    <link rel="stylesheet" type="text/css" href="../libs/share/css/share.min.css">
+                    <link rel="stylesheet" type="text/css" href="../static/libs/share/css/share.min.css">
 <div id="article-share">
 
     
     <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="../libs/share/js/social-share.min.js"></script>
+    <script src="../static/libs/share/js/social-share.min.js"></script>
     
 
     
@@ -558,8 +557,8 @@
     </div>
 
     
-        <link rel="stylesheet" href="../libs/gitalk/gitalk.css">
-<link rel="stylesheet" href="../css/my-gitalk.css">
+        <link rel="stylesheet" href="../static/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="../static/css/my-gitalk.css">
 
 <div class="card gitalk-card" data-aos="fade-up">
     <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
@@ -569,7 +568,7 @@
     <div id="gitalk-container" class="card-content"></div>
 </div>
 
-<script src="../libs/gitalk/gitalk.min.js"></script>
+<script src="../static/libs/gitalk/gitalk.min.js"></script>
 <script>
     let gitalk = new Gitalk({
         clientID: '559eacfba3c76c3c2b8b',
@@ -709,21 +708,21 @@
 
 
 <!-- 代码块功能依赖 -->
-<script type="text/javascript" src="../libs/codeBlock/codeBlockFuction.js"></script>
+<script type="text/javascript" src="../static/libs/codeBlock/codeBlockFuction.js"></script>
 
 <!-- 代码语言 -->
 
-<script type="text/javascript" src="../libs/codeBlock/codeLang.js"></script>
+<script type="text/javascript" src="../static/libs/codeBlock/codeLang.js"></script>
 
 
 <!-- 代码块复制 -->
 
-<script type="text/javascript" src="../libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="../static/libs/codeBlock/codeCopy.js"></script>
 
 
 <!-- 代码块收缩 -->
 
-<script type="text/javascript" src="../libs/codeBlock/codeShrink.js"></script>
+<script type="text/javascript" src="../static/libs/codeBlock/codeShrink.js"></script>
 
 
 <!-- 代码块折行 -->
@@ -751,7 +750,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 </div>
 
 
-<script src="../libs/tocbot/tocbot.min.js"></script>
+<script src="../static/libs/tocbot/tocbot.min.js"></script>
 <script>
     $(function () {
         tocbot.init({
@@ -911,7 +910,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
     </div>
 </div>
 
-<script src="../js/search.js"></script>
+<script src="../static/js/search.js"></script>
 <script type="text/javascript">
 $(function () {
     searchFunc("../search.xml", 'searchInput', 'searchResult');
@@ -926,24 +925,22 @@ $(function () {
 </div>
 
 
-    <script src="../libs/materialize/materialize.min.js"></script>
-    <script src="../libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="../libs/aos/aos.js"></script>
-    <script src="../libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="../libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="../js/matery.js"></script>
+    <script src="../static/libs/materialize/materialize.min.js"></script>
+    <script src="../static/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="../static/libs/aos/aos.js"></script>
+    <script src="../static/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="../static/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="../static/js/matery.js"></script>
 
     <!-- Baidu Analytics -->
 
     <!-- Baidu Push -->
 
     
-    <script src="../libs/others/clicklove.js" async="async"></script>
+    <script src="../static/libs/others/clicklove.js" async="async"></script>
     
     
-    <script async src="../libs/others/busuanzi.pure.mini.js"></script>
-    
-
+    <script async src="../static/libs/others/busuanzi.pure.mini.js"></script>
     
 
     
@@ -955,7 +952,9 @@ $(function () {
     
 
     
-    <script src="../libs/instantpage/instantpage.js" type="module"></script>
+
+    
+    <script src="../static/libs/instantpage/instantpage.js" type="module"></script>
     
 
 <script>

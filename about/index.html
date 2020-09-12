@@ -19,19 +19,18 @@
     <title>关于 | 懒人日记</title>
     <link rel="icon" type="image/png" href="../admin.png">
 
-    <link rel="stylesheet" type="text/css" href="../libs/awesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="../libs/materialize/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="../libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="../libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="../libs/lightGallery/css/lightgallery.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/matery.css">
-    <link rel="stylesheet" type="text/css" href="../css/my.css">
+    <link rel="stylesheet" type="text/css" href="../static/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="../static/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="../static/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/my.css">
 
-    <script src="../libs/jquery/jquery.min.js"></script>
+    <script src="../static/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="atom.xml" title="懒人日记" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+</head>
 
 
 <body>
@@ -451,7 +450,7 @@
     </div>
 </div>
 
-<script type="text/javascript" src="../libs/echarts/echarts.min.js"></script>
+<script type="text/javascript" src="../static/libs/echarts/echarts.min.js"></script>
 <script>
     let postsChart = echarts.init(document.getElementById('posts-chart'));
     let categoriesChart = echarts.init(document.getElementById('categories-chart'));
@@ -522,7 +521,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"Android","value":1},{"name":"Linux","value":1},{"name":"企鹅","value":2},{"name":"鲸鱼","value":1},{"name":"咖啡","value":1},{"name":"陆游器","value":1},{"name":"海豚","value":1},{"name":"大象","value":1},{"name":"Oracle","value":1},{"name":"春天","value":1},{"name":"前端","value":1},{"name":"杂记","value":1},{"name":"软件","value":1}],
+                data: [{"name":"Android","value":1},{"name":"Linux","value":1},{"name":"企鹅","value":2},{"name":"鲸鱼","value":1},{"name":"咖啡","value":1},{"name":"海豚","value":1},{"name":"陆游器","value":1},{"name":"Oracle","value":1},{"name":"大象","value":1},{"name":"春天","value":1},{"name":"前端","value":1},{"name":"杂记","value":1},{"name":"软件","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -546,7 +545,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["企鹅","Android","Linux","FTP","大便","鲸鱼","咖啡","陆游器","海豚","大象"]
+                data: ["企鹅","Android","Linux","FTP","大便","鲸鱼","咖啡","海豚","陆游器","Oracle"]
             }
         ],
         yAxis: [
@@ -714,26 +713,26 @@
             
             
             
-            <a href="../tags/%E9%99%86%E6%B8%B8%E5%99%A8/">
-                <span class="chip center-align waves-effect waves-light chip-default">陆游器</span>
-            </a>
-            
-            
-            
             <a href="../tags/%E6%B5%B7%E8%B1%9A/">
                 <span class="chip center-align waves-effect waves-light chip-default">海豚</span>
             </a>
             
             
             
-            <a href="../tags/%E5%A4%A7%E8%B1%A1/">
-                <span class="chip center-align waves-effect waves-light chip-default">大象</span>
+            <a href="../tags/%E9%99%86%E6%B8%B8%E5%99%A8/">
+                <span class="chip center-align waves-effect waves-light chip-default">陆游器</span>
             </a>
             
             
             
             <a href="../tags/Oracle/">
                 <span class="chip center-align waves-effect waves-light chip-default">Oracle</span>
+            </a>
+            
+            
+            
+            <a href="../tags/%E5%A4%A7%E8%B1%A1/">
+                <span class="chip center-align waves-effect waves-light chip-default">大象</span>
             </a>
             
             
@@ -896,7 +895,7 @@
     </div>
 </div>
 
-<script src="../js/search.js"></script>
+<script src="../static/js/search.js"></script>
 <script type="text/javascript">
 $(function () {
     searchFunc("../search.xml", 'searchInput', 'searchResult');
@@ -911,24 +910,22 @@ $(function () {
 </div>
 
 
-    <script src="../libs/materialize/materialize.min.js"></script>
-    <script src="../libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="../libs/aos/aos.js"></script>
-    <script src="../libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="../libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="../js/matery.js"></script>
+    <script src="../static/libs/materialize/materialize.min.js"></script>
+    <script src="../static/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="../static/libs/aos/aos.js"></script>
+    <script src="../static/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="../static/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="../static/js/matery.js"></script>
 
     <!-- Baidu Analytics -->
 
     <!-- Baidu Push -->
 
     
-    <script src="../libs/others/clicklove.js" async="async"></script>
+    <script src="../static/libs/others/clicklove.js" async="async"></script>
     
     
-    <script async src="../libs/others/busuanzi.pure.mini.js"></script>
-    
-
+    <script async src="../static/libs/others/busuanzi.pure.mini.js"></script>
     
 
     
@@ -940,7 +937,9 @@ $(function () {
     
 
     
-    <script src="../libs/instantpage/instantpage.js" type="module"></script>
+
+    
+    <script src="../static/libs/instantpage/instantpage.js" type="module"></script>
     
 
 <script>

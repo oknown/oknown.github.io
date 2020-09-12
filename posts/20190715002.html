@@ -19,19 +19,18 @@
     <title>企鹅滑雪 | 懒人日记</title>
     <link rel="icon" type="image/png" href="../admin.png">
 
-    <link rel="stylesheet" type="text/css" href="../libs/awesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="../libs/materialize/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="../libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="../libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="../libs/lightGallery/css/lightgallery.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/matery.css">
-    <link rel="stylesheet" type="text/css" href="../css/my.css">
+    <link rel="stylesheet" type="text/css" href="../static/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="../static/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="../static/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/my.css">
 
-    <script src="../libs/jquery/jquery.min.js"></script>
+    <script src="../static/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="atom.xml" title="懒人日记" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+</head>
 
 
 <body>
@@ -244,7 +243,7 @@
 </header>
 
     
-<script src="../libs/cryptojs/crypto-js.min.js"></script>
+<script src="../static/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
         let pwd = '';
@@ -278,7 +277,7 @@
 <main class="post-container content">
 
     
-    <link rel="stylesheet" href="../libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="../static/libs/tocbot/tocbot.css">
 <style>
     #articleContent h1::before,
     #articleContent h2::before,
@@ -480,11 +479,11 @@
 <p><code>firewall-cmd --permanent --zone=public --add-interface=wg0</code><br><code>firewall-cmd --zone=public --add-masquerade --permanent</code><br><code>firewall-cmd --permanent --zone=public --add-rich-rule='rule family=ipv4 masquerade'</code></p>
 <h3 id="systemctl"><a href="#systemctl" class="headerlink" title="systemctl"></a>systemctl</h3><p>systemctl是CentOS7的服务管理工具中主要的工具，它融合之前service和chkconfig的功能于一体。</p>
 <p>启动一个服务：<code>systemctl start firewalld.service</code><br>关闭一个服务：<code>systemctl stop firewalld.service</code><br>重启一个服务：<code>systemctl restart firewalld.service</code><br>显示一个服务的状态：<code>systemctl status firewalld.service</code><br>在开机时启用一个服务：<code>systemctl enable firewalld.service</code><br>在开机时禁用一个服务：<code>systemctl disable firewalld.service</code><br>查看服务是否开机启动：<code>systemctl is-enabled firewalld.service</code><br>查看已启动的服务列表：<code>systemctl list-unit-files|grep enabled</code><br>查看启动失败的服务列表：<code>systemctl --failed</code></p>
-<h3 id="快速清空文件内容"><a href="#快速清空文件内容" class="headerlink" title="快速清空文件内容"></a>快速清空文件内容</h3><pre class="line-numbers language-shell"><code class="language-shell">: > filename
-> filename
-echo "" > filename
-echo > filename
-cat /dev/null > filename<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="快速清空文件内容"><a href="#快速清空文件内容" class="headerlink" title="快速清空文件内容"></a>快速清空文件内容</h3><pre><code class="shell">: &gt; filename
+&gt; filename
+echo "" &gt; filename
+echo &gt; filename
+cat /dev/null &gt; filename</code></pre>
 <h3 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h3><p>dd if=/dev/zero of=/var/swap bs=1M count=1024</p>
 <p>mkswap /var/swap</p>
 <p>swapon /var/swap</p>
@@ -508,8 +507,8 @@ cat /dev/null > filename<span aria-hidden="true" class="line-numbers-rows"><span
 <p>yum –exclude=kernel* update</p>
 <h3 id="一键脚本"><a href="#一键脚本" class="headerlink" title="一键脚本"></a>一键脚本</h3><h4 id="v2ray一键部署管理脚本"><a href="#v2ray一键部署管理脚本" class="headerlink" title="v2ray一键部署管理脚本"></a>v2ray一键部署管理脚本</h4><p>Debian8/Debian7/Ubuntu16/Ubuntu14/Centos7</p>
 <pre><code>bash &lt;(curl -s -L https://git.io/v2ray.sh)</code></pre>
-<h4 id="Kcptun-一键安装脚本"><a href="#Kcptun-一键安装脚本" class="headerlink" title="Kcptun 一键安装脚本"></a>Kcptun 一键安装脚本</h4><pre class="line-numbers language-shell"><code class="language-shell">wget --no-check-certificate -O kcptun.sh https://github.com/kuoruan/shell-scripts/raw/master/kcptun/kcptun.sh
-sh kcptun.sh<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h4 id="Kcptun-一键安装脚本"><a href="#Kcptun-一键安装脚本" class="headerlink" title="Kcptun 一键安装脚本"></a>Kcptun 一键安装脚本</h4><pre><code class="shell">wget --no-check-certificate -O kcptun.sh https://github.com/kuoruan/shell-scripts/raw/master/kcptun/kcptun.sh
+sh kcptun.sh</code></pre>
 <h4 id="OpenVZ-BBR-一键安装脚本"><a href="#OpenVZ-BBR-一键安装脚本" class="headerlink" title="OpenVZ BBR 一键安装脚本"></a>OpenVZ BBR 一键安装脚本</h4><p>安装命令：</p>
 <pre><code>wget --no-check-certificate -O ovz-bbr-installer.sh https://github.com/kuoruan/shell-scripts/raw/master/ovz-bbr/ovz-bbr-installer.sh
 sh ovz-bbr-installer.sh</code></pre>
@@ -606,12 +605,12 @@ sh ovz-bbr-installer.sh</code></pre>
                     
                 </div>
                 <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; margin: -0.15rem 0;">
-                    <link rel="stylesheet" type="text/css" href="../libs/share/css/share.min.css">
+                    <link rel="stylesheet" type="text/css" href="../static/libs/share/css/share.min.css">
 <div id="article-share">
 
     
     <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="../libs/share/js/social-share.min.js"></script>
+    <script src="../static/libs/share/js/social-share.min.js"></script>
     
 
     
@@ -625,8 +624,8 @@ sh ovz-bbr-installer.sh</code></pre>
     </div>
 
     
-        <link rel="stylesheet" href="../libs/gitalk/gitalk.css">
-<link rel="stylesheet" href="../css/my-gitalk.css">
+        <link rel="stylesheet" href="../static/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="../static/css/my-gitalk.css">
 
 <div class="card gitalk-card" data-aos="fade-up">
     <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
@@ -636,7 +635,7 @@ sh ovz-bbr-installer.sh</code></pre>
     <div id="gitalk-container" class="card-content"></div>
 </div>
 
-<script src="../libs/gitalk/gitalk.min.js"></script>
+<script src="../static/libs/gitalk/gitalk.min.js"></script>
 <script>
     let gitalk = new Gitalk({
         clientID: '559eacfba3c76c3c2b8b',
@@ -772,21 +771,21 @@ sh ovz-bbr-installer.sh</code></pre>
 
 
 <!-- 代码块功能依赖 -->
-<script type="text/javascript" src="../libs/codeBlock/codeBlockFuction.js"></script>
+<script type="text/javascript" src="../static/libs/codeBlock/codeBlockFuction.js"></script>
 
 <!-- 代码语言 -->
 
-<script type="text/javascript" src="../libs/codeBlock/codeLang.js"></script>
+<script type="text/javascript" src="../static/libs/codeBlock/codeLang.js"></script>
 
 
 <!-- 代码块复制 -->
 
-<script type="text/javascript" src="../libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="../static/libs/codeBlock/codeCopy.js"></script>
 
 
 <!-- 代码块收缩 -->
 
-<script type="text/javascript" src="../libs/codeBlock/codeShrink.js"></script>
+<script type="text/javascript" src="../static/libs/codeBlock/codeShrink.js"></script>
 
 
 <!-- 代码块折行 -->
@@ -814,7 +813,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 </div>
 
 
-<script src="../libs/tocbot/tocbot.min.js"></script>
+<script src="../static/libs/tocbot/tocbot.min.js"></script>
 <script>
     $(function () {
         tocbot.init({
@@ -974,7 +973,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
     </div>
 </div>
 
-<script src="../js/search.js"></script>
+<script src="../static/js/search.js"></script>
 <script type="text/javascript">
 $(function () {
     searchFunc("../search.xml", 'searchInput', 'searchResult');
@@ -989,24 +988,22 @@ $(function () {
 </div>
 
 
-    <script src="../libs/materialize/materialize.min.js"></script>
-    <script src="../libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="../libs/aos/aos.js"></script>
-    <script src="../libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="../libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="../js/matery.js"></script>
+    <script src="../static/libs/materialize/materialize.min.js"></script>
+    <script src="../static/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="../static/libs/aos/aos.js"></script>
+    <script src="../static/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="../static/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="../static/js/matery.js"></script>
 
     <!-- Baidu Analytics -->
 
     <!-- Baidu Push -->
 
     
-    <script src="../libs/others/clicklove.js" async="async"></script>
+    <script src="../static/libs/others/clicklove.js" async="async"></script>
     
     
-    <script async src="../libs/others/busuanzi.pure.mini.js"></script>
-    
-
+    <script async src="../static/libs/others/busuanzi.pure.mini.js"></script>
     
 
     
@@ -1018,7 +1015,9 @@ $(function () {
     
 
     
-    <script src="../libs/instantpage/instantpage.js" type="module"></script>
+
+    
+    <script src="../static/libs/instantpage/instantpage.js" type="module"></script>
     
 
 <script>

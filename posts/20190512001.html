@@ -19,19 +19,18 @@
     <title>喝咖啡的姿势 | 懒人日记</title>
     <link rel="icon" type="image/png" href="../admin.png">
 
-    <link rel="stylesheet" type="text/css" href="../libs/awesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="../libs/materialize/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="../libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="../libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="../libs/lightGallery/css/lightgallery.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/matery.css">
-    <link rel="stylesheet" type="text/css" href="../css/my.css">
+    <link rel="stylesheet" type="text/css" href="../static/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="../static/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="../static/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/my.css">
 
-    <script src="../libs/jquery/jquery.min.js"></script>
+    <script src="../static/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="atom.xml" title="懒人日记" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+</head>
 
 
 <body>
@@ -244,7 +243,7 @@
 </header>
 
     
-<script src="../libs/cryptojs/crypto-js.min.js"></script>
+<script src="../static/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
         let pwd = '';
@@ -278,7 +277,7 @@
 <main class="post-container content">
 
     
-    <link rel="stylesheet" href="../libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="../static/libs/tocbot/tocbot.css">
 <style>
     #articleContent h1::before,
     #articleContent h2::before,
@@ -444,36 +443,36 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>记录Java中的一些骚操作</p>
-<h3 id="Java8获取本月最后一天"><a href="#Java8获取本月最后一天" class="headerlink" title="Java8获取本月最后一天"></a>Java8获取本月最后一天</h3><pre class="line-numbers language-java"><code class="language-java">LocalDate today <span class="token operator">=</span> LocalDate<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//本月的第一天</span>
-LocalDate firstday <span class="token operator">=</span> LocalDate<span class="token punctuation">.</span><span class="token function">of</span><span class="token punctuation">(</span>today<span class="token punctuation">.</span><span class="token function">getYear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>today<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//本月的最后一天</span>
-LocalDate lastDay <span class="token operator">=</span>today<span class="token punctuation">.</span><span class="token function">with</span><span class="token punctuation">(</span>TemporalAdjusters<span class="token punctuation">.</span><span class="token function">lastDayOfMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"本月的第一天："</span> <span class="token operator">+</span> firstday<span class="token punctuation">)</span><span class="token punctuation">;</span>
-System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"本月的最后一天："</span> <span class="token operator">+</span> lastDay<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="PDF打印"><a href="#PDF打印" class="headerlink" title="PDF打印"></a>PDF打印</h3><h4 id="设置打印副本（份数）"><a href="#设置打印副本（份数）" class="headerlink" title="设置打印副本（份数）"></a>设置打印副本（份数）</h4><pre class="line-numbers language-java"><code class="language-java">PrintRequestAttributeSet pras <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashPrintRequestAttributeSet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-pras<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Copies</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-pras<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>MultipleDocumentHandling<span class="token punctuation">.</span>SEPARATE_DOCUMENTS_UNCOLLATED_COPIES<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="Java8获取本月最后一天"><a href="#Java8获取本月最后一天" class="headerlink" title="Java8获取本月最后一天"></a>Java8获取本月最后一天</h3><pre><code class="java">LocalDate today = LocalDate.now();
+//本月的第一天
+LocalDate firstday = LocalDate.of(today.getYear(),today.getMonth(),1);
+//本月的最后一天
+LocalDate lastDay =today.with(TemporalAdjusters.lastDayOfMonth());
+System.out.println("本月的第一天：" + firstday);
+System.out.println("本月的最后一天：" + lastDay);</code></pre>
+<h3 id="PDF打印"><a href="#PDF打印" class="headerlink" title="PDF打印"></a>PDF打印</h3><h4 id="设置打印副本（份数）"><a href="#设置打印副本（份数）" class="headerlink" title="设置打印副本（份数）"></a>设置打印副本（份数）</h4><pre><code class="java">PrintRequestAttributeSet pras = new HashPrintRequestAttributeSet();
+pras.add(new Copies(4));
+pras.add(MultipleDocumentHandling.SEPARATE_DOCUMENTS_UNCOLLATED_COPIES);</code></pre>
 <p>注意：Copies和MultipleDocumentHandling需要配合使用，否则无效。</p>
 <p>参考资料：<a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.oracle.com/javase/6/docs/api/javax/print/attribute/standard/Copies.html">https://docs.oracle.com/javase/6/docs/api/javax/print/attribute/standard/Copies.html</a></p>
 <h4 id="设置打印范围"><a href="#设置打印范围" class="headerlink" title="设置打印范围"></a>设置打印范围</h4><pre><code>pras.add(new PageRanges(4, 8));</code></pre>
 <p>单单设置这个打印熟悉是不够的，还需要搭配Book</p>
-<pre class="line-numbers language-java"><code class="language-java">PDDocument document <span class="token operator">=</span> PDDocument<span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span>inputStream<span class="token punctuation">)</span><span class="token punctuation">;</span>
-PDFPrintableHelper printable <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PDFPrintableHelper</span><span class="token punctuation">(</span>document<span class="token punctuation">,</span> printHandler<span class="token punctuation">)</span><span class="token punctuation">;</span>
-PrinterJob job <span class="token operator">=</span> PrinterJob<span class="token punctuation">.</span><span class="token function">getPrinterJob</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre><code class="java">PDDocument document = PDDocument.load(inputStream);
+PDFPrintableHelper printable = new PDFPrintableHelper(document, printHandler);
+PrinterJob job = PrinterJob.getPrinterJob();
 
-job<span class="token punctuation">.</span><span class="token function">setPrintService</span><span class="token punctuation">(</span>defaultService<span class="token punctuation">)</span><span class="token punctuation">;</span>
-PageFormat pageFormat <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PageFormat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+job.setPrintService(defaultService);
+PageFormat pageFormat = new PageFormat();
 
-Paper paper <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Paper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-pageFormat<span class="token punctuation">.</span><span class="token function">setPaper</span><span class="token punctuation">(</span>paper<span class="token punctuation">)</span><span class="token punctuation">;</span>
-Book book <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Book</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Paper paper = new Paper();
+pageFormat.setPaper(paper);
+Book book = new Book();
 
-<span class="token keyword">int</span> pages <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getNumberOfPages</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> pageNum <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> pageNum <span class="token operator">&lt;=</span> pages<span class="token punctuation">;</span> pageNum <span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    book<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>printable<span class="token punctuation">,</span> pageFormat<span class="token punctuation">,</span> pageNum<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-job<span class="token punctuation">.</span><span class="token function">setPageable</span><span class="token punctuation">(</span>book<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+int pages = document.getNumberOfPages();
+for (int pageNum = 1; pageNum &lt;= pages; pageNum ++) {
+    book.append(printable, pageFormat, pageNum);
+}
+job.setPageable(book);</code></pre>
 <p>若只<code>book.append(printable, pageFormat);</code>不管PDF有多少页都只打印第一页</p>
 <p>重点：</p>
 <p>1、在Printerable打印之前，它无法确定可能打印的页数</p>
@@ -600,12 +599,12 @@ Dao接口的工作原理是JDK动态代理，Mybatis运行时会使用JDK动态�
                     
                 </div>
                 <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; margin: -0.15rem 0;">
-                    <link rel="stylesheet" type="text/css" href="../libs/share/css/share.min.css">
+                    <link rel="stylesheet" type="text/css" href="../static/libs/share/css/share.min.css">
 <div id="article-share">
 
     
     <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="../libs/share/js/social-share.min.js"></script>
+    <script src="../static/libs/share/js/social-share.min.js"></script>
     
 
     
@@ -619,8 +618,8 @@ Dao接口的工作原理是JDK动态代理，Mybatis运行时会使用JDK动态�
     </div>
 
     
-        <link rel="stylesheet" href="../libs/gitalk/gitalk.css">
-<link rel="stylesheet" href="../css/my-gitalk.css">
+        <link rel="stylesheet" href="../static/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="../static/css/my-gitalk.css">
 
 <div class="card gitalk-card" data-aos="fade-up">
     <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
@@ -630,7 +629,7 @@ Dao接口的工作原理是JDK动态代理，Mybatis运行时会使用JDK动态�
     <div id="gitalk-container" class="card-content"></div>
 </div>
 
-<script src="../libs/gitalk/gitalk.min.js"></script>
+<script src="../static/libs/gitalk/gitalk.min.js"></script>
 <script>
     let gitalk = new Gitalk({
         clientID: '559eacfba3c76c3c2b8b',
@@ -767,21 +766,21 @@ Dao接口的工作原理是JDK动态代理，Mybatis运行时会使用JDK动态�
 
 
 <!-- 代码块功能依赖 -->
-<script type="text/javascript" src="../libs/codeBlock/codeBlockFuction.js"></script>
+<script type="text/javascript" src="../static/libs/codeBlock/codeBlockFuction.js"></script>
 
 <!-- 代码语言 -->
 
-<script type="text/javascript" src="../libs/codeBlock/codeLang.js"></script>
+<script type="text/javascript" src="../static/libs/codeBlock/codeLang.js"></script>
 
 
 <!-- 代码块复制 -->
 
-<script type="text/javascript" src="../libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="../static/libs/codeBlock/codeCopy.js"></script>
 
 
 <!-- 代码块收缩 -->
 
-<script type="text/javascript" src="../libs/codeBlock/codeShrink.js"></script>
+<script type="text/javascript" src="../static/libs/codeBlock/codeShrink.js"></script>
 
 
 <!-- 代码块折行 -->
@@ -809,7 +808,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 </div>
 
 
-<script src="../libs/tocbot/tocbot.min.js"></script>
+<script src="../static/libs/tocbot/tocbot.min.js"></script>
 <script>
     $(function () {
         tocbot.init({
@@ -969,7 +968,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
     </div>
 </div>
 
-<script src="../js/search.js"></script>
+<script src="../static/js/search.js"></script>
 <script type="text/javascript">
 $(function () {
     searchFunc("../search.xml", 'searchInput', 'searchResult');
@@ -984,24 +983,22 @@ $(function () {
 </div>
 
 
-    <script src="../libs/materialize/materialize.min.js"></script>
-    <script src="../libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="../libs/aos/aos.js"></script>
-    <script src="../libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="../libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="../js/matery.js"></script>
+    <script src="../static/libs/materialize/materialize.min.js"></script>
+    <script src="../static/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="../static/libs/aos/aos.js"></script>
+    <script src="../static/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="../static/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="../static/js/matery.js"></script>
 
     <!-- Baidu Analytics -->
 
     <!-- Baidu Push -->
 
     
-    <script src="../libs/others/clicklove.js" async="async"></script>
+    <script src="../static/libs/others/clicklove.js" async="async"></script>
     
     
-    <script async src="../libs/others/busuanzi.pure.mini.js"></script>
-    
-
+    <script async src="../static/libs/others/busuanzi.pure.mini.js"></script>
     
 
     
@@ -1013,7 +1010,9 @@ $(function () {
     
 
     
-    <script src="../libs/instantpage/instantpage.js" type="module"></script>
+
+    
+    <script src="../static/libs/instantpage/instantpage.js" type="module"></script>
     
 
 <script>

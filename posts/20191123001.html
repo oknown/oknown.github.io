@@ -19,19 +19,18 @@
     <title>Centos7安装vsftpd | 懒人日记</title>
     <link rel="icon" type="image/png" href="../admin.png">
 
-    <link rel="stylesheet" type="text/css" href="../libs/awesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="../libs/materialize/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="../libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="../libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="../libs/lightGallery/css/lightgallery.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/matery.css">
-    <link rel="stylesheet" type="text/css" href="../css/my.css">
+    <link rel="stylesheet" type="text/css" href="../static/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="../static/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="../static/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/my.css">
 
-    <script src="../libs/jquery/jquery.min.js"></script>
+    <script src="../static/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.1.1"><link rel="alternate" href="atom.xml" title="懒人日记" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+</head>
 
 
 <body>
@@ -244,7 +243,7 @@
 </header>
 
     
-<script src="../libs/cryptojs/crypto-js.min.js"></script>
+<script src="../static/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
         let pwd = '';
@@ -278,7 +277,7 @@
 <main class="post-container content">
 
     
-    <link rel="stylesheet" href="../libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="../static/libs/tocbot/tocbot.css">
 <style>
     #articleContent h1::before,
     #articleContent h2::before,
@@ -470,7 +469,7 @@
 <h3 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h3><pre><code>yum -y install vsftpd</code></pre>
 <h3 id="软件配置"><a href="#软件配置" class="headerlink" title="软件配置"></a>软件配置</h3><h4 id="匿名开放模式"><a href="#匿名开放模式" class="headerlink" title="匿名开放模式"></a>匿名开放模式</h4><p>1、修改配置文件，带注释的是需要修改和新增的配置</p>
 <p><code>vim /etc/vsftpd/vsftpd.conf</code></p>
-<pre class="line-numbers language-shell"><code class="language-shell">#启用匿名访问模式
+<pre><code class="shell">#启用匿名访问模式
 anonymous_enable=YES
 #匿名用户上传文件的umask值
 anon_umask=022
@@ -499,7 +498,7 @@ tcp_wrappers=YES
 #PASV模式最小端口号
 pasv_min_port=45000
 #PASV模式最大端口号
-pasv_max_port=49000<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+pasv_max_port=49000</code></pre>
 <p>2、创建并授权匿名用户FTP根目录</p>
 <pre><code>mkdir -p /data/anon/pub
 chown -R ftp /data/anon/pub/</code></pre>
@@ -508,7 +507,7 @@ chown -R ftp /data/anon/pub/</code></pre>
 systemctl enable vsftpd</code></pre>
 <h4 id="本地用户模式"><a href="#本地用户模式" class="headerlink" title="本地用户模式"></a>本地用户模式</h4><p>1、修改配置文件，删除之前的匿名模式配置内容</p>
 <p><code>vim /etc/vsftpd/vsftpd.conf</code></p>
-<pre class="line-numbers language-shell"><code class="language-shell">#关闭匿名访问模式
+<pre><code class="shell">#关闭匿名访问模式
 anonymous_enable=NO
 local_enable=YES
 write_enable=YES
@@ -530,7 +529,7 @@ pam_service_name=vsftpd
 userlist_enable=YES
 tcp_wrappers=YES
 pasv_min_port=45000
-pasv_max_port=49000<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+pasv_max_port=49000</code></pre>
 <p>2、创建本地用户，并指定家目录</p>
 <pre><code>useradd -d /data/user -s /sbin/nologin user
 echo "123456" | passwd --stdin user</code></pre>
@@ -545,9 +544,9 @@ test1
 <p>注：第一行用户名，第二行密码，依此类推</p>
 <p>明文信息不安全，需要使用db_load命令用哈希（hash）算法将明文信息转换成数据文件，然后将明文信息文件删除。</p>
 <p><code>yum install db4*</code></p>
-<pre class="line-numbers language-shell"><code class="language-shell">db_load -T -t hash -f /etc/vsftpd/vuser.txt /etc/vsftpd/vuser.db
+<pre><code class="shell">db_load -T -t hash -f /etc/vsftpd/vuser.txt /etc/vsftpd/vuser.db
 chmod 600 /etc/vsftpd/vuser.db
-rm -f /etc/vsftpd/vuser.txt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+rm -f /etc/vsftpd/vuser.txt</code></pre>
 <p>2、创建虚拟用户映射的系统本地用户和FTP根目录</p>
 <pre><code>useradd -d /data/ftproot -s /sbin/nologin ftp
 chmod -Rf 755 /data/ftproot/</code></pre>
@@ -695,12 +694,12 @@ firewall-cmd --reload</code></pre>
                     
                 </div>
                 <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; margin: -0.15rem 0;">
-                    <link rel="stylesheet" type="text/css" href="../libs/share/css/share.min.css">
+                    <link rel="stylesheet" type="text/css" href="../static/libs/share/css/share.min.css">
 <div id="article-share">
 
     
     <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="../libs/share/js/social-share.min.js"></script>
+    <script src="../static/libs/share/js/social-share.min.js"></script>
     
 
     
@@ -714,8 +713,8 @@ firewall-cmd --reload</code></pre>
     </div>
 
     
-        <link rel="stylesheet" href="../libs/gitalk/gitalk.css">
-<link rel="stylesheet" href="../css/my-gitalk.css">
+        <link rel="stylesheet" href="../static/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="../static/css/my-gitalk.css">
 
 <div class="card gitalk-card" data-aos="fade-up">
     <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
@@ -725,7 +724,7 @@ firewall-cmd --reload</code></pre>
     <div id="gitalk-container" class="card-content"></div>
 </div>
 
-<script src="../libs/gitalk/gitalk.min.js"></script>
+<script src="../static/libs/gitalk/gitalk.min.js"></script>
 <script>
     let gitalk = new Gitalk({
         clientID: '559eacfba3c76c3c2b8b',
@@ -863,21 +862,21 @@ $endThismonth = mktime(23, 59, 59, date
 
 
 <!-- 代码块功能依赖 -->
-<script type="text/javascript" src="../libs/codeBlock/codeBlockFuction.js"></script>
+<script type="text/javascript" src="../static/libs/codeBlock/codeBlockFuction.js"></script>
 
 <!-- 代码语言 -->
 
-<script type="text/javascript" src="../libs/codeBlock/codeLang.js"></script>
+<script type="text/javascript" src="../static/libs/codeBlock/codeLang.js"></script>
 
 
 <!-- 代码块复制 -->
 
-<script type="text/javascript" src="../libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="../static/libs/codeBlock/codeCopy.js"></script>
 
 
 <!-- 代码块收缩 -->
 
-<script type="text/javascript" src="../libs/codeBlock/codeShrink.js"></script>
+<script type="text/javascript" src="../static/libs/codeBlock/codeShrink.js"></script>
 
 
 <!-- 代码块折行 -->
@@ -905,7 +904,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 </div>
 
 
-<script src="../libs/tocbot/tocbot.min.js"></script>
+<script src="../static/libs/tocbot/tocbot.min.js"></script>
 <script>
     $(function () {
         tocbot.init({
@@ -1065,7 +1064,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
     </div>
 </div>
 
-<script src="../js/search.js"></script>
+<script src="../static/js/search.js"></script>
 <script type="text/javascript">
 $(function () {
     searchFunc("../search.xml", 'searchInput', 'searchResult');
@@ -1080,24 +1079,22 @@ $(function () {
 </div>
 
 
-    <script src="../libs/materialize/materialize.min.js"></script>
-    <script src="../libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="../libs/aos/aos.js"></script>
-    <script src="../libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="../libs/lightGallery/js/lightgallery-all.min.js"></script>
-    <script src="../js/matery.js"></script>
+    <script src="../static/libs/materialize/materialize.min.js"></script>
+    <script src="../static/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="../static/libs/aos/aos.js"></script>
+    <script src="../static/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="../static/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="../static/js/matery.js"></script>
 
     <!-- Baidu Analytics -->
 
     <!-- Baidu Push -->
 
     
-    <script src="../libs/others/clicklove.js" async="async"></script>
+    <script src="../static/libs/others/clicklove.js" async="async"></script>
     
     
-    <script async src="../libs/others/busuanzi.pure.mini.js"></script>
-    
-
+    <script async src="../static/libs/others/busuanzi.pure.mini.js"></script>
     
 
     
@@ -1109,7 +1106,9 @@ $(function () {
     
 
     
-    <script src="../libs/instantpage/instantpage.js" type="module"></script>
+
+    
+    <script src="../static/libs/instantpage/instantpage.js" type="module"></script>
     
 
 <script>
