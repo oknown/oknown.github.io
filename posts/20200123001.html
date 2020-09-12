@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="软件,资源">
+    <meta name="keywords" content="Linux,debian,nginx">
     <meta name="description" content="记录学习、工作、生活中的一些问题和感悟，收集&amp;分享软件、资源，你懂的，不懂的这里全都有。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>软件资源分享 | 懒人日记</title>
+    <title>Debian安装最新版Nginx | 懒人日记</title>
     <link rel="icon" type="image/png" href="../admin.png">
 
     <link rel="stylesheet" type="text/css" href="../libs/awesome/css/all.css">
@@ -260,12 +260,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('../medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('../medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">软件资源分享</h1>
+                    <h1 class="description center-align post-title">Debian安装最新版Nginx</h1>
                 </div>
             </div>
         </div>
@@ -382,8 +382,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="../tags/%E8%BD%AF%E4%BB%B6/">
-                                <span class="chip bg-color">软件</span>
+                            <a href="../tags/%E4%BC%81%E9%B9%85/">
+                                <span class="chip bg-color">企鹅</span>
+                            </a>
+                        
+                            <a href="../tags/%E5%A4%A7%E4%BE%BF/">
+                                <span class="chip bg-color">大便</span>
                             </a>
                         
                     </div>
@@ -394,8 +398,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="../categories/%E8%BD%AF%E4%BB%B6/" class="post-category">
-                                软件
+                            <a href="../categories/%E4%BC%81%E9%B9%85/" class="post-category">
+                                企鹅
                             </a>
                         
                     </div>
@@ -407,21 +411,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-07-04
+                    2020-01-23
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2019-12-24
+                    2020-09-04
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    65
+                    274
                 </div>
                 
 
@@ -443,10 +447,32 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><a href></a></p>
-<hr>
-<h3 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h3><p><a href>NFC Tool Pro中文破解版</a></p>
-<h3 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h3><p><a href>CP210X驱动文件</a></p>
+                <p>在Debian下面通过apt-get可以自动安装 nginx，这样安装的nginx版本都有些旧.</p>
+<p>Nginx官网提供了一些编辑绎好的安装包，只需先更新安装源，再通过 apt-get &amp; install 就可安装了。</p>
+<h3 id="1-添加安装源"><a href="#1-添加安装源" class="headerlink" title="1.添加安装源"></a>1.添加安装源</h3><p><code>vi /etc/apt/sources.list</code><br>根据系统版本添加对应的安装源</p>
+<pre><code>#Debian 5.0：
+deb http://nginx.org/packages/debian/ lenny nginx
+deb-src http://nginx.org/packages/debian/ lenny nginx
+
+#Debian 6.0：
+deb http://nginx.org/packages/debian/ squeeze nginx
+deb-src http://nginx.org/packages/debian/ squeeze nginx
+
+#Debian 7.0：
+deb http://nginx.org/packages/debian/ wheezy nginx
+deb-src http://nginx.org/packages/debian/ wheezy nginx
+
+#Debian 8.0：
+deb http://nginx.org/packages/debian/ jessie nginx
+deb-src http://nginx.org/packages/debian/ jessie nginx
+
+#Debian 9.0：
+deb http://nginx.org/packages/debian/ stretch nginx
+deb-src http://nginx.org/packages/debian/ stretch nginx</code></pre>
+<h3 id="2-导入升级Key并更新源"><a href="#2-导入升级Key并更新源" class="headerlink" title="2.导入升级Key并更新源"></a>2.导入升级Key并更新源</h3><pre><code>wget http://nginx.org/keys/nginx_signing.key &amp;&amp; apt-key add nginx_signing.key
+apt-get update</code></pre>
+<h3 id="3-安装nginx"><a href="#3-安装nginx" class="headerlink" title="3.安装nginx"></a>3.安装nginx</h3><pre><code>apt-get install nginx</code></pre>
+<p>Enjoy it!</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -528,8 +554,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="../tags/%E8%BD%AF%E4%BB%B6/">
-                                    <span class="chip bg-color">软件</span>
+                                <a href="../tags/%E4%BC%81%E9%B9%85/">
+                                    <span class="chip bg-color">企鹅</span>
+                                </a>
+                            
+                                <a href="../tags/%E5%A4%A7%E4%BE%BF/">
+                                    <span class="chip bg-color">大便</span>
                                 </a>
                             
                         </div>
@@ -574,7 +604,7 @@
         repo: 'oknown.github.io',
         owner: 'oknown',
         admin: ["oknown"],
-        id: '2019-07-04T00-00-00',
+        id: '2020-01-23T00-00-00',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -602,44 +632,36 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href>
+                <a href="ckez4bcjy000zp9sbfjdv8ckq.html">
                     <div class="card-image">
                         
                         
-                        <img src="../medias/featureimages/18.jpg" class="responsive-img" alt="春天的故事">
+                        <img src="../medias/featureimages/20.jpg" class="responsive-img" alt="一个面瘫的心灵独白">
                         
-                        <span class="card-title">春天的故事</span>
+                        <span class="card-title">一个面瘫的心灵独白</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            因为人若有愿做的心，必蒙悦纳，乃是照他所有的，并不是照他所无的。--哥后:8:12<br><br>
+                            每天的状态
+
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { 
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-07-04
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-28
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="../categories/%E6%98%A5%E5%A4%A9/" class="post-category">
-                                    春天
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            admin
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="../tags/%E6%98%A5%E5%A4%A9/">
-                        <span class="chip bg-color">春天</span>
-                    </a>
-                    
                 </div>
                 
             </div>
@@ -651,31 +673,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="20190620001.html">
+                <a href="20191218001.html">
                     <div class="card-image">
                         
                         
-                        <img src="../medias/featureimages/10.jpg" class="responsive-img" alt="Oracle笔记">
+                        <img src="../medias/featureimages/6.jpg" class="responsive-img" alt="陆游器">
                         
-                        <span class="card-title">Oracle笔记</span>
+                        <span class="card-title">陆游器</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            因为有人用智慧、知识、灵巧所劳碌得来的，却要留给未曾劳碌的人为分。这也是虚空，也是大患。--传:2:21
+                            他们从最小的到至大的都一味地贪婪，从先知到祭司都行事虚谎，他们轻轻忽忽地医治我百姓的损伤，说：“平安了！平安了！”，其实没有平安。--耶:6:13-14
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-06-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-12-18
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../categories/Oracle/" class="post-category">
-                                    Oracle
+                            <a href="../categories/%E9%99%86%E6%B8%B8%E5%99%A8/" class="post-category">
+                                    陆游器
                                 </a>
                             
                             
@@ -685,8 +707,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../tags/Oracle/">
-                        <span class="chip bg-color">Oracle</span>
+                    <a href="../tags/%E9%99%86%E6%B8%B8%E5%99%A8/">
+                        <span class="chip bg-color">陆游器</span>
                     </a>
                     
                 </div>

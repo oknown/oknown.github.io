@@ -6,7 +6,7 @@
   <link href="https://uknown.me/atom.xml" rel="self"/>
   
   <link href="https://uknown.me/"/>
-  <updated>2020-08-29T03:51:13.762Z</updated>
+  <updated>2020-09-11T03:59:24.285Z</updated>
   <id>https://uknown.me/</id>
   
   <author>
@@ -17,27 +17,104 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>一个面瘫的心灵独白</title>
-    <link href="https://uknown.me/posts/ckejxjcvm000qg9sb6ppe9sjp.html"/>
-    <id>https://uknown.me/posts/ckejxjcvm000qg9sb6ppe9sjp.html</id>
-    <published>2020-08-29T03:47:23.285Z</published>
-    <updated>2020-08-29T03:51:13.762Z</updated>
+    <title></title>
+    <link href="https://uknown.me/posts/ckez4bcjh0003p9sbcxk50dep.html"/>
+    <id>https://uknown.me/posts/ckez4bcjh0003p9sbcxk50dep.html</id>
+    <published>2020-09-11T03:59:24.282Z</published>
+    <updated>2020-09-11T03:59:24.285Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;script&gt;
+    <summary type="html">&lt;hr&gt;
+&lt;hr&gt;
+&lt;script&gt;
         document.querySelectorAll(&#39;.github-emoji&#39;)
           .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
+            if (!el.dataset.src) { return;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Clash最新配置文件</title>
+    <link href="https://uknown.me/posts/ckez4bckn0028p9sb3f6052xx.html"/>
+    <id>https://uknown.me/posts/ckez4bckn0028p9sb3f6052xx.html</id>
+    <published>2020-09-07T03:17:44.035Z</published>
+    <updated>2020-09-07T03:19:15.716Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre&gt;&lt;code&gt;#---------------------------------------------------#
+## 配置文件需要放置在 $HOME/.config/clash/config.yml
+## 
+## 如果您不知道如何操作，请参阅</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>一个面瘫的心灵独白</title>
+    <link href="https://uknown.me/posts/ckez4bcjy000zp9sbfjdv8ckq.html"/>
+    <id>https://uknown.me/posts/ckez4bcjy000zp9sbfjdv8ckq.html</id>
+    <published>2020-08-29T03:47:23.285Z</published>
+    <updated>2020-09-12T03:36:03.001Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;每天的状态&lt;br&gt;&lt;img src=&quot;/images/loading.gif&quot; data-original=&quot;/assets/gif/netease.gif&quot; alt=&quot;网抑云&quot;&gt;&lt;/p&gt;
+&lt;script&gt;
        </summary>
         
       
     
     
     
+    
+  </entry>
+  
+  <entry>
+    <title>Debian安装最新版Nginx</title>
+    <link href="https://uknown.me/posts/20200123001.html"/>
+    <id>https://uknown.me/posts/20200123001.html</id>
+    <published>2020-01-23T05:00:00.000Z</published>
+    <updated>2020-09-04T11:10:37.120Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在Debian下面通过apt-get可以自动安装 nginx，这样安装的nginx版本都有些旧.&lt;/p&gt;
+&lt;p&gt;Nginx官网提供了一些编辑绎好的安装包，只需先更新安装源，再通过 apt-get &amp;amp; install 就可安装了。&lt;/p&gt;
+&lt;h3</summary>
+        
+      
+    
+    
+    
+    <category term="企鹅" scheme="https://uknown.me/categories/%E4%BC%81%E9%B9%85/"/>
+    
+    
+    <category term="企鹅" scheme="https://uknown.me/tags/%E4%BC%81%E9%B9%85/"/>
+    
+    <category term="大便" scheme="https://uknown.me/tags/%E5%A4%A7%E4%BE%BF/"/>
     
   </entry>
   
